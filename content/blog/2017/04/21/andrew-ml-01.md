@@ -76,9 +76,7 @@ derive structure from data where we don't necessarily know the effect of the var
     - Other application fields: organize computing clusters, social network analysis, market segmentation, 
     astronomical data analysis
 
-## Linear regression
-
-### In theory
+## Notation
 
 A few notation used throughout the course:
 
@@ -87,21 +85,87 @@ A few notation used throughout the course:
 - $x^{(i)} = \text{input (features) of }i\text{th training example}$
 - $x_j^{(i)} = \text{value of feature }j \text{ in }i\text{th training example}$
 
+## Linear regression
+
+### In theory
 For linear regression, our hypothesis is 
 
 $$
 h_\theta(x) = \theta_0 x_0 + \theta_1 x_1 + \dots + \theta_n x_n = \theta^T x 
 $$
 
-where $\theta$ is a $n+1$ vector and $x$ is a $n+1$ vector as well.
+where 
 
 $$
-\left[
-\begin{matrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn} \end{matrix}
-\right]$$
+\begin{align*}
+& x = \begin{bmatrix} x_0 \\ x_1 \\ \vdots \\ x_n \end{bmatrix} \in \mathbb{R} ^{n+1} &
+& \theta = \begin{bmatrix} \theta_0 \\ \theta_1 \\ \vdots \\ \theta_n \end{bmatrix} \in \mathbb{R} ^{n+1}
+\end{align*}
+$$
 
+and our cost function is 
+
+$$
+J(\theta) = \frac{1}{2m} \sum_{i=1}^m(\theta^T x^{(i)}-y(i))^2
+$$
+
+In order to find $\theta$ that minimizes our cost function $J(\theta)$. Two methods are available for us:
+
+- Gradient Descent
+
+$$
+\begin{align*} 
+\text{Repeat\{ } && \\
+&& \theta_j := \theta_j - \alpha \times \frac{1}{m} \sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} &&
+\text{(simultaneously update $\theta_j$ for $j = 0, 1, \dots, n$)} \\
+\text{\}}
+\end{align*}
+$$
+
+$\alpha$ is called learning rate, which determines "the step we take downhill" and the part afterwards decides
+which direction we want to go (derived by taking partial derivatives against $\theta_j$).
+
+\* ---- Note ---- *
+
+> We may need to do feature scaling & pick up learning rate $\alpha$ wisely when we work with gradient descent.
+
+- Normal Equation
+
+We just directly calculate the partial derivatives for every $\theta_j$ and set it equals to zero 
+(i.e $\frac{\partial}{\partial \theta_j}J(\theta) = 0$ for every $j$) and we get:
+
+$$
+\theta = (X^TX)^{-1}X^Ty
+$$
+
+where $X$ is called *design matrix*, and it has form
+
+$$
+\begin{align*} 
+& x = \left[\begin{array}{ccc} - & (x^{(1)})^T & - \\ - & (x^{(2)})^T & - \\ & \vdots & \\ - & (x^{(m)})^T & -\end{array} \right] &
+x^{(i)} = \begin{bmatrix}x_0^{(i)} \\ \vdots \\ x_n^{(i)} \end{bmatrix} \in \mathbb{R} ^{n+1}
+\end{align*}
+$$
 
 ### In practice
 
+One tricky thing I find out when I work through quiz and programming problems is the gap between the mathematical
+representation and the actual implementation.
+
+
+## Linear regression with regularization
+
+Quite often, we may face *overfitting* issue, which can be fixed by either reduce number of features or
+regularization.
+
+### In theory
+
+### In practice
 
 ## Logistic regression
+
+### In theory
+
+### In practice
+
+## Logistic regression with regularization
