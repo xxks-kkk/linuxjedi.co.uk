@@ -2,10 +2,11 @@ Title: MAW Chapter 6: Priority Queues (Heaps) writing questions
 Date: 2017-03-26 12:01
 Category: Data Struct & Algo
 Tags: heaps, proof, math, maw
+Summary: My solutions to selected problems in MAW Chapter 6
 
 ## Solutions
 
-including: MAW 6.6, 6.7, 6.9, 6.13, 6.14
+including: MAW 6.6, 6.7, 6.9, 6.13, 6.14, 6.16, 6.17, 6.27, 6.28,
 
 ### MAW 6.6
 
@@ -123,6 +124,7 @@ $$
 
 > Suppose we need to perform $M$ `PercolateUp` and $N$ `DeleteMiin` on a d-heap
 > that initially has $N$ elements.
+
 > a. What is the total running time of all operations in terms of $M$, $N$, and $d$?
 
 A `percolateUp` operation on a d-heap with $N$ elements takes $O(\log_d N)$ steps.
@@ -135,7 +137,7 @@ take $d$ comparison to find the minimum (see p.184).
 
 Thus in total this will take $O(M\log_d N + Nd\log_d N)$ steps.
 
-> d. If $d = 2$, what is the running time of all heap operations?
+> b. If $d = 2$, what is the running time of all heap operations?
 
 Substitute 2 into the formula calculated in part a) gives $O((M+N)\log_2 N)$.
 
@@ -153,3 +155,67 @@ $$
 $d = max(2, M/N)$ (See the related discussion at the end of Section 11.4)
 
 <!--http://mail.csis.ul.ie/~cs4115/resources/sol10.pdf-->
+
+## MAW 6.16
+
+> Merge the two leftist heaps in Figure 6.58
+
+<img src="/images/maw-6-16-problem.PNG" alt="MAW 6.16"/>
+
+The book doesn't do a well job on displaying the detailed steps in merging the 
+leftist heap. So, I decide to use this problem as an illustration. By algorithm
+description on p. 194 and the actual algorithm implementation on p.189., there are
+two key points in the algorithm:
+
+1. recursively merge the heap with the larger root with the right subheap of
+the heap with the smaller root.
+
+2. We do the swap at the root.
+
+The following shows the steps to get the final answer for this problem:
+
+<img src="/images/maw-6-16-solution.jpg" alt="MAW 6.16 solution" style="width:700px;height:400px"/>
+
+## MAW 6.17
+
+> Show the result of inserting keys 1 to 15 in order into an initially empty leftist heap.
+
+Use [this wonderful site](https://www.cs.usfca.edu/~galles/visualization/LeftistHeap.html)
+to see the whole process of insertion.
+
+## MAW 6.27
+
+> Prove that a binomial tree $B_k$ has binomial trees $B_0, B_1, \dots, B_{k-1}$
+> as children of the root.
+
+I'll try to use two ways to prove this. Both ways are by induction but one of them
+is more mathematical formula involved.
+
+*Method 1*
+
+Clearly the claim is true for $k = 1$. Suppose it is true for all values $i = 1, 2, \dots, k-1$.
+Since for $B_k$, we have $2^k$ nodes. Then, by the induction hypothesis, we have
+$2^{k-1} = 1 + 2^0 + \dots + 2^{k-2}$. Now, multiplying both sides of the equation
+by 2, we have $2^k = 2 + 2 + \dots + 2^{k-1}$, which is the same as
+$2^k = 1 + 2^0 + \dots + 2^{k-1}$. This completes the proof.
+
+*Method 2*
+
+Again the claim is true for $k = 1$. Suppose it is true for all values $i = 1, 2, \dots, k-1$.
+A $B_k$ tree is fromed by attaching a $B_{k-1}$ tree to the root of a $B_{k-1}$ tree.
+Thus, by induction, it contains a $B_0$ through $B_{k-2}$ tree, as well as the
+newly attached $B_{k-1}$ tree, proving the claim.
+
+## MAW 6.28
+
+> Prove that a binomial tree of height $k$ has ${k \choose d}$ nodes at depth $d$.
+
+Proof is by induction. Clearly the claim is true for $k=1$. Assume true for 
+all values $i=1,2,\dots,k$. A $B_{k+1}$ tree is formed by attaching a $B_k$ tree
+to the original $B_k$ tree. The original tree has ${k \choose d}$ nodes at depth
+$d$ by induction hypothesis. The attached tree had $\binom{k}{d-1}$ nodes at depth
+$d-1$, which are now at depth $d$. Adding these two terms we have
+
+$$
+\binom{k+1}{d} = \binom{k}{d} + \binom{k}{d-1}
+$$

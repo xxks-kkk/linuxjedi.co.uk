@@ -8,6 +8,7 @@ Minimal Emacs Tutorial
 :modified: 2017-01-03 21:45
 :category: tools
 :tags: emacs
+:summary: Emacs quick reference
 
 *******************
 Learn about Emacs
@@ -218,6 +219,10 @@ HowTos
     .. note::
 
        Instead of delete, you can use **C-x r t string RET** to replace rectangle contents with *string* con each line.
+
+.. topic:: Turn on the line number on the left hand side
+
+        I find this is particularly useful when I work with gdb in emacs. It can be done with **M-x linum-mode**.
          
 ==================
 Resources

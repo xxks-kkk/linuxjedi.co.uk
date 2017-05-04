@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Zeyuan Hu'
-SITENAME = "Zeyuan Hu's website"
+SITENAME = "Fluffy Stuff"
 SITESUBTITLE = "A tmp place to rest"
 SITEURL = 'http://zhu45.org'
 
@@ -19,6 +19,8 @@ FEED_ALL_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 FEED_DOMAIN = SITEURL
+
+STATIC_PATHS = ['assets', 'images']
 
 # Blogroll
 # LINKS = (('Brian Aker', 'http://krow.net/'),
@@ -38,13 +40,8 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
-
-
-#THEME='notmyidea-lxj'
-
 DEFAULT_DATE_FORMAT = '%a %d %b %Y, %H:%M'
 HIDE_SIDEBAR = False
-
 # Cleaner page links
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
@@ -53,8 +50,15 @@ PAGE_LANG_SAVE_AS = '{slug}-{lang}.html'
 # Cleaner Articles
 ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
-
 DISPLAY_TAGS_INLINE = True
+
+#################################
+#
+# Pelican notmyidea-lxj customization
+#
+#################################
+
+#THEME='notmyidea-lxj'
 
 #################################
 #
@@ -62,7 +66,7 @@ DISPLAY_TAGS_INLINE = True
 #
 #################################
 
-THEME='pelican-bootstrap3'
+#THEME='pelican-bootstrap3'
 JINJA_EXTENSIONS = ['jinja2.ext.i18n']
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['tag_cloud', 'render_math', 'i18n_subsites']
@@ -73,9 +77,26 @@ DISPLAY_PAGES_ON_MENU = False
 PYGMENTS_STYLE = 'emacs'
 BOOTSTRAP_THEME = 'lumen'
 
-###################################
-# End bootstrap theme configuration
-###################################
+#################################
+#
+# Pelican cid customization
+#
+#################################
+
+INDEX_URL = 'blog2'
+INDEX_SAVE_AS = INDEX_URL+'/index.html'
+
+THEME='pelican-cid'
+USE_CUSTOM_MENU = True
+CUSTOM_MENUITEMS = (('About', 'about-zack.html'),
+                    ('Blog', INDEX_URL),
+                    ('Quotes', 'quotes.html'),
+                    ('Projects', 'projects.html')
+)
+SITEFOOTER = u'Zeyuan Hu &copy; 2015-2017.'
+
+#################################
+
 
 # disable category
 # DIRECT_TEMPLATES = ['index', 'tags', 'archives']
@@ -110,7 +131,8 @@ ARTICLE_EXCLUDES = [ '/drafts' ]
 #
 # Custom Jinja Filters
 #   see: http://jinja.pocoo.org/docs/templates/#filters
-#
+#  
+#   format: http://strftime.org
 #################################
 
 
@@ -136,7 +158,7 @@ def month_name(month_number):
 
 
 def archive_date_format(date):
-    return custom_strftime('%b.%d.%y', date)
+    return custom_strftime('%m.%d.%Y', date)
 
 
 def sidebar_date_format(date):
