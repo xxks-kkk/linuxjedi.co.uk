@@ -65,6 +65,7 @@ For the first iteration, my ``archives.html`` looks something like this
 Let's first take a look at what archive page we can get from this code.
 
 .. image:: /images/pelican-hack-1.png
+   :alt: pelican-hack-1 result
 
 Line[1],[2] illustrates how usually template file get organized. Usually, we create
 a basic html file that specifies the layout of our site, which is ``base.html`` in my case.
