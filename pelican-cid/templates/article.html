@@ -10,7 +10,12 @@
             <h1>{{ article.title }}</h1>
             <p class="date">Written on <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%b %d, %Y') }}</time></p>
         </header>
-
+        
+        {% if article.toc %}
+            <nav class="toc">
+                {{article.toc}}
+            </nav>
+        {% endif %}
         <article>
             {{ article.content }}
         </article>

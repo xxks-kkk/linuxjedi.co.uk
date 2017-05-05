@@ -68,6 +68,16 @@ DISPLAY_TAGS_INLINE = True
 
 #THEME='pelican-bootstrap3'
 JINJA_EXTENSIONS = ['jinja2.ext.i18n']
+
+##################################
+# NOTE: 
+#
+# per http://docs.getpelican.com/en/3.6.3/settings.html, once
+# we define something in MD_EXTENSIONS, it will override the default and we have to add back
+# the list of MD extensions manually (http://pythonhosted.org/Markdown/extensions/
+# )
+##################################
+MD_EXTENSIONS = ['toc', 'codehilite(css_class=highlight)', 'extra', 'meta']
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['tag_cloud', 'render_math', 'i18n_subsites']
 LOCAL_CONTENT_CACHE = False
