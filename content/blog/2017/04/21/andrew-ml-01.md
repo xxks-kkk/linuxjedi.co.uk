@@ -326,7 +326,7 @@ Then the cost function $J(\theta)$ is
 
 $$
 J(\theta) = -\frac{1}{m}\sum_{i=1}^m \lbrack 
-(y^{(i)}\logh_\theta(x^{(i)}) + (1-y^{(i)})\log(1-h_\theta(x^{(i)})))\rbrack
+(y^{(i)}\log h_\theta(x^{(i)}) + (1-y^{(i)})\log(1-h_\theta(x^{(i)})))\rbrack
 $$
 
 To minimize cost function $J(\theta)$ we can of course use gradient descent. Surprisingly,
@@ -361,7 +361,7 @@ The cost function for regualarized logistic regression is following:
 
 $$
 J(\theta) = -\frac{1}{m}\sum_{i=1}^m \lbrack 
-(y^{(i)}\logh_\theta(x^{(i)}) + (1-y^{(i)})\log(1-h_\theta(x^{(i)})))\rbrack
+(y^{(i)}\log h_\theta(x^{(i)}) + (1-y^{(i)})\log(1-h_\theta(x^{(i)})))\rbrack
 + \frac{\lambda}{2m}\sum_{j=1}^n\theta_j^2
 $$
 
