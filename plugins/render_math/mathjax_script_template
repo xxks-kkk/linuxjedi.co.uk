@@ -17,9 +17,9 @@ if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {{
     mathjaxscript.src = location_protocol + {source};
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({{" +
-        "    config: ['MMLorHTML.js']," +
+        "    config: ['CommonHTML.js']," +
         "    TeX: {{ extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'{tex_extensions}], equationNumbers: {{ autoNumber: 'AMS' }}, Macros: {macros} }}," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    jax: ['input/TeX','input/MathML','output/CommonHTML']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
         "    displayIndent: '"+ indent +"'," +
