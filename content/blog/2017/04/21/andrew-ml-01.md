@@ -15,8 +15,6 @@ based upon the module of the material itself.
 In addition, like MAW reading posts, I will focus on the reflection and the post itself
 may not be self-contained. However, this may happen rarely.
 
-\* ---- Note ---- *
-
 > Coursera has really well-designed programming assignment that really helps to understand
 > both concepts and its actual implementation. All the code snippets listed in the below
 > and upcoming posts are availabe [in my code-for-blog repo](https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/andrew-ng-ml).
@@ -133,11 +131,7 @@ $$
 $$
 
 $\alpha$ is called learning rate, which determines "the step we take downhill" and the part afterwards decides
-which direction we want to go (derived by taking partial derivatives against $\theta_j$).
-
-\* ---- Note ---- *
-
-> We may need to do feature scaling & pick up learning rate $\alpha$ wisely when we work with gradient descent.
+which direction we want to go (derived by taking partial derivatives against $\theta_j$)[^1].
 
 - Normal Equation
 
@@ -268,11 +262,7 @@ $$
 
 The regularization parameter $\lambda$ controls the tradeoff between "fit the data well" and
 "keep parameters small to avoid overfitting".  If $\lambda$ is set to an extremely large
-value, then we may face "underfit" issue (i.e. all $\theta_j$ for $j = 1, \dots, n$ close to 0).
-
-\* ---- Note ---- *
-
-> We don't penalize $\theta_0$.
+value, then we may face "underfit" issue (i.e. all $\theta_j$ for $j = 1, \dots, n$ close to 0)[^2].
 
 Since our cost function has changed, both gradient descent and normal equation have to adjust accordingly:
 
@@ -388,3 +378,7 @@ J = 1/m * sum( ...
 grad(1) = (1/m * X'*(sigmoid(X*theta) - y))(1);
 grad(2:t) =  (1/m * X'*(sigmoid(X*theta) - y) + lambda/m * theta)(2: t);
 ```
+
+[^1]: We may need to do feature scaling & pick up learning rate $\alpha$ wisely when we work with gradient descent.
+
+[^2]: We don't penalize $\theta_0$.
