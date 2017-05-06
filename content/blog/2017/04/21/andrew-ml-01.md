@@ -279,13 +279,13 @@ Since our cost function has changed, both gradient descent and normal equation h
 - Gradient Descent
 
 $$
-\begin{align*} 
-\text{Repeat\{ } && \\
-\theta_0 := \theta_0 - \alpha \times \frac{1}{m} \sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_0^{(i)} && \\
+\begin{align} 
+\text{Repeat\{ } && \nonumber \\
+\theta_0 := \theta_0 - \alpha \times \frac{1}{m} \sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_0^{(i)} &&  \label{eq:5} \\
 \theta_j := \theta_j - \alpha \times \lbrack \frac{1}{m} \sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} + 
-\frac{\lambda}{m}\theta_j\rbrack && (j = 1,2,3, \dots, n) \\
-\text{\}}
-\end{align*}
+\frac{\lambda}{m}\theta_j\rbrack && (j = 1,2,3, \dots, n) \label{eq:6} \\
+\text{\}} \nonumber
+\end{align}
 $$
 
 - Normal Equation
@@ -365,7 +365,7 @@ J(\theta) = -\frac{1}{m}\sum_{i=1}^m \lbrack
 + \frac{\lambda}{2m}\sum_{j=1}^n\theta_j^2
 $$
 
-and the gradient descent looks exactly the same as the regualarized linear regression.
+and the gradient descent looks exactly the same as the regualarized linear regression \ref{eq:5} and \ref{eq:6}. 
 
 ### In practice
 
