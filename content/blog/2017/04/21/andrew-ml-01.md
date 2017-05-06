@@ -154,7 +154,7 @@ where $X$ is called *design matrix*, and it has form
 
 $$
 \begin{align*} 
-& x = \left[\begin{array}{ccc} - & (x^{(1)})^T & - \\ - & (x^{(2)})^T & - \\ & \vdots & \\ - & (x^{(m)})^T & -\end{array} \right] &
+& X = \left[\begin{array}{ccc} - & (x^{(1)})^T & - \\ - & (x^{(2)})^T & - \\ & \vdots & \\ - & (x^{(m)})^T & -\end{array} \right] &
 x^{(i)} = \begin{bmatrix}x_0^{(i)} \\ \vdots \\ x_n^{(i)} \end{bmatrix} \in \mathbb{R} ^{n+1}
 \end{align*}
 $$
