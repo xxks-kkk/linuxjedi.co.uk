@@ -6,7 +6,7 @@ Summary: My solutions to selected problems in MAW Chapter 7
 
 ## Solutions
 
-including: MAW 7.1, 7.2, 7.3, 7.4, 7.5.a, 7.9, 7.10, 
+including: MAW 7.1, 7.2, 7.3, 7.4, 7.5.a, 7.9, 7.10, 7.11, 
 
 ### MAW 7.1
 
@@ -130,3 +130,38 @@ the increment sequence will be $45, 21 (22-1), 9, 3, 1$.
 
 In this case, conseuctive increments are relatively prime and by the argument in 
 the proof of theorem 7.4, we can have the worst case running time $O(N^{3/2})$.
+
+### MAW 7.11
+
+> Show how heapsort processes the input 142, 543, 123, 65, 453, 879, 572, 434, 111, 242, 
+> 811, 102.
+
+The input is read in as it appears in the question. Then, we first build the heap with 
+the result looks like
+
+```
+879, 811, 572, 434, 543, 123, 142, 65, 111, 242, 453, 102
+```
+
+$879$ is removed from the heap and placed at the end. We'll put *|* to separate the elements
+that are sorted and not part of the heap. $102$ is placed in the hole and bubbled down, obtaining
+
+```
+811, 543, 572, 434, 453, 123, 142, 65, 111, 242, 102, | 879
+```
+
+continuing the process, we obtain
+
+```
+572, 543, 142, 434, 453, 123, 102, 65, 111, 242, | 811, 879
+543, 453, 142, 434, 242, 123, 102, 65, 111, | 572, 811, 879
+453, 434, 142, 111, 242, 123, 102, 65, | 543, 572, 811, 879
+434, 242, 142, 111, 65, 123, 102, | 453, 543, 572, 811, 879
+242, 111, 142, 102, 65, 123, | 434, 453, 543, 572, 811, 879
+142, 111, 123, 102, 65, | 242, 434, 453, 543, 572, 811, 879
+123, 111, 65, 102, | 142, 242, 434, 453, 543, 572, 811, 879
+111, 102, 65, | 123, 142, 242, 434, 453, 543, 572, 811, 879
+102, 65, | 111, 123, 142, 242, 434, 453, 543, 572, 811, 879
+65, | 102, 111, 123, 142, 242, 434, 453, 543, 572, 811, 879
+| 65, 102, 111, 123, 142, 242, 434, 453, 543, 572, 811, 879
+```
