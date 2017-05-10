@@ -6,7 +6,7 @@ Summary: My solutions to selected problems in MAW Chapter 7
 
 ## Solutions
 
-including: MAW 7.1, 7.2, 7.3, 7.4, 7.5.a, 7.9, 7.10, 7.11, 
+including: MAW 7.1, 7.2, 7.3, 7.4, 7.5.a, 7.9, 7.10, 7.11, 7.12, 
 
 ### MAW 7.1
 
@@ -165,3 +165,11 @@ continuing the process, we obtain
 65, | 102, 111, 123, 142, 242, 434, 453, 543, 572, 811, 879
 | 65, 102, 111, 123, 142, 242, 434, 453, 543, 572, 811, 879
 ```
+
+### MAW 7.12
+
+> a. What is the running time of heapsort for presorted input?
+
+Still $O(N\log N)$. Heapsort uses at least (roughly) 
+$N\log N$ comparisons on any input, so there are no particularly
+good inputs.
