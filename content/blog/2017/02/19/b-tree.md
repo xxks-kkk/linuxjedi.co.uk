@@ -50,8 +50,8 @@ the customer information can be found in the customer table.
 
 <img src="/images/real-b-tree.PNG" alt="real-b-tree" style="width: 700px;"/>
 
-In this example, once we continue down the tree and locate the phone number we are searching for, we use the RID to fetch the 
-rest of the customer record from the table. In this case, we use 4 disk accesses.
+In this example, once we continue down the tree and locate the phone number we are searching for, we use the RID to fetch the rest of the customer record from the table. In this case, we use 4 page accesses to get the full customer
+record from the table.
 
 ## Operations
 
@@ -110,12 +110,14 @@ What makes B-trees so disk friendly?
     - Data-item size doesn't affect what $M$ is. We determine $M$ only by how many keys can be packed into a disk block (node).
       Thus, the key size, the children pointer size, and the block size are the only factors here.
 
+## Links to resources
 
-## Reference
+Here are some of the resources I found helpful while preparing this article:
 
 - MAW Chapter 4
-- https://courses.cs.washington.edu/courses/cse373/06sp/handouts/lecture15.pdf
-- https://courses.cs.washington.edu/courses/cse332/10sp/lectures/lecture8.pdf
-- https://courses.cs.washington.edu/courses/cse332/10sp/lectures/lecture9.pdf
-- http://www.cs.yale.edu/homes/aspnes/pinewiki/BTrees.html
-- http://ilpubs.stanford.edu:8090/85/1/1995-19.pdf
+- Lecture slides [15](https://courses.cs.washington.edu/courses/cse373/06sp/handouts/lecture15.pdf),
+[8](https://courses.cs.washington.edu/courses/cse332/10sp/lectures/lecture8.pdf), and 
+[9](https://courses.cs.washington.edu/courses/cse332/10sp/lectures/lecture9.pdf)
+from U.Washington
+- [Yale pinewiki on B-tree](http://www.cs.yale.edu/homes/aspnes/pinewiki/BTrees.html)
+- [Stanford B-tree implementation paper](http://ilpubs.stanford.edu:8090/85/1/1995-19.pdf)
