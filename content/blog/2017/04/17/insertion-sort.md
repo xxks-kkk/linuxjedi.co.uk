@@ -7,7 +7,9 @@ Summary: bubble sort, selection sort, and insertion sort
 This post summarizes three typical simple sorting algorithms: *bubble sort*, 
 *selection sort*, and *insertion sort*. In chapter 7, MAW mainly talks about 
 *insertion sort* but for the sake of completeness, I will include the other two as
-well.
+well [^1].
+
+[TOC]
 
 ## Bubble sort
 
@@ -114,7 +116,7 @@ sort routine always take the same time.
 ### Concept
 
 The idea for insertion sort is that we insert an as-yet-unprocessed record
-int a sorted list of the records processed so far. In details, insertion sort
+into a sorted list of the records processed so far. In details, insertion sort
 consists of $N-1$ passes. For pass $P = 1$ through $N-1$, insertion sort ensures
 that the elements in positions $0$ through $p$ are in sorted order. In pass $P$,
 we move the element in position $P$ left until its correct place is found among
@@ -161,14 +163,6 @@ and worst case: $\Theta (N^2)$.
 In addition, insertion sort is stable and in place. Insertion sort is the most 
 effectively used on input array with roughly $N < 20$ and for almost sorted array.
 
-\* ---- Note ---- *
-
-> [bubble sort video](https://youtu.be/8Kp-8OGwphY), 
-> [selection sort video](https://youtu.be/f8hXR_Hvybo), 
-> [insertion sort video](https://youtu.be/DFG-XuyPYUQ) and 
-> [this animation](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
-> can help you understand the concept.
-
 ## A Lower Bound for Simple Sorting Algorithms
 
 - An **inversion** is a pair of elements in wrong order (i.e. $i < j$ but $A[i] > A[j]$).
@@ -188,10 +182,18 @@ The idea is that we try to swap the elements that are far apart and hopefully we
 remove more than one inversion for each swap. Shell sort is the first algorithm
 to break $O(N^2)$ running time. I'll talk about it in my next post.
 
-## Reference
+## Links to resources
 
-- MAW Chapter 7
-- https://www.cs.duke.edu/courses/fall01/cps100/notes/sorting_cheat.txt
-- https://www.cs.rochester.edu/~brown/172/lectures/12_sort1/12sort1.html
-- https://courses.cs.washington.edu/courses/cse373/01sp/Lect15.pdf
-- http://web.mit.edu/1.124/LectureNotes/sorting.html
+Here are some of the resources I found helpful while preparing this article:
+
+1. MAW Chapter 7
+2. [Sorting cheat sheet from Duke U.](https://www.cs.duke.edu/courses/fall01/cps100/notes/sorting_cheat.txt)
+3. [Lecture 15](https://courses.cs.washington.edu/courses/cse373/01sp/Lect15.pdf) from U.Washington
+4. [Notes from MIT](http://web.mit.edu/1.124/LectureNotes/sorting.html)
+5. [Lecture from U.Rochester](https://www.cs.rochester.edu/~brown/172/lectures/12_sort1/12sort1.html)
+
+[^1]: [bubble sort video](https://youtu.be/8Kp-8OGwphY), [selection sort video](https://youtu.be/f8hXR_Hvybo), 
+[insertion sort video](https://youtu.be/DFG-XuyPYUQ) and 
+[this animation](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
+can help you understand the concept.
+

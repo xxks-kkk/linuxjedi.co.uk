@@ -77,7 +77,7 @@ Shellsort is good for up to $N \approx 10000$ and its simplcity makes it a favor
 
 ## Properties
 
-- an $h_k-sorted$ array that is then $h_{k-1}$ sorted remains $h_k$ sorted (why algorithm works).
+- an $h_k$-sorted array that is then $h_{k-1}$ sorted remains $h_k$ sorted (why algorithm works).
 - the action of an $h_k$-sort is to perform an insertion sort on $h_k$ independent subarrays with size about $N/h_k$ elements
 (i.e. $h_k = 6$ then there are 6 subarrays(by index): {0,6,12}, {1,7}, {2,8}, {3,9}, {4,10}, {5,11}).
 - a larger increment swaps more distant pairs (natural derivation of the above property).
