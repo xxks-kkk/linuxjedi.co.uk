@@ -89,7 +89,7 @@ Then for a B-tree of order $M$
 - Depth of B-tree storing $N$ items is $O(\log_{\lceil{M/2}\rceil}N)$
 
 Find then takes $O(\log M)$ to do binary search on each node to determine which branch to take. Then the total time is 
-O(depth $\times \log M$) = $O(\log N)$ because $M$ is small compared to $N$.
+$O(depth \times \log M)$ = $O(\log N)$ because $M$ is small compared to $N$.
 
 Insertion and deletion doesn't different from $O(\log N)$ because the unique manipulation takes constant amount of work and the number 
 of times this unique manipulation is proportional to the height of tree.
