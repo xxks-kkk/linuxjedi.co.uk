@@ -4,7 +4,7 @@
 Quotes
 ######
 
-Last Update: May 02, 2017
+Last Update: May 16, 2017
 
 "The Master in the art of living makes little distinction between his work 
 and his play, his labor and his leisure, his mind and his body, his 
@@ -15,6 +15,12 @@ To him he is always doing both."
 **-- Zen Philosophy** 
 
 .. stop-show-quotes
+
+"If you are not part of the solution, then you are part of the problem."
+**-- Eldridge Cleaver**
+
+"I cannot trust a man to control others who cannot control himself." 
+**-- Robert E. Lee**
 
 "My sword I leave to him who can wear it." **-- The Pilgrim's Progress** (found in 
 `Charlie Munger's USC law commencement speech <https://genius.com/Charlie-munger-usc-law-commencement-speech-annotated>`_)
