@@ -367,11 +367,11 @@ we have $\log _\phi N \ge H$, which is $H \le 1.44\log _2 N = O(\log N)$.
 
 > Show the result of inserting 2,1,4,5,9,3,6,7 into an initially empty AVL tree.
 
-<a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/trees/graphviz-src/maw-4-16.gv">
+<a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/graphviz-drawings/maw-4-16.gv">
 <img src="/images/maw-4-16.png" alt="maw-4-16" style="width: 700px;"/>
 </a>
 
-<!--[![maw-4-16](/images/maw-4-16.png)](https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/trees/graphviz-src/maw-4-16.gv)-->
+<!--[![maw-4-16](/images/maw-4-16.png)](https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/graphviz-drawings/maw-4-16.gv)-->
 
 ### MAW 4.17
 

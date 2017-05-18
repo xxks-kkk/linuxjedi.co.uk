@@ -118,7 +118,7 @@ Example
 Let's work through MAW 4.1, 4.2, and 4.3 to get the tree terminology clear.
 
 .. image:: /images/tree-terminology.png
-   :target: https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/trees/graphviz-src/tree-terminology.gv
+   :target: https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/graphviz-drawings/tree-terminology.gv
 
 - "A" is the *root*
 - "G", "H", "I", "L", "M", "K" are the *leaves*
