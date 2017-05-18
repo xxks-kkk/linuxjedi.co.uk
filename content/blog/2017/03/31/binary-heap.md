@@ -27,13 +27,7 @@ For every nodex $X$, the key in the parent of $X$ is smaller than (or equal to) 
 key in $X$, with the exception of the root (which has no parent). In other words,
 every node is less than or equal to its children.
 
-This property guarantees that the root node is always the smallest node.
-
-\* ---- Note ---- *
-
-> The heap order property is for min heap. If you want to have a max heap, then
-> the heap order property should be that every node is greater than or equal to 
-> its children.
+This property guarantees that the root node is always the smallest node [^1].
 
 Here are some examples:
 
@@ -63,7 +57,7 @@ expensive to do.
 We add the value as the new node at the end of the array, which is the next avaliable
 location in the tree. Then, we need to maintain the heap order property by doing 
 a simple insertion sort operation on the path from the new place to the root to find
-the correct place for it in the tree. This is called *percolate up*. 
+the correct place for it in the tree. This is called *percolate up* [^2]. 
 
 <img src="/images/binary-heap-percolate-up.PNG" alt="binary heap percolate up" style="width: 700px;"/>
 
@@ -73,13 +67,11 @@ the correct place for it in the tree. This is called *percolate up*.
 
 <img src="/images/binary-heap-percolate-up-done.PNG" alt="binary heap percolate up done"/>
 
-\* ---- Note ---- *
-
-> Position 0 is used as a sentinel, which holds the value that is smaller than
-> (or equal to) any element in the heap. This is because every iteration of insert
-> needs to test: 1. if it has reached the top node A[1] 2. if parent $\le$ item
-> The first test can be avoid by using sentinel b/c it then becomes a special case
-> of second test.
+[^2]: Position 0 is used as a sentinel, which holds the value that is smaller than
+(or equal to) any element in the heap. This is because every iteration of insert
+needs to test: 1. if it has reached the top node A[1] 2. if parent $\le$ item
+The first test can be avoid by using sentinel b/c it then becomes a special case
+of second test.
 
 ### DeleteMin
 
@@ -138,18 +130,16 @@ This alogrithm runs in $O(N)$ time. Detailed proof see MAW p.189.
 
 We merge two heaps $H1$ and $H2$ of size $O(N)$. $H1$ and $H2$ are stored in two
 arrays. We can do $O(N)$ insert but this requires $O(N\log N)$ time. We can do better
-by copy $H2$ at the end of $H1$ and use `BuildHeap`. This requires $O(N)$ time.
+by copy $H2$ at the end of $H1$ and use `BuildHeap`. This requires $O(N)$ time [^3].
 
 ## Runtime analysis
 
 - Space: $O(N)$ (an array of size $N+1$)
 - Insert: $O(\log N)$
 
-\* ---- Note ---- *
-
-> As shown on MAW p.183, empirical study shows that on average, percolation terminates
-> early: average *insert* moves an element up 1.607 levels. This means that 
-> binary heap support insertion in *constant average* time per operation.
+[^3]: As shown on MAW p.183, empirical study shows that on average, percolation terminates
+early: average *insert* moves an element up 1.607 levels. This means that 
+binary heap support insertion in *constant average* time per operation.
 
 - DeleteMin: $O(\log N)$
 
@@ -166,10 +156,15 @@ the minimum of $d$ children (in binary heap, we do comparison once). Then, for
 In terms of array implementation, for entry located in position $i$, the parent is
 at $\lfloor{\frac{i + (d-2)}{d}}\rfloor$ and the children are at $id-(d-2), \dots, id+1$.
 
+## Links to resources
 
-## Reference
+Here are some of the resources I found helpful while preparing this article:
 
 - MAW Chapter 6
-- https://courses.cs.washington.edu/courses/cse332/10sp/lectures/lecture4.pdf
-- https://courses.cs.washington.edu/courses/cse373/06sp/handouts/lecture08.pdf
-- https://courses.cs.washington.edu/courses/cse373/06sp/handouts/lecture11.pdf
+- Lecture slides [4](https://courses.cs.washington.edu/courses/cse332/10sp/lectures/lecture4.pdf),
+[8](https://courses.cs.washington.edu/courses/cse373/06sp/handouts/lecture08.pdf), and 
+[11](https://courses.cs.washington.edu/courses/cse373/06sp/handouts/lecture11.pdf) from U.Washington
+
+[^1]: The heap order property is for min heap. If you want to have a max heap, then
+the heap order property should be that every node is greater than or equal to 
+its children.
