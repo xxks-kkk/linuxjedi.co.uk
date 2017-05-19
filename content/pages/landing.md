@@ -10,9 +10,12 @@ which shipped with [DB2](http://www.ibm.com/analytics/us/en/technology/db2/), [d
 In my spare time I like to learn more about [programming]({filename}projects.rst). 
 You can also find more about me in my [LinkedIn page](http://cn.linkedin.com/in/zhu45)or my
 [resume]({attach}/assets/zeyuan-hu-cv.pdf). 
-This site contains fully about technical study and reflection. If you're interested in my life thoughts,
-book review, and any non-technical stuff, please see my [Wordpress blog](https://zeyuanhu.wordpress.com/).
-Besides writing and programming, I also enjoy [karaoke]({filename}songs.md), drawings, and cooking. 
+This site contains fully about technical study and reflection. 
+If you're interested in my life thoughts,
+book review, and any non-technical stuff, 
+please see my [Wordpress blog](https://zeyuanhu.wordpress.com/).
+Besides writing and programming, I also enjoy [karaoke]({filename}songs.md), drawings, 
+and food hunting. [More about me ...]({filename}more_about_me.md)
 
 I am contactable via. my personal email address ferrishu3886@gmail.com and am on twitter as [@zeyuanhu](https://twitter.com/zeyuanhu)
 
