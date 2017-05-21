@@ -15,7 +15,7 @@ If you're interested in my life thoughts,
 book review, and any non-technical stuff, 
 please see my [Wordpress blog](https://zeyuanhu.wordpress.com/).
 Besides writing and programming, I also enjoy [karaoke]({filename}songs.md), drawings, 
-and food hunting. [More about me ...]({filename}more_about_me.md)
+and cooking.
 
 I am contactable via. my personal email address ferrishu3886@gmail.com and am on twitter as [@zeyuanhu](https://twitter.com/zeyuanhu)
 

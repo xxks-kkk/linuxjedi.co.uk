@@ -29,6 +29,10 @@ every node is less than or equal to its children.
 
 This property guarantees that the root node is always the smallest node [^1].
 
+[^1]: The heap order property is for min heap. If you want to have a max heap, then
+the heap order property should be that every node is greater than or equal to 
+its children.
+
 Here are some examples:
 
 <img src="/images/binary-heap.PNG" alt="binary heap examples" style="width: 700px;"/>
@@ -165,6 +169,3 @@ Here are some of the resources I found helpful while preparing this article:
 [8](https://courses.cs.washington.edu/courses/cse373/06sp/handouts/lecture08.pdf), and 
 [11](https://courses.cs.washington.edu/courses/cse373/06sp/handouts/lecture11.pdf) from U.Washington
 
-[^1]: The heap order property is for min heap. If you want to have a max heap, then
-the heap order property should be that every node is greater than or equal to 
-its children.
