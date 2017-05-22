@@ -301,6 +301,14 @@ for logistic regression with regularization below as hint for this section.
 
 ## Logistic regression
 
+Logistic regression is used as a classification algorithm. It is better than the linear
+regression because 1) linear regression classification result is higly impacted by the
+outliers 2) linear regression result $h_\theta (x)$ can output value $>1$ or $<0$, which
+doesn't fit with the nature of classification task.
+
+In contrast, as we will see, logistic regression output $0 \ge h_\theta (x) \le 1$, which
+can be intrepreted from probabily perspective.
+
 ### In theory
 
 Logistic regression hypothesis is 
