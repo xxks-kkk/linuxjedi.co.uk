@@ -1,8 +1,8 @@
 Title: Andrew Ng's ML Week 04 - 05
-Date: 2017-05-23 17:18
+Date: 2017-05-23 22:20
 Category: Machine Learning
 Tags: ml, coursera
-Summary: neural network
+Summary: Neural network
 
 Week 4 and 5 mainly talks about one important learning technique called "Neural Networks".
 It is especially heplful when there are many features and hence, many combinations
@@ -78,7 +78,7 @@ gradient will all be identical and essentially we comput one feature in this net
 initialize the weights for symmetry breaking. 
 
 One effective strategy is to randomly select values for $\theta_{ij}^{l}$ uniformly in the range 
-[$-\epsilon_\text{init}$,$\epsilon_\text{init}$]. You can choose $\epsilon_\text{init}$ based upon
+[$-\epsilon_\text{init}$,$\epsilon_\text{init}$]. We can choose $\epsilon_\text{init}$ based upon
 the number of units in the network. A good choice of $\epsilon_\text{init}$ is 
 $\epsilon_\text{init} = \frac{\sqrt{6}}{\sqrt{L_\text{in} + L_\text{out}}}$, where
 $L_\text{in} = S_l$ and $L_\text{out} = S_{l+1}$, which are the the number of units
@@ -169,8 +169,56 @@ $$
 Here, $h_\theta(x^{(i)})_k$ means the $k$th output in the output layer. The second part of 
 the equation summs over all the weights $\theta_{ji}^{(l)}$ except the bias term (i.e. $i=0$).
 
-#### 5. Backward propagation
+#### 5. Backpropagation
 
+Once we have the cost function, our next step is to find the derivative terms 
+$\frac{\partial J(\theta)}{\partial \theta_{ij}^{(l)}}$ for every $i,k,l$ in order to use various octave 
+built-in method (i.e. `fminunc`) to minimize $J(\theta)$ as a function of $\theta$. We use backpropagation to do this.
+
+The intuition for the backpropagation is the following: given a training example $(x^{(i)}, y^{(i)})$, we will
+first run forward propagation to compute all the activiations throughout the network, including the output units.
+Then, for each node $j$ in layer $l$, we would like to compute an "error term" $\delta_j^{(l)}$ that measures how
+much that node was "responsible" for any errors in our output. For an output node, we can directly measure the
+difference between the network's activation and the true target value, and use that to define $\delta_j^{(L)}$.
+For the hidden units, we can compute $\delta_j^{l}$ based on a weighted average of the error terms of the nodes in layer
+$(l+1)$.
+
+Here is the algorithm in details: [^4]
+
+- Given training set {$(x^{(1)}, y^{(1)}), \dots, (x^{(m)}, y^{(m)})$}
+- Set $\Delta_{ij}^{(l)} = 0$ (for all $i,l,j$)
+
+- `For i=1:m,`
+
+    1. perform [forward propagation](#3-forward-propagation) to compute $a^{(l)}$ for $l = 2, 3, \dots, L$ 
+    2. using $y^{(i)}$, compute $\delta^{(L)} = a^{(L)} - y^{(i)}$
+    3. compute $\delta^{(L-1)}, \delta^{(L-2)}, \dots, \delta^{(2)}$ using 
+    $\delta^{(l)} = ((\Theta^{(l)})^T \delta^{(l+1)}).\ast a^{(l)}.\ast (1-a^{(l)})$
+    4. $\Delta_{ij}^{(l)} := \Delta_{ij}^{(l)} + a_j^{(l)}\delta_i^{(l+1)}$
+       (Vectorized form is $\Delta^{(l)} := \Delta^{(l)} + \delta^{(l)}(a^{(l)})^T$)
+
+- $D_{ij}^{(l)} := \frac{1}{m}\Delta_{ij}^{(m)} + \frac{\lambda}{m}\theta_{ij}^{(l)} \text{ if } j \ne 0$ and
+$D_{ij}^{(l)} := \frac{1}{m}\Delta_{ij}^{(m)} \text{ if } j = 0$. 
+
+- $\frac{\partial J(\theta)}{\partial \theta_{ij}^{(l)}} = D_{ij}^{(l)}$
+
+Intuitvely, backpropagation algorithm is alot like forward propagation running backward. We can then use gradient
+descent or advanced optimization method to try to minimize $J(\theta)$ as a function of parameters $\theta$ [^5].
+
+[^4]: Notice that we don't compute $\delta_{(1)}$ because $\delta_{(1)}$ is associated with the input layer, which are
+features we observed from the training examples. So, there are no "error" involved. In addition, $.\ast$ means we 
+do element-wise multiplication in octave.
+
+[^5]: You can use [gradient checking](https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/andrew-ng-ml/machine-learning-ex4/ex4/computeNumericalGradient.m) 
+to verify if the backpropagation is implemented correctly. 
 
 ## Implementation details
 
+Week 5's programming assignment on NN learning is the most challenging one I have met so far in this course. Initially, 
+I plan to go through lots of details in terms of implementation in this section. However, after I finish the model
+section above and take a look at the assignment code again, I realize that the algorithms described above reflect
+fair accurately on how the code should be written. 
+
+However, there is one point I want to emphasize $a_{(1)}$ is a vector with dimension $n \times 1$. This is important
+if you want to apply the algorithms exactly. When I first coded the program, my $a_{(1)}$ is a row vector with dimension
+$1 \times n$, which causes me much trouble for the rest of implementations.
