@@ -76,8 +76,12 @@ gradient will all be identical and essentially we comput one feature in this net
 initialize the weights for symmetry breaking. 
 
 One effective strategy is to randomly select values for $\theta_{ij}^{l}$ uniformly in the range 
-[$-\epsilon_\text{init}$,$\epsilon_\text{init}$].
-
+[$-\epsilon_\text{init}$,$\epsilon_\text{init}$]. You can choose $\epsilon_\text{init}$ based upon
+the number of units in the network. A good choice of $\epsilon_\text{init}$ is 
+$\epsilon_\text{init} = frac{\sqrt{6}}{\sqrt{L_\text{in} + L_\text{out}}}$, where
+$L_\text{in} = S_l$ and $L_\text{out} = S_{l+1}$, which are the the number of units
+in the layers adjacent to $\Theta_{(l)}$. Take above NN as an example, our 
+$\epsilon_\text{init}$ will be $0.87$, which is calculated from $\frac{\sqrt{6}}{\sqrt{3+5}}$.
 
 ## Implementation details
 
