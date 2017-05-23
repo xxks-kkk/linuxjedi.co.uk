@@ -33,7 +33,6 @@ respectively.
 - $\Theta^{(l)} =$ matrix of weights controlling function mapping from layer $l$ to layer $l+1$.
 For example, [^1]
 
-```
 $$
 \Theta^{(1)} = \begin{bmatrix} 
 \theta_{10}^{(1)} && \theta_{11}^{(1)} && \theta_{12}^{(1)} && \theta_{13}^{(1)} \\
@@ -47,10 +46,13 @@ $$
 $\theta_{10}^{1}$ means weight from $x_0$ in layer $1$ to $a_1$ in layer $2$. In other words,
 $\theta_{ji}^{l}$ means weight from $a_i^{l}$ to $a_j^{l+1}$. Then the rows in the
 matrix can be thought of as the weights from neurons in layer $l$ to corresponding $a_j$ in layer $l+1$ 
-(i.e., 1st row in the above example means weights from layer $1$ to $a_1$ in layer $2$).
+(i.e., 1st row in the above example means weights from layer $1$ to $a_1$ in layer $2$). 
+Explicitly, the number of columns in our current theta matrix is equal to the number of 
+nodes in our current layer (including the bias unit). The number of rows is equal to the number
+of nodes in the next layer (excluding the bias unit).
 
-- $k =$ number of neurons in the output layer (i.e. $S_L = k$). In other words, $k$ represents the number of classes
-in multi-class classification. This indicates that $h_\theta(x) = \mathbb{R}^k$. [^2]
+- $K =$ number of neurons in the output layer (i.e. $S_L = K$). In other words, $k$ represents the number of classes
+in multi-class classification. This indicates that $h_\theta(x) = \mathbb{R}^K$. [^2]
 
 [^2]: Usually, in our training sets {$(x^{(1)}, y^{(1)}), \dots, (x^{(m)}, y^{(m)})$}, we are given actual label (i.e. 
 $y^{(9)} = 10$ for handwritten digit recognition). However, we need to transform those labels into $\mathbb{R}^k$ by doing,for instance, create $\mathbb{R}^{10}$ vector with last position being $1$ and rest being $0$
@@ -71,17 +73,104 @@ hidden units in every layer. Usually, the more hidden units the better.
 
 #### 2. Randomly initialize weights
 
-Zero initialization is considered bad for NN (i.e. $\theta_{ij}^{l}$ for all $i,j,l$) because our activation output and
+Zero initialization is considered bad for NN (i.e. $\theta_{ij}^{l} = 0$ for all $i,j,l$) because our activation output and
 gradient will all be identical and essentially we comput one feature in this network. That's why we need to randomly 
 initialize the weights for symmetry breaking. 
 
 One effective strategy is to randomly select values for $\theta_{ij}^{l}$ uniformly in the range 
 [$-\epsilon_\text{init}$,$\epsilon_\text{init}$]. You can choose $\epsilon_\text{init}$ based upon
 the number of units in the network. A good choice of $\epsilon_\text{init}$ is 
-$\epsilon_\text{init} = frac{\sqrt{6}}{\sqrt{L_\text{in} + L_\text{out}}}$, where
+$\epsilon_\text{init} = \frac{\sqrt{6}}{\sqrt{L_\text{in} + L_\text{out}}}$, where
 $L_\text{in} = S_l$ and $L_\text{out} = S_{l+1}$, which are the the number of units
-in the layers adjacent to $\Theta_{(l)}$. Take above NN as an example, our 
-$\epsilon_\text{init}$ will be $0.87$, which is calculated from $\frac{\sqrt{6}}{\sqrt{3+5}}$.
+in the layers adjacent to $\Theta^{(l)}$. Take above NN as an example, our 
+$\epsilon_\text{init}$ will be $0.87$, which is calculated from $\frac{\sqrt{6}}{\sqrt{3+5}}$. [^3]
+
+[^3]: Here, it is unclear for me which two layers we should choose to calculate 
+$\epsilon_\text{init}$. In the [programming assignment 4](https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/andrew-ng-ml/machine-learning-ex4/ex4),
+the value is calculated from the layer 1 (input layer) and layer 2 (1st hidden layer).
+
+
+#### 3. Forward propagation 
+
+The next step we need to do is to use forward propagation to get $h_\theta(x^{(i)})$ for any $x^{(i)}$.
+Let's use above NN as an example to demonstrate how forward propagation is done. There are
+$4$ output units in the output layer and thus, our $h_\theta(x^{(i)})$ looks like
+
+$$
+h_\theta(x^{(i)}) = \begin{bmatrix}
+a_1^{(4)} \\
+a_2^{(4)} \\
+a_3^{(4)} \\
+a_4^{(4)} \\
+\end{bmatrix}
+$$
+
+The general idea for the forward propagation is that we take in the input from previous 
+layer, and multiply with our weights, and then apply our sigmoid function to get the
+activation value for the current layer. We start with the input layer and do this 
+iteratively until we get to output layer, which its activation value will be our 
+$h_\theta(x^{(i)})$.
+
+Concretely, let's first represent our input layer (with bias term) as  $x$ and 
+define a new variable $z^{(j)}$ as following:
+
+$$
+\begin{align*}
+& x = \begin{bmatrix} x_0 \\ x_1 \\ \dots \\ x_n \end{bmatrix}
+&&
+z^{(j)} = \begin{bmatrix} z_1^{(j)} \\ z_2^{(j)} \\ \dots \\ z_n^{(j)} \end{bmatrix}
+\end{align*}
+$$
+
+Then, we can calculate the activation value $a^{(j)}$ for the layer j as follows
+(treating $x = a^{(1)}$):
+
+1. Add bias term $a_0^{(j-1)} = 1$ to $a^{(j-1)}$ and our new $a^{(j-1)}$ looks like 
+
+    $$
+    a^{(j-1)} = \begin{bmatrix} a_0^{(j-1)} \\ a_1^{(j-1)} \\ \dots \\ a_n^{(j-1)} \end{bmatrix}
+    $$
+
+2. Calculate $z^{(j)}$ as follows:
+
+    $$
+    z^{(j)} = \Theta^{(j-1)}a^{(j-1)}
+    $$
+
+    Here, $\Theta^{(j-1)}$ has dimension $S_j \times (S_{j-1} + 1)$ and $a^{(j-1)}$ has 
+    dimension $(S_{j-1} + 1) \times 1$. Then, our vector $z^{(j)}$ has height $S_j$.
+
+3. We get a vector of our activation nodes for layer $j$ as follows:
+
+$$
+a^{(j)} = g(z^{(j)})
+$$
+
+We repeat these three steps and get $h_\theta(x^{(i)})$, which in our NN is the activation
+value $a^{(4)}$ for $i$-th training example. 
+
+One key intuition for forward propagation is that the whole process is just like logistic
+regression except that rather than using original feature $x_1, x_2, \dots, x_n$, it uses
+new features $a^{(L-1)}$, which are learned by the NN itself.
+
+#### 4. Cost function $J(\theta)$
+
+Now we need to compute the cost function $J(\theta)$ of the NN in order to minimize
+the classification error with the given data. Since NN shares a lot similarity with
+the logistic regression, it's no hard to imagine that the NN's cost function $J(\theta)$
+shares the similar form with the logistic regression's cost function:
+
+$$
+J(\theta) = - \frac{1}{m} [ \sum_{i=1}^m \sum_{k=1}^K y_k^{(i)} \log h_\theta(x^{(i)})_k + 
+(1 - y_k^{(i)}) \log(1-h_\theta(x^{(i)})_k)] + \frac{\lambda}{2m} 
+\sum_{l=1}^{L-1}\sum_{i=1}^{S_l}\sum_{j=1}^{S_l+1}(\theta_{ji}^{(l)})^2
+$$
+
+Here, $h_\theta(x^{(i)})_k$ means the $k$th output in the output layer. The second part of 
+the equation summs over all the weights $\theta_{ji}^{(l)}$ except the bias term (i.e. $i=0$).
+
+#### 5. Backward propagation
+
 
 ## Implementation details
 
