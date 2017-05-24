@@ -219,6 +219,6 @@ I plan to go through lots of details in terms of implementation in this section.
 section above and take a look at the assignment code again, I realize that the algorithms described above reflect
 fair accurately on how the code should be written. 
 
-However, there is one point I want to emphasize $a_{(1)}$ is a vector with dimension $n \times 1$. This is important
-if you want to apply the algorithms exactly. When I first coded the program, my $a_{(1)}$ is a row vector with dimension
+However, there is one point I want to emphasize $a^{(1)}$ is a vector with dimension $n \times 1$. This is important
+if you want to apply the algorithms exactly. When I first coded the program, my $a^{(1)}$ is a row vector with dimension
 $1 \times n$, which causes me much trouble for the rest of implementations.
