@@ -195,7 +195,7 @@ Here is the algorithm in details: [^4]
     3. compute $\delta^{(L-1)}, \delta^{(L-2)}, \dots, \delta^{(2)}$ using 
     $\delta^{(l)} = ((\Theta^{(l)})^T \delta^{(l+1)}).\ast a^{(l)}.\ast (1-a^{(l)})$
     4. $\Delta_{ij}^{(l)} := \Delta_{ij}^{(l)} + a_j^{(l)}\delta_i^{(l+1)}$
-       (Vectorized form is $\Delta^{(l)} := \Delta^{(l)} + \delta^{(l)}(a^{(l)})^T$)
+       (Vectorized form is $\Delta^{(l)} := \Delta^{(l)} + \delta^{(l+1)}(a^{(l)})^T$)
 
 - $D_{ij}^{(l)} := \frac{1}{m}\Delta_{ij}^{(m)} + \frac{\lambda}{m}\theta_{ij}^{(l)} \text{ if } j \ne 0$ and
 $D_{ij}^{(l)} := \frac{1}{m}\Delta_{ij}^{(m)} \text{ if } j = 0$. 
@@ -222,3 +222,9 @@ fair accurately on how the code should be written.
 However, there is one point I want to emphasize $a^{(1)}$ is a vector with dimension $n \times 1$. This is important
 if you want to apply the algorithms exactly. When I first coded the program, my $a^{(1)}$ is a row vector with dimension
 $1 \times n$, which causes me much trouble for the rest of implementations.
+
+$\Delta^{(l)} := \Delta^{(l)} + \delta^{(l+1)}(a^{(l)})^T$ looks confusing for me as well 
+for the first time. My question is how many $\Delta^{(l)}$ are there. My trick is to take 
+a look at the last term of the equation. $\delta^{(l+1)}(a^{(l)})^T$ indicates that $\Delta^{(l)}$
+starts with the second last layer and there is one until input layer (including).
+So, in our NN above, there are three $\Delta^{(l)}$ we should update. 
