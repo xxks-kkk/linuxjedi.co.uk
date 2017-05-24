@@ -51,7 +51,7 @@ Explicitly, the number of columns in our current theta matrix is equal to the nu
 nodes in our current layer (including the bias unit). The number of rows is equal to the number
 of nodes in the next layer (excluding the bias unit).
 
-- $K =$ number of neurons in the output layer (i.e. $S_L = K$). In other words, $k$ represents the number of classes
+- $K =$ number of neurons in the output layer (i.e. $S_L = K$). In other words, $K$ represents the number of classes
 in multi-class classification. This indicates that $h_\theta(x) = \mathbb{R}^K$. [^2]
 
 [^2]: Usually, in our training sets {$(x^{(1)}, y^{(1)}), \dots, (x^{(m)}, y^{(m)})$}, we are given actual label (i.e. 
