@@ -1,5 +1,5 @@
 Title: Drawing a Neural Network through Graphviz 
-Date: 2017-05-23 22:20
+Date: 2017-05-25 22:20
 Category: tools
 Tags: ml, graphviz
 Summary: Use NN as an example to show graphviz tricks
@@ -56,7 +56,7 @@ edge[style=invis];
 2. `splines=false` controls how the edges are represented and in this case, edges 
 are drawn as line segments.
 3. `edge[style=invis]` forces edges to become invisible. This is a common trick to tweak
-graphviz layout. I'll talk more about it in the next section.
+graphviz layout. 
 
 ```{C}
 {
@@ -137,20 +137,63 @@ chunk provides a simpler way to achieve the same purpose.
 From our NN drawing example, there are two recurring tricks when we tweak Graphviz 
 picture layout:
 
-- Invisible nodes
+- Invisible nodes/edges
 - Rank constraints
 
+### Invisible nodes/edges
 
+In the above example, we use invisible edges to specify the ordering of nodes within
+each NN layer. In addition, we use node with `plaintext` shape to specify the text label
+in the layer.
 
+Usually, we use invisible edges to specify what nodes should line up and sometimes
+we use invisible nodes to take up space to keep the graph in a specific structure.
+[This SO post](https://stackoverflow.com/questions/7374108/graphviz-node-placement-and-rankdir)
+demonstrates how we can use invisible nodes and edges in combination to create 
+a fancy picture. 
+[This SO post](https://stackoverflow.com/questions/27091591/graphviz-dot-vertical-alignment-of-nodes)
+is another example to show how to use "invisible edges" (it uses another trick called
+`group` attribute).
 
+### Rank constraints
 
+If you check [official doc](http://www.graphviz.org/doc/info/attrs.html#d:rank),
+here is what rank does:
 
+> Rank constraints on the nodes in a subgraph. If rank="same", 
+> all nodes are placed on the same rank. If rank="min", all nodes are placed on the minimum rank. 
+> If rank="source", all nodes are placed on the minimum rank, and the only nodes on the minimum 
+> rank belong to some subgraph whose rank attribute is "source" or "min". Analogous criteria hold 
+> for rank="max" and rank="sink". (Note: the minimum rank is topmost or leftmost, and the maximum 
+> rank is bottommost or rightmost.)
 
+Let's demonstrate this description with a simple example [^4]:
 
+[^4]: The example is adapted from [this SO post](https://stackoverflow.com/questions/6149834/rank-attribute-is-confusing-to-me).
 
+```{C}
+digraph G
+{
+  {rank=source; a->b;}
+  {rank=same; c->d;}
+}
+```
 
-https://stackoverflow.com/questions/7374108/graphviz-node-placement-and-rankdir
+This example gives a graph with two rows. `a->b` is above `c->d`.
+However, if I change `{rank=source; a->b;}` to `{rank=min; a->b;}`, we'll
+end up with one row: `a->b` will be to the left of `c->d`. This is due to
+the difference between `min` and `source`: `min` allows other subgraphs in the
+minimum rank. However, `source` only allows other subgraphs of `min` or `source`
+to be on the minimum rank (we have `same` in this case).
 
-https://stackoverflow.com/questions/27091591/graphviz-dot-vertical-alignment-of-nodes
+`sink` and `max` works similarly. For instance, the below example gives a picture
+with `c->d` at the top and `a->b` at the bottom:
+
+```{C}
+digraph G{
+  {rank=sink; a->b;}
+  {rank=same; c->d;}
+}
+```
 
 
