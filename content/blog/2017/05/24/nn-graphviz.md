@@ -39,8 +39,10 @@ I want to clearly label all the nodes in all layers and make distinction among f
 input, bias term, hidden units, and output units. So, I decide to draw one on my own.
 
 Here is the [code](https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/graphviz-drawings/nn3.dot)
-that generates the [my blog NN picture](http://zhu45.org/images/nn2.png) [^2]. Let me briefly
+that generates the picture below [^2]. Let me briefly
 highlights some key points in the code:
+
+![]({filename}/images/nn2.png)
 
 [^2]: Technically, the code used to generate the blog NN picture is 
 [this one](https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/graphviz-drawings/nn2.dot)
