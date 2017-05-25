@@ -85,9 +85,60 @@ for more examples on grouping nodes with the same attributes.
   x0->x1->x2->x3;
 }
 ```
+1. `rank=same` is another trick I'll talk about later. This specifies what "layer"
+(or "rank" by official term) a set of nodes belongs. You can read [the official doc](http://www.graphviz.org/doc/info/attrs.html#d:rank) for the details.
+2. `x0->...->x3` specifies the relative position of the four nodes. Since the graph is
+arranged from left to right (indicate by `rankdir = LR`), then the "layer" is vertical.
+Then by `x0->...->x3`, the first node will be `x0`, followed by `x1`, and so on. Also,
+we have `edge[style=invis]` and this will hide the edges among these four nodes. This 
+is how we draw the NN layers.
+
+```{C}
+a02->a03;
+```
+
+1. This line is used to prevent tilting of the graph. As you can see, we specify
+how the nodes should be arranged in a layer but we don't much constraint on how
+the layers should be positioned except `rankdir=LR`, which says layers should be 
+ordered from left to right. `a02->a03` says layer with `a02` should be lined up with 
+layer with `a03`.
+
+```{C}
+l0 [shape=plaintext, label="layer 1 (input layer)"];
+l0->x0;
+{rank=same; l0;x0};
+```
+
+1. This code chunk is how we add label text to each layer. As you can see we use
+another node `l0` with shape `plaintext`, which says `l0` is just a text message.
+Then we connect it with the first node of layer 1 `x0`, which serves as attaching
+the text to the layer 1.
+
+```{C}
+edge[style=solid, tailport=e, headport=w];
+```
+
+1. We specify the edge style again. This will only affect the edges after this setup
+not before. One small trick here is `tailport=e, headport=w`. This will let all the edges
+point to the same position.
+
+```{C}
+{x0; x1; x2; x3} -> {a12;a22;a32;a42;a52};
+{a02;a12;a22;a32;a42;a52} -> {a13;a23;a33;a43;a53};
+{a03;a13;a23;a33;a43;a53} -> {O1,O2,O3,O4};
+```
+
+1. This code chunk is how we actually draw the edges. In the simple example above,
+it explicitly draws the edges between two nodes. It is quite pain to do. Above code
+chunk provides a simpler way to achieve the same purpose.
 
 ## Graphviz tweaks
 
+From our NN drawing example, there are two recurring tricks when we tweak Graphviz 
+picture layout:
+
+- Invisible nodes
+- Rank constraints
 
 
 
