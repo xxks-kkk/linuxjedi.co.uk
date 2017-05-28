@@ -286,8 +286,8 @@ later in the course and the only thing they require is the gradients.
 
 $$
 \begin{align*}
-\frac{\partial J(\theta)}{\partial \theta_0} &=& \frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_0^{(i)} && \text{ for} j = 0 \\
-\frac{\partial J(\theta)}{\partial \theta_j} &=& \Big(\frac{1}{m} \sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}\Big) + \frac{\lambda}{m}\theta_j && \text{ for} j \ge 1
+\frac{\partial J(\theta)}{\partial \theta_0} &=& \frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} && \text{ for } j = 0 \\
+\frac{\partial J(\theta)}{\partial \theta_j} &=& \Big(\frac{1}{m} \sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}\Big) + \frac{\lambda}{m}\theta_j && \text{ for } j \ge 1
 \end{align*}
 $$
 
