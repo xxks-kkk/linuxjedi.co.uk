@@ -278,6 +278,19 @@ $$
 \end{align}
 $$
 
+Here, it is might be a good time to write out the gradient explicitly (rather than embedding them in 
+the gradient descent algorithm). 
+[Gradient descent](http://eli.thegreenplace.net/2016/understanding-gradient-descent/) 
+is only one of many algorithms that optimizes a given function. We will use other algorithms
+later in the course and the only thing they require is the gradients.
+
+$$
+\begin{align*}
+\frac{\partial J(\theta)}{\partial \theta_0} &=& \frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_0^{(i)} && \text{ for} j = 0 \\
+\frac{\partial J(\theta)}{\partial \theta_j} &=& \Big(\frac{1}{m} \sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)}\Big) + \frac{\lambda}{m}\theta_j && \text{ for} j \ge 1
+\end{align*}
+$$
+
 - Normal Equation
 
 $$
@@ -296,8 +309,16 @@ we want $\lambda > 0$ so that the matrix is invertible.
 ### In practice
 
 Linear regression regularization implementation doesn't differ from no-regularization
-implementation in terms of matrices implementation technique. I'll show a code snippet
-for logistic regression with regularization below as hint for this section.
+implementation in terms of matrices implementation technique. The following code chunk
+demonstrates a way to calculate the cost function $J(\theta)$ and the gradients (not gradient descent):
+
+```{octave}
+J = 1/(2*m)*(sum((X*theta-y).^2)) + lambda/(2*m)*(sum(theta(2:end).^2));         
+G = (lambda/m) .* theta;
+G(1) = 0; 
+grad = ((1/m) * X' * (X*theta - y)) + G;
+grad = grad(:);
+```
 
 ## Logistic regression
 
