@@ -278,7 +278,7 @@ $$
 \end{align}
 $$
 
-Here, it is might be a good time to write out the gradient explicitly (rather than embedding them in 
+Here, it might be a good time to write out the gradient explicitly (rather than embedding them in 
 the gradient descent algorithm). 
 [Gradient descent](http://eli.thegreenplace.net/2016/understanding-gradient-descent/) 
 is only one of many algorithms that optimizes a given function. We will use other algorithms

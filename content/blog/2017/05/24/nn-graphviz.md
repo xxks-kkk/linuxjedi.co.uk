@@ -134,7 +134,7 @@ point to the same position.
 it explicitly draws the edges between two nodes. It is quite pain to do. Above code
 chunk provides a simpler way to achieve the same purpose.
 
-## Graphviz tweaks
+## Graphviz tricks
 
 From our NN drawing example, there are two recurring tricks when we tweak Graphviz 
 picture layout:
