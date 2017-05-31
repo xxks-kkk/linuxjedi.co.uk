@@ -1,4 +1,4 @@
-Title: Drawing a Neural Network through Graphviz 
+Title: Draw a Neural Network through Graphviz 
 Date: 2017-05-25 22:20
 Category: tools
 Tags: ml, graphviz
