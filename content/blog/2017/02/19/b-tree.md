@@ -76,7 +76,7 @@ a neighbor. If leaf underflows and can't borrow, we merge nodes and delete paren
 ## Runtime analysis
 
 We first show that height $H$ is logarithmic in number of data items $N$. Let $M \ge 2$. Because all nodes are at least half full (except root may have
-only 2 children) and all leaves are at the same level, the minimum number od data items $N$ for a height $H$ tree is 
+only 2 children) and all leaves are at the same level, the minimum number of data items $N$ for a height $H$ tree is 
 
 $$
 N \ge \underbrace{2(\lceil{M/2}\rceil)^{H-1}}_\textrm{min number of leaves}\times\underbrace{\lceil{L/2}\rceil}_\textrm{min data per leaf}

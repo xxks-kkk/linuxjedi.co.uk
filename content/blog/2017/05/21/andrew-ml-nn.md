@@ -7,7 +7,7 @@ Summary: Neural network
 Week 4 and 5 mainly talks about one important learning technique called "Neural Networks".
 It is especially heplful when there are many features and hence, many combinations
 for the [linear or logistic regressions]({filename}/blog/2017/04/21/andrew-ml-01.md). 
-Interestingly, I have studied neural networks
+Interestingly, I studied neural networks
 [previously](https://www.dropbox.com/s/hkym4s135amgmxv/HU.pdf?dl=0) 
 when I was a student at college. It may feel different when we revisit old friend.
 

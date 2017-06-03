@@ -7,7 +7,8 @@ My day job is as a Software Engineer at IBM working on [Federation Server](http:
 which shipped with [DB2](http://www.ibm.com/analytics/us/en/technology/db2/), [dashDB](http://www.ibm.com/analytics/us/en/technology/cloud-data-services/dashdb/), 
 [BigSQL](https://www-01.ibm.com/software/data/infosphere/hadoop/big-sql.html), and many other IBM data warehouse solutions. 
 
-In my spare time I like to learn more about [programming]({filename}projects.rst). 
+In my spare time I like to learn more about [programming]({filename}projects.rst) and
+get exposure to machine learning and natural language processing. 
 You can also find more about me in my [LinkedIn page](http://cn.linkedin.com/in/zhu45)or my
 [resume]({attach}/assets/zeyuan-hu-cv.pdf). 
 This site contains fully about technical study and reflection. 
