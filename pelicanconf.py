@@ -36,7 +36,7 @@ SOCIAL = (('GitHub', 'http://github.com/xxks-kkk'),
           ('LinkedIn', 'https://cn.linkedin.com/in/zhu45')
          )
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True

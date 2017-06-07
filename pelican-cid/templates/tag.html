@@ -5,22 +5,37 @@
 <section id="content" class="body">
 {# based on http://stackoverflow.com/questions/12764291/jinja2-group-by-month-year #}
 
-<h1>Archives by tag '{{ tag }}'</h1>
+<h1 class="post-title">Archives by tag '{{ tag }}'</h1>
 
-<table class="tag-list">
-  <tbody>
+<!-- <table class="tag-list"> -->
+<!--   <tbody> -->
+<!-- {% for year, year_group in dates|groupby('date.year')|reverse %} -->
+<!--   {% for month, month_group in year_group|groupby('date.month')|reverse %} -->
+<!--     {% for article in month_group %} -->
+<!--       <tr> -->
+<!--       <td style="padding-right: 10px">{{ article.date|archive_date_format }}:</td> -->
+<!--       <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td> -->
+<!--       </tr> -->
+<!--     {% endfor %} -->
+<!--   {% endfor %} -->
+<!-- {% endfor %} -->
+<!--   </tbody> -->
+<!-- </table> -->
+
+  <table class="postindex">
+    <tbody>
 {% for year, year_group in dates|groupby('date.year')|reverse %}
   {% for month, month_group in year_group|groupby('date.month')|reverse %}
-    {% for article in month_group %}
+    {% for article in month_group %}      
       <tr>
-      <td style="padding-right: 10px">{{ article.date|archive_date_format }}:</td>
-      <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
+        <td><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></td>
+        <td class="right"><time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime('%Y-%m-%d') }}</time></td>
       </tr>
-    {% endfor %}
-  {% endfor %}
-{% endfor %}
-  </tbody>
-</table>
+      {% endfor %}
+      {% endfor %}
+      {% endfor %}
+    </tbody>
+  </table>
 
 </section>
 {% endblock %}
