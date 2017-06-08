@@ -54,7 +54,7 @@ splines=false;
 edge[style=invis];
 ```
 
-1. `rankdir=LR` makes the directed graphs drawn from top to bottom.
+1. `rankdir=LR` makes the directed graphs drawn from left to right.
 2. `splines=false` controls how the edges are represented and in this case, edges 
 are drawn as line segments.
 3. `edge[style=invis]` forces edges to become invisible. This is a common trick to tweak

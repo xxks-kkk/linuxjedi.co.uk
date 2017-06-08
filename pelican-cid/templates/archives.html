@@ -32,7 +32,7 @@
 </p>
 
 <p>
-<h2>Archives by year</h2>
+<h2>By year</h2>
 
 {% for year, numposts in articles|groupby('date.year') %}
  <li><a href="{{ SITEURL }}/archives/{{ year }}/period_archives.html">{{ year }} ({{ numposts|count }})</a></li>
@@ -40,7 +40,7 @@
 </p>
 
 <p>
-<h2>Archives by tag</h2>
+<h2>By tag</h2>
 
 {% for tag, articles in tags|sort %}
   <li><a href="{{ SITEURL }}/tag/{{ tag|lower }}.html">{{ tag }} ({{ articles|count }})</a></li>
