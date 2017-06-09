@@ -313,6 +313,13 @@ a:hover {
   text-decoration: none;
   border-bottom: none; }
 
+blockquote {
+  font-style: italic;
+  font-weight: 300;
+  border: 1px solid #ccc;
+  padding: 2px 20px 2px 20px;
+  margin: 3px; }
+
 li {
   margin: 4px; }
 
@@ -479,12 +486,6 @@ body {
     .container .post .highlight {
       font-size: 0.9em;
       overflow-x: auto; }
-    .container .post blockquote {
-      font-style: italic;
-      font-weight: 300;
-      border: 1px solid #ccc;
-      padding: 2px 20px 2px 20px;
-      margin: 3px; }
     .container .post header {
       margin: 2.2em 0; }
       .container .post header h1 {

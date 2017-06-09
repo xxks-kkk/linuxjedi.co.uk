@@ -34,7 +34,7 @@
 <p>
 <h2>By year</h2>
 
-{% for year, numposts in articles|groupby('date.year') %}
+{% for year, numposts in articles|groupby('date.year')|sort(reverse=True) %}
  <li><a href="{{ SITEURL }}/archives/{{ year }}/period_archives.html">{{ year }} ({{ numposts|count }})</a></li>
 {% endfor %}
 </p>
