@@ -25,8 +25,6 @@ than the minimum of the $Npl$ of its children.
 - leftist heap property is that for every node $X$ in the heap, the $Npl$ of the
 left child is at least as large as that of the right child.
 
-\* ---- Note ---- *
-
 > In fact, the leftist heap property is the leftist property applies to heap.
 > In other words, if every node in a tree has the $Npl$ of the left child
 > is at least as large as that of the right child, then we call this tree
@@ -41,8 +39,6 @@ only the left tree is leftist.
 
 - If rightmost path of leftist tree has $r$ nodes, then the whole tree has at least
 $2^r-1$ nodes. 
-
-\* ---- Note ---- *
 
 > The above property leads to: $n \ge 2^r-1$, so $r$ is $O(\log N)$. Since our 
 > fundamental operation `merge` will perform all the work on the right path,

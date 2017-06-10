@@ -4,6 +4,8 @@
 Quotes
 ######
 
+:template: quotes
+
 "The Master in the art of living makes little distinction between his work 
 and his play, his labor and his leisure, his mind and his body, his 
 education and his recreation, his love and his religion. 
@@ -13,6 +15,10 @@ To him he is always doing both."
 **-- Zen Philosophy** 
 
 .. stop-show-quotes
+
+"The first principle is that you must not fool yourself - and you are the 
+easiest person to fool."
+**-- Richard Feynman**
 
 "If you are not part of the solution, then you are part of the problem."
 **-- Eldridge Cleaver**

@@ -79,7 +79,7 @@ JINJA_EXTENSIONS = ['jinja2.ext.i18n']
 ##################################
 MD_EXTENSIONS = ['toc', 'codehilite(css_class=highlight)', 'extra', 'meta']
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['tag_cloud', 'render_math', 'i18n_subsites']
+PLUGINS = ['tag_cloud', 'render_math', 'i18n_subsites', 'html_rst_directive']
 LOCAL_CONTENT_CACHE = False
 HIDE_SIDEBAR = True
 DISPLAY_CATEGORIES_ON_MENU = False # disable display categories in the navbar

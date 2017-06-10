@@ -32,6 +32,10 @@ def rebuild():
     build()
 
 def regenerate():
+    try:
+        local('sass pelican-cid/src/sass/cid.sass pelican-cid/static/css/cid.css')
+    except:
+        pass
     local('pelican -r -s pelicanconf.py')
 
 def serve():

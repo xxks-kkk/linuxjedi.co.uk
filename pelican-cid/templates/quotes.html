@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block overhead %}
+    <blockquote>
+    <p>
+    This page was initially forked from <a href="http://pages.cs.wisc.edu/~remzi/quotes.html" style="border-bottom: 1px dotted">
+    Prof. Remzi's quotes collection</a> back in year 2012 when I was having fun with his 
+    <a href="http://pages.cs.wisc.edu/~remzi/Classes/354/Fall2012" style="border-bottom: 1px dotted">amazing system class</a>.
+    </p>
+    </blockquote>
+{% endblock overhead %}
+{% block content %}        
+<section id="content" class="body">    
+    <h1 class="entry-title">{{ page.title }}</h1>
+    {% if PDF_PROCESSOR %}<a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">get
+    the pdf</a>{% endif %}
+    {{ page.content }}
+</section>
+{% endblock %}
