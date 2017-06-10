@@ -17,6 +17,6 @@ and cooking.
 I am contactable via. my personal email address ferrishu3886 [AT] gmail [DOT] com and
 am on twitter as [@zeyuanhu](https://twitter.com/zeyuanhu)
 
-<img src="/images/me2.jpg" alt="me" style="height: 225.1px; width: 400px"/>
+<img src="/images/me2.jpg" class="img-fluid" alt="me" style="height: auto; max-width: 50%"/>
 
 "Discipline is the bridge between goals and accomplishment." --Jim Rohn

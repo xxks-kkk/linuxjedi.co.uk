@@ -205,11 +205,6 @@ h1.post-title {
   border-bottom: 1px solid #000;
   margin-bottom: 0px; }
 
-.container h1 {
-  line-height: 1.2em;
-  border-bottom: 1px solid #000;
-  margin-bottom: 0px; }
-
 .post-info {
   padding: 20px; }
 
@@ -268,7 +263,8 @@ span.label.label-default {
 
 body {
   font-family: "Droid Sans", "Merriweather", "Georgia", serif;
-  font-weight: 300; }
+  font-weight: 300;
+  background-color: #ddd; }
   body a {
     font-weight: 400;
     text-decoration: none;
@@ -325,7 +321,14 @@ body {
 
 .container {
   max-width: 56em;
-  margin: 1em auto; }
+  margin: 1em auto;
+  padding: 50px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); }
+  .container h1 {
+    line-height: 1.2em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0px; }
   @media screen and (max-width: 640px) {
     .container {
       margin: 0.8em; } }
@@ -345,7 +348,8 @@ body {
       top: 0;
       right: 0;
       margin: 0 2px;
-      font-family: "Gentium Book Basic", "Georgia", serif; }
+      font-family: "Gentium Book Basic", "Georgia", serif;
+      padding-top: 10px; }
       @media screen and (max-width: 640px) {
         .container .blog-header nav {
           position: relative;
