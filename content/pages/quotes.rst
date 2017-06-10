@@ -4,7 +4,8 @@
 Quotes
 ######
 
-:template: quotes
+..
+   :template: quotes
 
 "The Master in the art of living makes little distinction between his work 
 and his play, his labor and his leisure, his mind and his body, his 
@@ -225,5 +226,15 @@ and things will go better later."
 "Don't fire unless fired upon, but if they mean to have a war, let it
 begin here."
 **-- Captain John Parker**
+
+.. html::
+
+    <blockquote>
+    <p>
+    This page was initially forked from <a href="http://pages.cs.wisc.edu/~remzi/quotes.html" style="border-bottom: 1px dotted">
+    Prof. Remzi's quotes collection</a> back in year 2012 when I was having fun with his 
+    <a href="http://pages.cs.wisc.edu/~remzi/Classes/354/Fall2012" style="border-bottom: 1px dotted">amazing system class</a>.
+    </p>
+    </blockquote>
 
 `Back To Top <{filename}/pages/quotes.rst>`_
