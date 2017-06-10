@@ -77,7 +77,7 @@ JINJA_EXTENSIONS = ['jinja2.ext.i18n']
 # the list of MD extensions manually (http://pythonhosted.org/Markdown/extensions/
 # )
 ##################################
-MD_EXTENSIONS = ['toc', 'codehilite(css_class=highlight)', 'extra', 'meta']
+MD_EXTENSIONS = ['toc', 'codehilite(css_class=highlight)', 'extra', 'meta', 'admonition']
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['tag_cloud', 'render_math', 'i18n_subsites', 'html_rst_directive']
 LOCAL_CONTENT_CACHE = False

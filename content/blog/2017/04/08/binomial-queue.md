@@ -86,13 +86,11 @@ $H'$ and $H''$ below:
 
 <img src="/images/binomial-queue-deleteMin-02.PNG" alt="binomial queue deleteMin 02"/>
 
-and our final result is:
+and our final result is [^1]:
 
 <img src="/images/binomial-queue-deleteMin-03.PNG" alt="binomial queue deleteMin 03"/>
 
-\* ---- Note ---- *
-
-> For actual implementation details, please see MAW p. 208 - 211.
+[^1]: For actual implementation details, please see MAW p. 208 - 211.
 
 ## Runtime analysis
 

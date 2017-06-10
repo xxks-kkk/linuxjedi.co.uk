@@ -402,12 +402,10 @@ body {
       height: auto;
       display: block;
       margin: 1.5em auto; }
-    .container .post code {
+    .container .post code, .container .post tt {
       padding: 2px 4px;
       font-size: 90%;
-      color: #c7254e;
-      background-color: #f9f2f4;
-      border-radius: 4px; }
+      color: #c7254e; }
     .container .post .highlight {
       font-size: 0.9em;
       overflow-x: auto; }
@@ -422,6 +420,23 @@ body {
     .container .post footer {
       margin: 2em 0 0 0;
       text-align: left; }
+  .container .admonition.note {
+    background: #E0FFE0;
+    margin-left: 10px;
+    margin-right: 72px;
+    margin-bottom: 4px;
+    padding: 4px;
+    border: 2px black solid;
+    font-size: 90%; }
+  .container .admonition-title {
+    background: #1abc9c;
+    font-weight: bold;
+    display: block;
+    color: #fff;
+    padding: 6px 12px;
+    margin: -6px;
+    margin-bottom: 12px;
+    text-align: center; }
 
 .topic {
   padding: 10px 20px;

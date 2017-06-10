@@ -32,13 +32,12 @@ is $2$,$4$,$1$,$5$.
 
 You can play with different $M$, $N$ on this [site](http://webspace.ship.edu/deensley/mathdl/Joseph.html) to get a better sense of the problem.
 
-\* ---- Note ---- *
-
-> MAW uses a problem description that is slight different than the problem description usually find online. In the book, he defines $M$ in term of 
-number of passes. However, in our problem description, we use $M$ to indicate the $M$th person get eliminated. Here is an example to show the difference.
-In MAW description, $M = 0$ and $N = 5$, players are eliminated in order. However, in our own intepretation, $M$ should be $1$ in order to achieve the same 
-elimination order. Similarly, in the book, $M = 1$ when we have $2$, $4$, $1$, $5$ elimination order for the second example.  Mathematically, 
-$M_{new} = M_{MAW} + 1$.
+!!! note
+    MAW uses a problem description that is slight different than the problem description usually find online. In the book, he defines $M$ in term of number of passes. However, in our problem description, we use $M$ to indicate the $M$th person get
+    eliminated. Here is an example to show the difference.In MAW description, $M = 0$ and $N = 5$, players are eliminated in 
+    order. However, in our own intepretation, $M$ should be $1$ in order to achieve the same elimination order. Similarly, in 
+    the book, $M = 1$ when we have $2$, $4$, $1$, $5$ elimination order for the second example.  Mathematically, 
+    $M_{new} = M_{MAW} + 1$.
 
 ## Josephus problem with $M = 2$
 
@@ -172,18 +171,18 @@ By looking at the table on the left, we can easily see that $F(2k) = 2F(k) - 1$.
 However, there is no nice clean linear relation that we can get between $F(2k)$ and $F(k)$ 
 when $n = 10$, $m = 3$.
 
-\* ---- Note ---- *
 
-> Inside *Concrete Mathematics: A Foundation for Computer Science*, after talking about the
-solution to the Josephus problem, the author shift their focus to solve a generalized
-recurrence of \ref{eq:1} and \ref{eq:2}, which is (1.11) in the book. This has nothing to do
-with the Josephus problem and I'm guessing the reason why the author want to talk about 
-the solution to the generalized recurrence is to illustrate dynamic programming philosophy.
+!!! note
+        Inside *Concrete Mathematics: A Foundation for Computer Science*, after talking about the
+        solution to the Josephus problem, the author shift their focus to solve a generalized
+        recurrence of \ref{eq:1} and \ref{eq:2}, which is (1.11) in the book. This has nothing to do
+        with the Josephus problem and I'm guessing the reason why the author want to talk about 
+        the solution to the generalized recurrence is to illustrate dynamic programming philosophy.
 
 ## General solution
 
-/*The big picture here is we need to find out the relative position of the final survivor to the
-"first" person during each recursive call and then calculate the actual position for actual $n$*/
+The big picture here is we need to find out the relative position of the final survivor to the
+"first" person during each recursive call and then calculate the actual position for actual $n$
 
 The general solution utilitizes the dynamic programming paradigm by performing the first step
 and using the solution of the subproblem we create to solve the initial problem. 

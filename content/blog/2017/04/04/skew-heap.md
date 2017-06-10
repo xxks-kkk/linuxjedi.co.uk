@@ -48,16 +48,17 @@ and this is the final merge result:
 
 <img src="/images/skew-heap-03.PNG" alt="skew heap 03" style="width: 700px;"/>
 
-\* ---- Note ---- *
-
-> The end result is actually leftist heap but there is no guaranteed that this is
-> always the case. If you take a look, $H_1$ is not lefist heap.
+!!! note
+    The end result is actually leftist heap but there is no guaranteed that this is
+    always the case. If you take a look, $H_1$ is not lefist heap.
 
 ## Runtime analysis
 
 - `merge`, `deleteMin`, and `insert` are all running in $O(\log N)$ amortized time.
 
-## Reference
+## Links to resources
+
+Here are some of the resources I found helpful while preparing this article:
 
 - MAW Chapter 6
-- http://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/heaps.pdf
+- [CMU lecture slides](http://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/heaps.pdf)

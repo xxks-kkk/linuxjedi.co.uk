@@ -160,12 +160,16 @@ above, we should have the same sum as the old, which is one. Eventually, we are 
 with two node, one of them is root. Now, we calculate the sum, which gives $1/2$. This 
 is contradiction to the equality.
 
-\* ---- Note ---- *
-
-> This problem is called [Kraft–McMillan inequality](https://en.wikipedia.org/wiki/Kraft%E2%80%93McMillan_inequality),
-  which is one of fundamental theorem in Information theory. I find [this youtube playlist about information theory](https://www.youtube.com/playlist?list=PLE125425EC837021F)
-  is really good as an intro to the field because it doesn't make the material look very daunting and super technical,
-  which some [lecture note](http://circuit.ucsd.edu/~yhk/ece154c-spr16/pdfs/LectureNotes01.pdf) manages to achieve.
+!!! note
+    This problem is called 
+    [Kraft–McMillan inequality](https://en.wikipedia.org/wiki/Kraft%E2%80%93McMillan_inequality),
+    which is one of fundamental theorem in Information theory. I find 
+    [this youtube playlist about information theory](https://www.youtube.com/playlist?list=PLE125425EC837021F)
+    is really good as an intro to the field because it doesn't make the material look 
+    very daunting and super technical,
+    which some 
+    [lecture note](http://circuit.ucsd.edu/~yhk/ece154c-spr16/pdfs/LectureNotes01.pdf)
+     manages to achieve.
 
 ### MAW 4.14
 
@@ -303,16 +307,20 @@ E[Y_n] &\le& \frac{4}{n}\sum_{i=0}^{n-1}E[Y_i] \\
 \end{eqnarray*}
 $$
 
-\* ---- Note ---- *
-
-> I [reference this lecture note](https://www.cs.bgu.ac.il/~fds112/wiki.files/P05.pdf) when I try to develop the proof. 
-> Overall, I share the similar proof with this one. However, we have slightly difference in terms of how we 
-> define $E[Y_n]$. The note defines an indicator random variables $Z_{n,i} = I\{I=i\}$, where $I=i$ means we pick $i_{th}$ element as our 
-> first element inserting into the empty tree. Since, we pick the first insertion element equally
-> likely, then $P(I=i) = \frac{1}{n}$, and thus, $E[Z_{n,i}] = \frac{1}{n}$ by $E[I_A] = P(A)$. Then, he defines $Y_n = \sum_{i=1}^nZ_{n,i} \cdot (2 \cdot max(Y_{i-1}, Y_{n-i}))$
-> because only one $Z_{n,i}$ can be $1$ and all others are $0$. It seems right but when he calculates the $E[Y_n]$, he states that
-> $Z_{n,i}$ is independent of $Y_{i-1}$ and $Y_{n-i}$. However, I don't think so as the height of the tree $h_n$, which $Y_n$ is constructed from 
-> depends on which element we pick first. I tend to think about $E[Y_n]$ as expectation of the conditional expectation.
+!!! note
+    I 
+    [reference this lecture note](https://www.cs.bgu.ac.il/~fds112/wiki.files/P05.pdf)
+     when I try to develop the proof. 
+    Overall, I share the similar proof with this one. However, we have slightly 
+    difference in terms of how we 
+    define $E[Y_n]$. The note defines an indicator random variables 
+    $Z_{n,i} = I\{I=i\}$, where $I=i$ means we pick $i_{th}$ element as our 
+    first element inserting into the empty tree. Since, we pick the first insertion 
+    element equally likely, then $P(I=i) = \frac{1}{n}$, and thus, $E[Z_{n,i}] = \frac{1}{n}$ by $E[I_A] = P(A)$. Then, he defines $Y_n = \sum_{i=1}^nZ_{n,i} \cdot (2 \cdot max(Y_{i-1}, Y_{n-i}))$ because only one $Z_{n,i}$ can be $1$ and all others are $0$. It seems right but when he calculates the $E[Y_n]$, he states that
+    $Z_{n,i}$ is independent of $Y_{i-1}$ and $Y_{n-i}$. However, I don't think so as 
+    the height of the tree $h_n$, which $Y_n$ is constructed from 
+    depends on which element we pick first. I tend to think about $E[Y_n]$ as 
+    expectation of the conditional expectation.
 
 [//]: # (https://www.cs.rochester.edu/~gildea/csc282/slides/C12-bst.pdf)
 [//]: # (http://cs.stackexchange.com/questions/6342/proof-that-a-randomly-built-binary-search-tree-has-logarithmic-height)
@@ -349,11 +357,11 @@ $$
 
 Now, let $H = 15$ and we have $S(15) = 2583$.
 
-\* ---- Note ---- *
-
-> initial condition is for the general solution for the recurrence relation, not the homogeneous 
-> part. Thus, we cannot use the initial condition immediately when we have our homogeneous part done.
-> We need to wait until the whole solution (homogeneous part + particular part).
+!!! note
+    Initial condition is for the general solution for the recurrence relation, not 
+    the homogeneous part. Thus, we cannot use the initial condition immediately when 
+    we have our homogeneous part done.We need to wait until the whole solution 
+    (homogeneous part + particular part).
 
 **Remarks:**
 
@@ -376,12 +384,11 @@ we have $\log _\phi N \ge H$, which is $H \le 1.44\log _2 N = O(\log N)$.
 ### MAW 4.17
 
 > Keys $1, 2, \dots, 2^k-1$ are inserted in order into an initially empty AVL tree. Prove that the resulting tree
-> is perfectly balanced.
+> is perfectly balanced [^1].
 
-\* ---- Note ---- *
-
-> The solution and corresponding figures are majorly taken from https://cseweb.ucsd.edu/classes/su05/cse100/cse100hw1.pdf
-> with minor wording tweak to allow easy understanding for myself.
+[^1]: The solution and corresponding figures are majorly taken from 
+[this link](https://cseweb.ucsd.edu/classes/su05/cse100/cse100hw1.pdf)
+with minor wording tweak to allow easy understanding for myself.
 
 **Proof:**
 Let's use induction on $k$ to prove the following statement:

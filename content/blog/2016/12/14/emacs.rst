@@ -64,12 +64,11 @@ File Editing
 
 .. note::
 
-        You need to set mark before you can use region operation. To know more about `The Mark and Region <https://www.cs.colorado.edu/~main/cs1300-old/cs1300/doc/emacs/emacs_13.html>`_ 
+        - You need to set mark before you can use region operation. To know more about 
+          `The Mark and Region <https://www.cs.colorado.edu/~main/cs1300-old/cs1300/doc/emacs/emacs_13.html>`_ 
 
-.. note::
-
-         To move or copy a region of text in emacs, you must first "mark" it, then kill or copy the marked text, move the cu
-         rsor to the desired location, and restore the killed or copied text. A region of text is defined by marking one end         of it, then moving the cursor to the other end. 
+        - To move or copy a region of text in emacs, you must first "mark" it, then kill or copy the marked text, move the cu
+          rsor to the desired location, and restore the killed or copied text. A region of text is defined by marking one end         of it, then moving the cursor to the other end. 
 
 - **C-@** Set the mark here
 - **C-SPC** Set the mark where point is

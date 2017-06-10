@@ -16,10 +16,10 @@ The content closely follows Chapter 7
 ["Introductory Combinatorics"](https://www.amazon.com/Introductory-Combinatorics-5th-Richard-Brualdi/dp/0136020402),
 which is the textbook I used.
 
-\* ---- Note ---- *
-
-> This note is practical-oriented. I will skip the proof of the theorem whenever possible.
-> If you are interested in the proof side of the universe, please read the book.
+!!! note
+    This note is practical-oriented. I will skip the proof of the theorem 
+    whenever possible.If you are interested in the proof side of the universe, 
+    please read the book.
 
 ## TOC
 
@@ -142,11 +142,11 @@ $$
 
 is the solution of the Fabonacci recurrence relation.
 
-\* ---- Note ---- *
-
-> As you might notice, theorem 7.4.1 explicitly requires that the roots of the characteristic equation have 
-> to be distinct. However, that's not always the case and theorem 7.4.1 will not work (see book for an example).
-> That's why we need theorem 7.4.2.
+!!! note
+    As you might notice, theorem 7.4.1 explicitly requires that the roots of the 
+    characteristic equation have to be distinct. However, that's not always the case 
+    and theorem 7.4.1 will not work (see book for an example). 
+    That's why we need theorem 7.4.2.
 
 *Theorem 7.4.2:* Let $q_1, q_2, \dots, q_n$ be the distinct roots of the following characteristic equation of the 
 linear homogeneous recurrence relation with constant coefficients:
@@ -203,8 +203,7 @@ $$
 
 Then we can use initial values to determine $c1$, $c2$, $c3$, $c4$ and we have $h_n = \frac{7}{9} (-1)^n - \frac{3}{9}n(-1)^n + \frac{2}{9}2^n$.
 
-<!--\* ---- Note ---- *
-
+<!--
 > You probably already notice from the previous example that "characteristic equation" method really depends on the diffculty in finding all roots
 > of a polynomial equation. Sometimes finding the roots of characteristic equation can be quite diffcult. That's what second method tries to address.
 > If you find out that characteristic equation is really diffcult to solve, you can always use "generating function" method.-->
@@ -322,11 +321,9 @@ $$
 
 Thus, $h_n = 5\times2^n - 4\times3^n$.
 
-\* ---- Note ---- *
-
-> Getting the polynomial expansion of $g(x)$ is the hardest part of this method. For instance, factoring the 
-> denominator of $g(x)$ can be tricky for high degree polynomials. I need more practice on solving recurrence
-> relation to decide which method is superior under what kind of situation.
+<!-- Getting the polynomial expansion of $g(x)$ is the hardest part of this method. For instance, factoring the 
+denominator of $g(x)$ can be tricky for high degree polynomials. I need more practice on solving recurrence
+relation to decide which method is superior under what kind of situation.-->
 
 ## Linear nonhomogeneous recurrence relation with constant coefficients
 
@@ -381,19 +378,22 @@ $$
 
 Now, let's use inital condition to solve for $c$ and we have $c = -1$. So, $h_n = -3^n + 2n + 3$.
 
-\* ---- Note ---- *
-
-> As you can see, solving recurrence relation using characteristic equation has strong connection with solving differential equations (both homogeneous and
-> nonhomogeneous). 
+!!! note
+    As you can see, solving recurrence relation using characteristic equation has 
+    strong connection with solving differential equations (both homogeneous and 
+    nonhomogeneous). 
 
 ### Method 2: Generating function
 
 There is nothing difference in using "generating function" method to solve nonhomogeneous than solve homogeneous recurrence relation. That's actually 
 a beauty of this method: nothing needs to tweak in order to work under different situation.
 
-\* ---- Note ---- *
-
-> Certainly, not all recurrence relation appeard in computer science can be easily solved by the method described in this post. For instance,
-> inside [Josephus problem]({filename}/blog/2016/12/31/josephus-problem.md), recurrence relation may depend on whether $n$ is odd or even and 
-> methods may not apply nicely. This implies another type of technique to solve recurrence relation is to guess the solution and prove it by induction.
-> Also, in the book, solving $h_n = h_{n-1} + n^3$ on p. 250 is not standard as well.
+!!! note
+    Certainly, not all recurrence relation appeard in computer science can be easily 
+    solved by the method described in this post. For instance, inside 
+    [Josephus problem]({filename}/blog/2016/12/31/josephus-problem.md), recurrence 
+    relation may depend on whether $n$ is odd or even and 
+    methods may not apply nicely. This implies another type of technique to solve 
+    recurrence relation is to guess the solution and prove it by induction.
+    Also, in the book, solving $h_n = h_{n-1} + n^3$ on p. 250 is not standard as 
+    well.
