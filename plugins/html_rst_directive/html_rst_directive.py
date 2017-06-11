@@ -11,7 +11,7 @@ supported by Pelican, within reST documents:
 
 Implementation reference:
 
-- 
+- See zeyuan's doc 'sphinx' resources page for links
 
 """
 

@@ -264,7 +264,12 @@ span.label.label-default {
 body {
   font-family: "Droid Sans", "Merriweather", "Georgia", serif;
   font-weight: 300;
-  background-color: #ddd; }
+  /* xiao-jia.com style code
+   * @media screen and (min-width: $break-small)
+   *    background-color: #ddd */ }
+  @media screen and (min-width: 640px) {
+    body {
+      background: url(pageframe-right.gif) right top repeat-y, url(pageframe-left-160.gif) left top repeat-y; } }
   body a {
     font-weight: 400;
     text-decoration: none;
@@ -322,9 +327,11 @@ body {
 .container {
   max-width: 56em;
   margin: 1em auto;
-  padding: 50px;
   background: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); }
+  /* xiao-jia.com style code
+   * @media screen and (min-width: $break-small)
+   *     padding: 50px
+   *     box-shadow: 0 0 5px rgba(0,0,0,0.2), inset 0 0 50px rgba(0,0,0,0.1) */ }
   .container h1 {
     line-height: 1.2em;
     border-bottom: 1px solid #ccc;
