@@ -57,7 +57,7 @@ For example, the term $T(N/2)/(N/2)$ appears on both sides and thus cancels.
 After everything is added, the final result is:
 
 $$
-\frac{T(N)}{N} = \frac{T(1)}{1} + \log N * 1
+\frac{T(N)}{N} = \frac{T(1)}{1} + \log N \cdot 1
 $$
 
 because all of the other terms cancel and there are $\log N$ equations, and so all
@@ -122,4 +122,3 @@ using $k = \log N$, we obtain
 $$
 T(N) = NT(1) + N \log N = N\log N + N
 $$
-
