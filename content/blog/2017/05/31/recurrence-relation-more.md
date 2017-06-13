@@ -29,7 +29,7 @@ $$
 
 There are two ways to solve this recurrence relation:
 
-## Construct a telescoping sum
+## Method 1: Construct a telescoping sum
 
 The goal of this method is to construct a telescoping sum (i.e see
 [telescope series](https://en.wikipedia.org/wiki/Telescoping_series) to get a sense
@@ -77,7 +77,7 @@ relation with constant coefficients. However, it cannot be solved by the method
 I write up in the last post. I have no clue why. This recurrence relation is taken 
 from MAW p243.
 
-## Iteratively substitute
+## Method 2: Iteratively substitute
 
 For this method, we continuely substitute the recurrence relation on the right-hand
 side with the hope to find a pattern of the general solution to the recurrence relation.

@@ -17,6 +17,9 @@ To him he is always doing both."
 
 .. stop-show-quotes
 
+"He who has a why to live can bear almost any how."
+**-- Friedrich Nietzsche**
+
 "The first principle is that you must not fool yourself - and you are the 
 easiest person to fool."
 **-- Richard Feynman**
