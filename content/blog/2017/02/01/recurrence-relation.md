@@ -121,7 +121,7 @@ f_n = c_1 \Big(\frac{1+\sqrt 5}{2}\Big)^n + c_2 \Big(\frac{1-\sqrt 5}{2}\Big)^n
 \end{equation*}
 $$
 
-is the general solution. We now want constants c_1, and c_2 so that 
+is the general solution. We now want constants $c_1$, and $c_2$ so that 
 
 $$
 \begin{equation*}
