@@ -46,12 +46,21 @@ usage. The code script is available
 as a demonstration example.
 
 ```python
+#!/usr/bin/env python3.6
+# -*- coding: utf-8 -*-
+```
+
+The very first thing is "shebang". This is important for our task because
+the web page is often written in the unicode (i.e. mathematical symbols).
+This shebang will help us avoid unicode & ascii madness. 
+
+```python
 from bs4 import BeautifulSoup
 import requests
 import sys
 ```
 
-The very first thing is on `import`. If I use *import module*, I have to use quantifier
+We use a lot of libraries through `import`. If I use *import module*, I have to use quantifier
 for any module function call (i.e. `sys.exit()`). By the contrast, I can directly
 call the module function if I do *from module import*. This brings a question on
 when to use which. Here, I want to quote the explanation from 
