@@ -67,12 +67,12 @@ when to use which. Here, I want to quote the explanation from
 [Dive Into Python](http://www.diveintopython.net/object_oriented_framework/importing_modules.html)
 
 > When should you use *from module import*?
-> - If you will be accessing attributes and methods often and don't want to type the module name over and over, use *from module import*.
-> - If you want to selectively import some attributes and methods but not others, use *from module import*.
-> - If the module contains attributes or functions with the same name as ones in your module, you must use *import module* to avoid name conflicts.
-
-!!!note
-  The author makes extra remark: Use *from module import \** sparingly, because it makes it difficult to determine where a particular function or attribute came from, and that makes debugging and refactoring more difficult.
+>
+> - If you will be accessing attributes and methods often and don't want to type the module name over and over, use "*from module import*".
+> - If you want to selectively import some attributes and methods but not others, use "*from module import*".
+> - If the module contains attributes or functions with the same name as ones in your module, you must use "*import module*" to avoid name conflicts.
+>
+> The author makes extra remark: Use *from module import \** sparingly, because it makes it difficult to determine where a particular function or attribute came from, and that makes debugging and refactoring more difficult.
 
 ```python
 script, url = sys.argv
@@ -80,7 +80,7 @@ print('url is {:s}'.format(url))
 ```
 
 I used to really like Python2.7 and not a big fan of Python3. However, with python2.7 EOS,
-change must be made. the `print` statement is how we do format printing in python.
+change must be made. the `print` statement is how we do format printing in python3.
 
 ```python
 r = requests.get(url)
@@ -166,7 +166,7 @@ As you can see our result contains empty string, string with multiple leading
 whitespaces, and string with only whitespaces. We need to do some cleanup to keep
 only the question title. The first thing we do is to take out the empty string and
 the string with only whitespaces. This is done by 
-`title_lines = list(filter(operator.methodcaller('strip'), title_lines))`. [^2]
+`title_lines = list(filter(operator.methodcaller('strip'), title_lines))` [^2].
 [filter](https://docs.python.org/2/library/functions.html#filter) 
 creates a list of elements for which a function (the 1st argument of `filter`) 
 returns true. `operator.methodcaller('strip')` uses 
