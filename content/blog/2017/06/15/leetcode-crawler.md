@@ -8,8 +8,8 @@ It has been many years since
 [last time](http://pages.cs.wisc.edu/~zeyuan/projects/notes/diveintopython/diveintopython.html) 
 I touched python. Things get very rusty. Recently, I have been practicing
 my algorithm skills on leetcode and I keep all my solutions in a 
-[github repo](https://github.com/xxks-kkk/shuati). I want my source file have consistency
-formatting shown below.
+[github repo](https://github.com/xxks-kkk/shuati). I want my source files 
+have consistency formatting shown below
 
 ```
 /*
@@ -30,11 +30,11 @@ formatting shown below.
  // Source code begins here ...
 ```
 
-However, there is one thing keeps annoy me: I have to manually add this header comment
-every single time when I finish a problem. So, I ask myself if there is a better way
-to make the whole process as much automatic as possible. Python and its famous
-[beautifulsoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) library [^1] immediately
-comes into my mind.
+The overhead of adding this header comment can be quite large. 
+So, I ask myself if there is a better way
+to make the whole process automated as much as possible. Python and its famous
+[beautifulsoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) library [^1] 
+immediately come into my mind.
 
 [^1]: Here is [a good tutorial](http://web.stanford.edu/~zlotnick/TextAsData/Web_Scraping_with_Beautiful_Soup.html) on beautifulSoup.
 
@@ -43,7 +43,7 @@ me quite some time on googling. Please leave your comment if you find any non-py
 usage. The code script is available 
 [here](https://github.com/xxks-kkk/shuati/blob/master/scraper.py). I'll use
 [92. ReverseLinkedList II](https://leetcode.com/problems/reverse-linked-list-ii/#/description)
-as a demonstration example.
+leetcode page as a working example to demonstrate the python techniques.
 
 ```python
 #!/usr/bin/env python3.6
