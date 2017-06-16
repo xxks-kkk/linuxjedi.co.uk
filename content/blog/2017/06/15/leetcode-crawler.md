@@ -230,5 +230,5 @@ The last point needs to notice is `line = line.replace("\r", "").replace("\n", "
 which removes carriage return character (`^M`) and linux newline character.
 
 That's it for the leetcode scraper. This is actually the first scraper I have
-ever written. It doesn't look hard as it sounds. I think that's majorly because of
+ever written. It is not as hard as I imagined. I think that's majorly because of
 the powerful python language and its libraries.
