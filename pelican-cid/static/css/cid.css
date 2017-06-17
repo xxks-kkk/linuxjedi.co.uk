@@ -191,10 +191,8 @@
 * {
   color: #030303; }
 
-.post-info, blockquote, .topic {
-  background: #f0f0f0;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc; }
+.post-info, blockquote, .topic, .highlight {
+  background: #f0f0f0; }
 
 code, kbd, pre, samp {
   font-family: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
@@ -266,7 +264,7 @@ body {
   font-weight: 300;
   /* @media screen and (min-width: $break-small)
    * background-color: beige */ }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1200px) {
     body {
       background: url(pageframe-right-160.gif) right top repeat-y, url(pageframe-left-160.gif) left top repeat-y; } }
   body a {
@@ -449,10 +447,6 @@ body {
 
 .toc {
   border: 1px solid #c6c9cb; }
-
-.highlight {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc; }
 
 .highlight pre {
   padding: 20px; }

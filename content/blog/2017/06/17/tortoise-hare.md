@@ -56,7 +56,9 @@ The key observation for showing the correctness of the algorithm lies in
 the following fact:
 
 $$
-x_{j+k\lambda} = x_j \text{for all integers }j \ge \mu \text{ and } k \ge 0 \label{eqn:1}
+\begin{equation}
+x_{j+k\lambda} = x_j \text{ for all integers }j \ge \mu \text{ and } k \ge 0 \label{eqn:1}
+\end{equation}
 $$
 
 This statement says that going around the loop any number of times takes you 
@@ -74,7 +76,7 @@ when he meets with tortoise is $2i$ [^1]. Then, we have the following set of equ
 
 $$
 \begin{eqnarray}
-i = \mu + y + m \cdot \lambda  \label{eqn:2}
+i = \mu + y + m \cdot \lambda  \label{eqn:2} \\
 2i = \mu + y + n \cdot \lambda \label{eqn:3}
 \end{eqnarray}
 $$
@@ -82,7 +84,9 @@ $$
 Now we subtract \ref{eqn:2} from \ref{eqn:3} and we have
 
 $$
+\begin{equation}
 i = (n-m) \cdot \lambda \label {eqn:4}
+\end{equation}
 $$
 
 Let's revisit our key observation \ref{eqn:1} and set $j = \mu$ and $k = (n-m)$, we have
@@ -174,9 +178,11 @@ For example, the sequence $1,3,4,2,1$ can be considered as a sequence of
 iterated function values with $x_0 = 1, x_1 = f(1) = 3, x_2 = f(3) = 4,
 x_3 = f(4) = 2, x_4 = f(2) = 1$. Let's try another representation:
 
+```
 | index | 0 | 1 | 2 | 3 | 4 |
 |-------|---|---|---|---|---|
 | value | 1 | 3 | 4 | 2 | 1 |
+```
 
 Surprisingly, the function $f$ simply map the index to the corresponding values.
 With this table, the above sequence can be converted as a linked list:
