@@ -4,7 +4,7 @@ Josephus Problem & Radix Sort Reflection
 
 :date: 2017-01-06 00:34
 :category: programming languages
-:tags: c, double-linked-list
+:tags: c, linked-list
 :summary: Takeaway from MAW 3.13 and 3.10
 
 This post is a reflection on the two problems (MAW 3.13 & 3.10) I
