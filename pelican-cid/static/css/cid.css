@@ -266,9 +266,9 @@ body {
   font-weight: 300;
   /* @media screen and (min-width: $break-small)
    * background-color: beige */ }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1000px) {
     body {
-      background: url(pageframe-right.gif) right top repeat-y, url(pageframe-left.gif) left top repeat-y; } }
+      background: url(pageframe-right-160.gif) right top repeat-y, url(pageframe-left-160.gif) left top repeat-y; } }
   body a {
     font-weight: 400;
     text-decoration: none;
