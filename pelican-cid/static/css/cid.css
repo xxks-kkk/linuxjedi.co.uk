@@ -192,7 +192,7 @@
   color: #030303; }
 
 .post-info, blockquote, .topic, .highlight {
-  background: #f0f0f0; }
+  background: #dadfe1; }
 
 code, kbd, pre, samp {
   font-family: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
@@ -220,7 +220,7 @@ p {
   line-height: 1.5em; }
 
 a:hover {
-  background-color: #C74350;
+  background-color: #C5050C;
   color: white;
   text-decoration: none;
   border-bottom: none; }
@@ -241,7 +241,7 @@ hr {
   border-top: 1px solid #eee; }
 
 span.label.label-default {
-  background: #C74350;
+  background: #C5050C;
   padding: 0.2em;
   font-size: 100%;
   display: inline;
@@ -257,20 +257,22 @@ span.label.label-default {
   margin-right: 20px; }
 
 .footnote-ref {
-  border: 2px solid #C74350; }
+  border: 2px solid #C5050C; }
 
 body {
   font-family: "Droid Sans", "Merriweather", "Georgia", serif;
   font-weight: 300;
-  /* @media screen and (min-width: $break-small)
-   * background-color: beige */ }
-  @media screen and (min-width: 1200px) {
+  /* @media screen and (min-width: $break-large)
+   * //background: url(pageframe-right.gif) right top repeat-y, url(pageframe-left.gif) left top repeat-y
+   * //background: url(pageframe-right.gif) right top repeat-y, url(page-frame-left-25.png) left top repeat-y
+   * background: url(pageframe-right-160.gif) right top repeat-y, url(pageframe-left-160.gif) left top repeat-y */ }
+  @media screen and (min-width: 640px) {
     body {
-      background: url(pageframe-right-160.gif) right top repeat-y, url(pageframe-left-160.gif) left top repeat-y; } }
+      background-color: #dadfe1; } }
   body a {
     font-weight: 400;
     text-decoration: none;
-    /* border-bottom: 2px dotted #C74350 */ }
+    /* border-bottom: 2px dotted #C5050C */ }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: "Gentium Book Basic", "Georgia", serif; }
     body h1 a, body h2 a, body h3 a, body h4 a, body h5 a, body h6 a {
@@ -324,10 +326,11 @@ body {
 .container {
   max-width: 56em;
   margin: 1em auto;
-  background: #fff;
-  /* @media screen and (min-width: $break-small)
-   * padding: 50px
-   * box-shadow: 0 0 5px rgba(0,0,0,0.2), inset 0 0 50px rgba(0,0,0,0.1) */ }
+  background: #fff; }
+  @media screen and (min-width: 640px) {
+    .container {
+      padding: 50px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); } }
   .container h1 {
     line-height: 1.2em;
     border-bottom: 1px solid #ccc;
@@ -408,7 +411,7 @@ body {
     .container .post code, .container .post tt {
       padding: 2px 4px;
       font-size: 90%;
-      color: #c7254e; }
+      color: #c5050c; }
     .container .post .highlight {
       font-size: 0.9em;
       overflow-x: auto; }
