@@ -107,6 +107,17 @@ SITEFOOTER = u'Zeyuan Hu &copy; 2015-2017.'
 
 #################################
 
+#################################
+#
+# Pelican flex customization
+#
+# https://github.com/alexandrevicenzi/Flex
+#################################
+
+#THEME='pelican-flex'
+#MAIN_MENU = True
+
+#################################
 
 # disable category
 # DIRECT_TEMPLATES = ['index', 'tags', 'archives']
