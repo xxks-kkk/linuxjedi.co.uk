@@ -90,9 +90,17 @@
       {% if pages or LINKS %}
       <nav>
         <ul class="list">
-          {% for page in pages|sort(attribute='title') %}
-          <li><a href="{{ SITEURL }}/{{ page.url }}#{{ page.slug }}">{{ page.title }}</a></li>
-          {% endfor %}
+          {% if DISPLAY_PAGES_ON_MENU != False %}
+            {% for page in pages|sort(attribute='title') %}
+            <li><a href="{{ SITEURL }}/{{ page.url }}#{{ page.slug }}">{{ page.title }}</a></li>
+            {% endfor %}
+          {% endif %}
+
+          {% if USE_CUSTOM_MENU %}
+            {% for name, url in CUSTOM_MENUITEMS %}
+            <li><a href="{{ SITEURL }}/{{ url }}">{{ name }}</a></li>
+            {% endfor %}
+          {% endif %}
 
           {% for name, link in LINKS %}
           <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>

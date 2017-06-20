@@ -96,14 +96,14 @@ BOOTSTRAP_THEME = 'lumen'
 INDEX_URL = 'blog2'
 INDEX_SAVE_AS = INDEX_URL+'/index.html'
 
-THEME='pelican-cid'
+# THEME='pelican-cid'
 USE_CUSTOM_MENU = True
-CUSTOM_MENUITEMS = (('About', 'about-zack.html'),
-                    ('Blog', INDEX_URL),
-                    ('Quotes', 'quotes.html'),
-                    ('Projects', 'projects.html')
+CUSTOM_MENUITEMS = (
+                     ('Blog', INDEX_URL),
+                     ('Quotes', 'quotes.html'),
+                     ('Projects', 'projects.html')
 )
-SITEFOOTER = u'Zeyuan Hu &copy; 2015-2017.'
+# SITEFOOTER = u'Zeyuan Hu &copy; 2015-2017.'
 
 #################################
 
@@ -114,8 +114,10 @@ SITEFOOTER = u'Zeyuan Hu &copy; 2015-2017.'
 # https://github.com/alexandrevicenzi/Flex
 #################################
 
-#THEME='pelican-flex'
+THEME='pelican-flex'
 #MAIN_MENU = True
+DISPLAY_PAGES_ON_MENU = False
+COPYRIGHT_YEAR = '2015 - 2017'
 
 #################################
 
