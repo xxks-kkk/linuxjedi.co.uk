@@ -44,6 +44,8 @@
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/cid.css">
         {% endblock stylesheets %}
+        <!-- add font-awesome -->
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/fa/css/font-awesome.min.css">
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
         {% endif %}

@@ -97,12 +97,6 @@ INDEX_URL = 'blog2'
 INDEX_SAVE_AS = INDEX_URL+'/index.html'
 
 THEME='pelican-cid'
-USE_CUSTOM_MENU = True
-CUSTOM_MENUITEMS = (('About', 'about-zack.html'),
-                    ('Blog', INDEX_URL),
-                    ('Quotes', 'quotes.html'),
-                    ('Projects', 'projects.html')
-)
 SITEFOOTER = u'Zeyuan Hu &copy; 2015-2017.'
 
 #################################

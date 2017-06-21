@@ -1,5 +1,5 @@
-Projects
-========
+Projects (deprecate)
+====================
 
 These are some of the toys I have been playing with in my spare time.
 
