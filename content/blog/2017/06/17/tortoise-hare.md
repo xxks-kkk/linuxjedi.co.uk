@@ -4,7 +4,7 @@ Category: Data Struct & Algo
 Tags: linked-list, leetcode, algorithm
 Summary: Floyd's Tortoise and Hare w/ leetcode 142, 287
 
-Recently, I'm starting to work on [leetcode's problems](https://github.com/xxks-kkk/shuati). 
+Recently, I start to work on [leetcode's problems](https://github.com/xxks-kkk/shuati). 
 My goal is to solve two problems per day (mission possible, right?). The problems I'm looking
 at are [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) and 
 [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/), 
