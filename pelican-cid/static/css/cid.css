@@ -206,16 +206,6 @@ h1.post-title {
 .post-info {
   padding: 20px; }
 
-td {
-  white-space: nowrap;
-  width: 1%; }
-
-td.right {
-  text-align: right; }
-
-td a {
-  line-height: 120%; }
-
 p {
   line-height: 1.5em; }
 
@@ -272,7 +262,15 @@ body {
   body a {
     font-weight: 400;
     text-decoration: none;
-    /* border-bottom: 2px dotted #C5050C */ }
+    border-bottom: 1px dotted; }
+  body td {
+    white-space: nowrap;
+    width: 1%; }
+  body td.right {
+    text-align: right; }
+  body td a {
+    line-height: 120%;
+    border-bottom: none; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: "Gentium Book Basic", "Georgia", serif; }
     body h1 a, body h2 a, body h3 a, body h4 a, body h5 a, body h6 a {
