@@ -1,134 +1,107 @@
 .highlight {
-  background: #f0f0f0; }
+  background: #eeeedd; }
   .highlight .hll {
     background-color: #ffffcc; }
   .highlight .c {
-    color: #60a0b0;
-    font-style: italic; }
+    color: #228B22; }
   .highlight .err {
-    border: 1px solid #FF0000; }
+    color: #a61717;
+    background-color: #e3d2d2; }
   .highlight .k {
-    color: #007020;
+    color: #8B008B;
     font-weight: bold; }
-  .highlight .o {
-    color: #666666; }
   .highlight .ch, .highlight .cm {
-    color: #60a0b0;
-    font-style: italic; }
+    color: #228B22; }
   .highlight .cp {
-    color: #007020; }
+    color: #1e889b; }
   .highlight .cpf, .highlight .c1 {
-    color: #60a0b0;
-    font-style: italic; }
+    color: #228B22; }
   .highlight .cs {
-    color: #60a0b0;
-    background-color: #fff0f0; }
+    color: #8B008B;
+    font-weight: bold; }
   .highlight .gd {
-    color: #A00000; }
+    color: #aa0000; }
   .highlight .ge {
     font-style: italic; }
   .highlight .gr {
-    color: #FF0000; }
+    color: #aa0000; }
   .highlight .gh {
     color: #000080;
     font-weight: bold; }
   .highlight .gi {
-    color: #00A000; }
+    color: #00aa00; }
   .highlight .go {
     color: #888888; }
   .highlight .gp {
-    color: #c65d09;
-    font-weight: bold; }
+    color: #555555; }
   .highlight .gs {
     font-weight: bold; }
   .highlight .gu {
     color: #800080;
     font-weight: bold; }
   .highlight .gt {
-    color: #0044DD; }
-  .highlight .kc, .highlight .kd, .highlight .kn {
-    color: #007020;
-    font-weight: bold; }
-  .highlight .kp {
-    color: #007020; }
-  .highlight .kr {
-    color: #007020;
+    color: #aa0000; }
+  .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr {
+    color: #8B008B;
     font-weight: bold; }
   .highlight .kt {
-    color: #902000; }
+    color: #a7a7a7;
+    font-weight: bold; }
   .highlight .m {
-    color: #40a070; }
-  .highlight .s, .highlight .na {
-    color: #4070a0; }
-  .highlight .nb {
-    color: #007020; }
+    color: #B452CD; }
+  .highlight .s {
+    color: #CD5555; }
+  .highlight .na, .highlight .nb {
+    color: #658b00; }
   .highlight .nc {
-    color: #0e84b5;
+    color: #008b45;
     font-weight: bold; }
   .highlight .no {
-    color: #60add5; }
+    color: #00688B; }
   .highlight .nd {
-    color: #555555;
-    font-weight: bold; }
-  .highlight .ni {
-    color: #d55537;
-    font-weight: bold; }
+    color: #707a7c; }
   .highlight .ne {
-    color: #007020; }
+    color: #008b45;
+    font-weight: bold; }
   .highlight .nf {
-    color: #06287e; }
-  .highlight .nl {
-    color: #002070;
-    font-weight: bold; }
+    color: #008b45; }
   .highlight .nn {
-    color: #0e84b5;
-    font-weight: bold; }
+    color: #008b45;
+    text-decoration: underline; }
   .highlight .nt {
-    color: #062873;
+    color: #8B008B;
     font-weight: bold; }
   .highlight .nv {
-    color: #bb60d5; }
+    color: #00688B; }
   .highlight .ow {
-    color: #007020;
-    font-weight: bold; }
+    color: #8B008B; }
   .highlight .w {
     color: #bbbbbb; }
   .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo {
-    color: #40a070; }
-  .highlight .sb, .highlight .sc {
-    color: #4070a0; }
-  .highlight .sd {
-    color: #4070a0;
-    font-style: italic; }
-  .highlight .s2 {
-    color: #4070a0; }
-  .highlight .se {
-    color: #4070a0;
-    font-weight: bold; }
+    color: #B452CD; }
+  .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se {
+    color: #CD5555; }
   .highlight .sh {
-    color: #4070a0; }
-  .highlight .si {
-    color: #70a0d0;
+    color: #1c7e71;
     font-style: italic; }
+  .highlight .si {
+    color: #CD5555; }
   .highlight .sx {
-    color: #c65d09; }
+    color: #cb6c20; }
   .highlight .sr {
-    color: #235388; }
-  .highlight .s1 {
-    color: #4070a0; }
-  .highlight .ss {
-    color: #517918; }
+    color: #1c7e71; }
+  .highlight .s1, .highlight .ss {
+    color: #CD5555; }
   .highlight .bp {
-    color: #007020; }
+    color: #658b00; }
   .highlight .vc, .highlight .vg, .highlight .vi {
-    color: #bb60d5; }
+    color: #00688B; }
   .highlight .il {
-    color: #40a070; }
+    color: #B452CD; }
 
 /* Comment */
 /* Error */
 /* Keyword */
-/* Operator */
 /* Comment.Hashbang */
 /* Comment.Multiline */
 /* Comment.Preproc */
@@ -158,10 +131,8 @@
 /* Name.Class */
 /* Name.Constant */
 /* Name.Decorator */
-/* Name.Entity */
 /* Name.Exception */
 /* Name.Function */
-/* Name.Label */
 /* Name.Namespace */
 /* Name.Tag */
 /* Name.Variable */
@@ -258,7 +229,7 @@ body {
    * background: url(pageframe-right-160.gif) right top repeat-y, url(pageframe-left-160.gif) left top repeat-y */ }
   @media screen and (min-width: 640px) {
     body {
-      background-color: #dadfe1; } }
+      background-image: url("skulls.png"); } }
   body a {
     font-weight: 400;
     text-decoration: none;
