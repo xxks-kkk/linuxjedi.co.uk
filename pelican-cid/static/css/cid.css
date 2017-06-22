@@ -234,14 +234,6 @@ body {
     font-weight: 400;
     text-decoration: none;
     border-bottom: 1px dotted; }
-  body td {
-    white-space: nowrap;
-    width: 1%; }
-  body td.right {
-    text-align: right; }
-  body td a {
-    line-height: 120%;
-    border-bottom: none; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: "Gentium Book Basic", "Georgia", serif; }
     body h1 a, body h2 a, body h3 a, body h4 a, body h5 a, body h6 a {
@@ -250,6 +242,40 @@ body {
     max-width: 100%;
     margin: 2em auto;
     display: block; }
+
+.table.postindex td {
+  white-space: nowrap;
+  width: 1%; }
+.table.postindex td.right {
+  text-align: right; }
+.table.postindex td a {
+  line-height: 120%;
+  border-bottom: none; }
+
+.table-striped.table.table-hover {
+  display: table;
+  border-spacing: 2px;
+  border-color: grey;
+  border-collapse: collapse;
+  width: 100%; }
+  .table-striped.table.table-hover tr:nth-of-type(odd) {
+    background: #eee; }
+  .table-striped.table.table-hover tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit; }
+  .table-striped.table.table-hover th {
+    background: #333;
+    color: white;
+    font-weight: bold; }
+  .table-striped.table.table-hover td, .table-striped.table.table-hover th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left; }
+  .table-striped.table.table-hover thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit; }
 
 .disclaimer {
   text-align: center;

@@ -178,11 +178,11 @@ For example, the sequence $1,3,4,2,1$ can be considered as a sequence of
 iterated function values with $x_0 = 1, x_1 = f(1) = 3, x_2 = f(3) = 4,
 x_3 = f(4) = 2, x_4 = f(2) = 1$. Let's try another representation:
 
-```
+
 | index | 0 | 1 | 2 | 3 | 4 |
 |-------|---|---|---|---|---|
 | value | 1 | 3 | 4 | 2 | 1 |
-```
+
 
 Surprisingly, the function $f$ simply map the index to the corresponding values.
 With this table, the above sequence can be converted as a linked list:

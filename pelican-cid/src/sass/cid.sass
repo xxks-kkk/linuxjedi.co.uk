@@ -94,6 +94,17 @@ body
         text-decoration: none
         border-bottom: 1px dotted                       
 
+    h1, h2, h3, h4, h5, h6
+        font-family: $header-font
+        a
+            font-weight: bold
+
+    iframe
+        max-width: 100%
+        margin: 2em auto
+        display: block
+
+.table.postindex
     td
         white-space: nowrap
         width: 1%
@@ -105,15 +116,35 @@ body
         line-height: 120%
         border-bottom: none
 
-    h1, h2, h3, h4, h5, h6
-        font-family: $header-font
-        a
-            font-weight: bold
+.table-striped.table.table-hover
+    display: table
+    border-spacing: 2px
+    border-color: grey
+    border-collapse: collapse
+    width: 100%
 
-    iframe
-        max-width: 100%
-        margin: 2em auto
-        display: block
+    tr:nth-of-type(odd)
+        background: #eee
+
+    tr
+        display: table-row
+        vertical-align: inherit
+        border-color: inherit
+
+    th
+        background: #333
+        color: white
+        font-weight: bold
+
+    td,th
+        padding: 6px
+        border: 1px solid #ccc
+        text-align: left
+    
+    thead
+        display: table-header-group
+        vertical-align: middle
+        border-color: inherit
 
 .disclaimer
     text-align: center
