@@ -35,8 +35,8 @@ immediately, is the entry point of the cycle.
 5. Then, one of them will keep moving to finish the victory lap to find the period
 of the cycle.
 
-The key difference when the list has a cycle is that at some point other 
-than the beginning of the list, the hare will be at the same spot as the tortoise ...
+The key difference when the list has a cycle is that at some point on the track, 
+the hare will be at the same spot as the tortoise ...
 
 ## Proof of correctness
 
