@@ -9,7 +9,8 @@ which shipped with [DB2](http://www.ibm.com/analytics/us/en/technology/db2/), [d
 
 In my spare time I like to learn more about [programming]({filename}software.md) and
 get exposure to machine learning and natural language processing. 
-You can also find more about me in my [LinkedIn page](http://cn.linkedin.com/in/zhu45)or my
+You can also find more about me in my [LinkedIn page](http://cn.linkedin.com/in/zhu45) 
+or my
 [resume]({attach}/assets/zeyuan-hu-cv.pdf). 
 Besides writing and programming, I also enjoy [karaoke]({filename}songs.md), drawings, 
 and cooking.
