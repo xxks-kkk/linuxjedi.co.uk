@@ -33,7 +33,7 @@ with the same value on those attributes that appear in the schemas of both relat
 - `join ... on` specifies a predicate to use on join.
 
 - `outer join` is used when we want to preserve the tuples that may have null value on
-the common attributes of one of the relations that we want to join on.
+the common attributes of either or both of the relations that we want to join on.
 
 ## Motivation
 
