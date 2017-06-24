@@ -16,7 +16,7 @@ day to day work. Things, again, get rusty very quickly. This time I want to do a
 better job by, at least, saving my notes in a good place. 
 
 !!!note
-    *teaches*, *instructor* table DDL and its actual data appeard in this post 
+    Tables appeard in this post 
     are from the 
     [supplementary resources](http://db-book.com/) of the 
     [Database System Concepts](https://www.amazon.com/Database-System-Concepts-Computer-Science/dp/0073523321) book.
@@ -426,7 +426,7 @@ from student natural join takes;
 This query actually is not right for our purpose because it will not show
 the student who takes no course. This is because his "ID" will only appear
 in *student* table not in *takes* table. If we do `natural join`, the value
-of "ID" will not equal (one is a number and the other is NULL), which will
+of "ID" will not equal (one is a number and the other is null), which will
 not show up in our final result set. Example in our case will be student Snow
 with "ID" 70557, who has not taken any course. 
 
@@ -569,7 +569,7 @@ and returns a relation instance as the result: $f(R_1, R_2) \to R_3$. We have
 the following operators:
 
 - $\sigma$: select rows from a relation  (i.e. $\sigma_{\text{grade} < B}(takes)$)
-- $\pi$: extract columns from a relation (i.e. $pi_{\text{ID, name}}(student)$)
+- $\pi$: extract columns from a relation (i.e. $\pi_{\text{ID, name}}(student)$)
 
 Then, for join we have following definitions:
 
@@ -584,7 +584,7 @@ Does this look familar to you? Yes, this exactly corresponds to `join ... on ...
 This is equivalent to `join ... using (...)` usage.
 
 - natural join: $R \bowtie S$ (equijoin where equalities are specified on all fields having the same 
-name in $R$ and $S$) (i.e. $$\text{student} \bowtie \text{takes}$).
+name in $R$ and $S$) (i.e. $\text{student} \bowtie \text{takes}$).
 
 Well, this is exactly the `natural join` usage.
 
@@ -639,5 +639,5 @@ Chapter 3, 4
 - [Database Management Systems](http://pages.cs.wisc.edu/~dbbook/) Chapter 4
 - [Code project page](https://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins) and
 [SO post](https://stackoverflow.com/questions/38549/what-is-the-difference-between-inner-join-and-outer-join) have
-nice graphic explanation to this concept that is worth checking out.
+nice graphic explanation to this concept.
 - [What is natural join in SQLite?](http://www.w3resource.com/sqlite/sqlite-natural-join.php)

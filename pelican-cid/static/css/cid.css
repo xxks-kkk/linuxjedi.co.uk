@@ -425,7 +425,8 @@ body {
     background: #E0FFE0;
     margin-left: 10px;
     margin-right: 72px;
-    margin-bottom: 4px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     padding: 4px;
     border: 2px black solid;
     font-size: 90%; }
