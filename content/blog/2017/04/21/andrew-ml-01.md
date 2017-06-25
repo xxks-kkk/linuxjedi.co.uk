@@ -385,6 +385,12 @@ However, in the course, we directly use the `fminunc` from Octave to do the opti
 Internally, the function use advanced optimization technique that can avoid manually picking
 $\alpha$ in gradient descent and find the optimal $\theta$ faster than gradient descent.
 
+!!!note
+    For multiclass classification problem, we have $h_\theta^{(i)}(x) = p(y=1 | x; \theta)$ where
+    $i = 1,2,3,...$. Then, we can train a logistic regression classifier $h_\theta^{(i)}(x)$ for
+    each class $i$ to predict the probability that $y=i$. On a new input $x$, to make predication, pick
+    the class $i$ that gives highest $h_\theta^{(i)}(x)$. We are going to predict $y$ with that value $i$.
+
 ### In practice
 
 The implementation for cost function and gradient descent for logistic regression
