@@ -112,10 +112,17 @@ $$
 and our cost function is 
 
 $$
-\begin{equation}
-J(\theta) = \frac{1}{2m} \sum_{i=1}^m(\theta^T x^{(i)}-y(i))^2 \label{eq:2}
-\end{equation}
+\begin{eqnarray}
+J(\theta) &=& \frac{1}{2m} \sum_{i=1}^m(\theta^T x^{(i)}-y(i))^2 \label{eq:2} \\
+          &=& \frac{1}{m}  \sum_{i=1}^m \underbrace{\frac{1}{2}(\theta^T x^{(i)}-y(i))^2_\textrm{cost($h_\theta(x),y)}} \label{eq:7}
+\end{eqnarray}
 $$
+
+!!!note
+    $2$ in the above equation is a convenience for the computation of the gradient
+    descent as the derivative term of the square function will cancel out the 
+    $\frac{1}{2}$ term.
+
 
 In order to find $\theta$ that minimizes our cost function $J(\theta)$. Two methods are available for us:
 
@@ -132,6 +139,13 @@ $$
 
 $\alpha$ is called learning rate, which determines "the step we take downhill" and the part afterwards decides
 which direction we want to go (derived by taking partial derivatives against $\theta_j$)[^1].
+
+!!!note
+    $J(\theta)$ should decrease after every iteration of batch gradient descent. If it is not, we
+    want to try smaller $\alpha$. However, if $\alpha$ is too small, gradient descent can be slow to converge
+    (i.e. $J(\theta)$ decreases by less than $\epsilon$ (i.e. $10^-3$) in one iteration). If $\alpha$ is too large,
+    $J(\theta)$ may not decrease on every iteration; may not converge. Thuse, to choose $\alpha$, we can 
+    try a range of values, say $\dots, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, \dots$.
 
 - Normal Equation
 
@@ -322,7 +336,7 @@ grad = grad(:);
 
 ## Logistic regression
 
-Logistic regression is used as a classification algorithm. It is better than the linear
+Logistic regression is a classification algorithm. It is better than the linear
 regression because 1) linear regression classification result is higly impacted by the
 outliers 2) linear regression result $h_\theta (x)$ can output value $>1$ or $<0$, which
 doesn't fit with the nature of classification task.
@@ -341,7 +355,22 @@ $$
 This hypothesis can be intrepreted as the probability that $y = 1$ given $x$ and $\theta$
 (i.e. $h_\theta(x) = P(y = 0 | x;\theta)$)
 
-Then the cost function $J(\theta)$ is
+In the linear regression, we have cost function \ref{eqn:2}. However, 
+$\text{cost}(h_\theta(x),y)$ cannot work for logistic regression because
+$J(\theta)$ is not convex. In order to make $J(\theta)$ convex, we have the following
+$\text{cost}(h_\theta(x),y)$ for logistic regression
+
+$$
+\text{cost}(h_\theta(x),y) = \left\{
+\begin{array}{ll}
+-\log (h_\theta(x)) \text{ if} y = 1
+-\log (1 - h_\theta(x)) \text{ if} y = 0
+\end{array}
+\right
+$$
+
+We can rewrite the above equation as $\text{cost}(h_\theta(x),y) = -y \log(h_\theta(x)) - (1-y) \log (1-h_\theta(x))$
+and then the cost function $J(\theta)$ is
 
 $$
 J(\theta) = -\frac{1}{m}\sum_{i=1}^m \lbrack 
@@ -408,6 +437,6 @@ grad(1) = (1/m * X'*(sigmoid(X*theta) - y))(1);
 grad(2:t) =  (1/m * X'*(sigmoid(X*theta) - y) + lambda/m * theta)(2: t);
 ```
 
-[^1]: We may need to do feature scaling & pick up learning rate $\alpha$ wisely when we work with gradient descent.
+[^1]: We may need to do feature scaling when we work with gradient descent.
 
 [^2]: We don't penalize $\theta_0$.
