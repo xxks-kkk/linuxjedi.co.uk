@@ -114,7 +114,7 @@ and our cost function is
 $$
 \begin{eqnarray}
 J(\theta) &=& \frac{1}{2m} \sum_{i=1}^m(\theta^T x^{(i)}-y(i))^2 \label{eq:2} \\
-          &=& \frac{1}{m}  \sum_{i=1}^m \underbrace{\frac{1}{2}(\theta^T x^{(i)}-y(i))^2_\textrm{cost($h_\theta(x),y)}} \label{eq:7}
+          &=& \frac{1}{m}  \sum_{i=1}^m \underbrace{\frac{1}{2}(\theta^T x^{(i)}-y(i))^2}_{\text{cost}(h_\theta(x),y)} \label{eq:7}
 \end{eqnarray}
 $$
 
@@ -143,7 +143,7 @@ which direction we want to go (derived by taking partial derivatives against $\t
 !!!note
     $J(\theta)$ should decrease after every iteration of batch gradient descent. If it is not, we
     want to try smaller $\alpha$. However, if $\alpha$ is too small, gradient descent can be slow to converge
-    (i.e. $J(\theta)$ decreases by less than $\epsilon$ (i.e. $10^-3$) in one iteration). If $\alpha$ is too large,
+    (i.e. $J(\theta)$ decreases by less than $\epsilon$ (i.e. $10^{-3}$) in one iteration). If $\alpha$ is too large,
     $J(\theta)$ may not decrease on every iteration; may not converge. Thuse, to choose $\alpha$, we can 
     try a range of values, say $\dots, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, \dots$.
 
@@ -355,18 +355,18 @@ $$
 This hypothesis can be intrepreted as the probability that $y = 1$ given $x$ and $\theta$
 (i.e. $h_\theta(x) = P(y = 0 | x;\theta)$)
 
-In the linear regression, we have cost function \ref{eqn:2}. However, 
+In the linear regression, we have cost function \ref{eq:2}. However, 
 $\text{cost}(h_\theta(x),y)$ cannot work for logistic regression because
 $J(\theta)$ is not convex. In order to make $J(\theta)$ convex, we have the following
 $\text{cost}(h_\theta(x),y)$ for logistic regression
 
 $$
-\text{cost}(h_\theta(x),y) = \left\{
-\begin{array}{ll}
--\log (h_\theta(x)) \text{ if} y = 1
--\log (1 - h_\theta(x)) \text{ if} y = 0
-\end{array}
-\right
+\text{cost}(h_\theta(x),y)=\left\{
+                \begin{array}{ll}
+                  -\log (h_\theta(x)) \text{ if } y = 1 \\
+                  -\log (1 - h_\theta(x)) \text{ if } y = 0
+                \end{array}
+              \right.
 $$
 
 We can rewrite the above equation as $\text{cost}(h_\theta(x),y) = -y \log(h_\theta(x)) - (1-y) \log (1-h_\theta(x))$
