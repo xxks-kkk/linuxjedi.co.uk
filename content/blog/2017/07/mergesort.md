@@ -1,4 +1,4 @@
-Title: Mergesort
+Title: Merge sort
 Date: 2017-07-01 23:33
 Category: Data Struct & Algo
 Tags: sorting, maw
