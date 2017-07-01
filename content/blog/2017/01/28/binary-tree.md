@@ -40,6 +40,7 @@ This is the summary of *binary tree* and *binary search tree* part in MAW Chapte
 ## Properties
 
 - The average depth of binary tree is $O(\sqrt{n})$
+- The height of *balance* binary tree is $O(n\log n)$
 - A binary tree of $N$ nodes, there are $N+1$ `NULL` pointers representing children (MAW 4.4)
 - The maximum number of nodes in a binary tree of height $H$ is $2^{H+1}-1$ (MAW 4.5)
 - The number of full nodes plus one is equal to the number of leaves in a nonempty binary tree

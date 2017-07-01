@@ -6,7 +6,7 @@ Summary: My solutions to selected problems in MAW Chapter 7
 
 ## Solutions
 
-including: MAW 7.1, 7.2, 7.3, 7.4, 7.5.a, 7.9, 7.10, 7.11, 7.12, 
+including: MAW 7.1, 7.2, 7.3, 7.4, 7.5.a, 7.9, 7.10, 7.11, 7.12, 7.13
 
 ### MAW 7.1
 
@@ -173,3 +173,23 @@ continuing the process, we obtain
 Still $O(N\log N)$. Heapsort uses at least (roughly) 
 $N\log N$ comparisons on any input, so there are no particularly
 good inputs.
+
+### MAW 7.13
+
+> Sort 3,1,4,1,5,9,2,6 using mergesort
+
+First the sequence {3,1,4,1} is sorted. To do this, the sequence {3,1}
+is sorted. This involves sorting {3} and {1}, which are base cases, and
+merging the result to obtain {1,3}. The sequence {4,1} is likewise sorted into
+{1,4}. Then these two sequences are merged to obtain {1,1,3,4}. The second
+half is sorted similarly, eventually obtaining {2,5,6,9}. The merge 
+result is then easily computed as {1,1,2,3,4,5,6,9}.
+
+### MAW 7.15
+
+> Determine the running time of mergesort for
+> a. sorted input
+> b. reverse-ordered input
+> c. random input
+
+The running time for mergesort is $O(N \log N)$ regardless of the input pattern.
