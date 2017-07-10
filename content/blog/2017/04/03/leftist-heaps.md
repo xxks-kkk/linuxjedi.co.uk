@@ -81,7 +81,7 @@ Merge(PriorityQueue H1, PriorityQueue H2)
   if (H1 == NULL) return H2;
   if (H2 == NULL) return H1;
   if (H1->Element < H2->Element) return Merge1(H1, H2);
-  if (H1->Element > H2->Element) return Merge2(H2, H1);
+  if (H1->Element > H2->Element) return Merge1(H2, H1);
 }
 
 static PriorityQueue

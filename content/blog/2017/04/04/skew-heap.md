@@ -30,8 +30,8 @@ into an initially empty skew heap.
 
 ## Operations
 
-Skew heap is extremely similar with leftist heap in terms of `merge` operation. 
-There is only one difference: for leftist heap, we check to see whether the 
+Skew heap is extremely similar with [leftist heap]({filename}/blog/2017/04/03/leftist-heaps.md) 
+in terms of `merge` operation. There is only one difference: for leftist heap, we check to see whether the 
 left and right children satisfy the leftist heap order property and swap them
 if they do not. However, for skew heaps, the swap is unconditional. In other words,
 we **always** swap the left & right subtrees at each step of merge. 
