@@ -145,7 +145,26 @@ I'm a Dog
 The reason behind this scenario is what we called **polymorphism**, which means "many form" in Greek. Here is how this
 concept get explained in [C++ Primer](https://www.amazon.com/Primer-5th-Stanley-B-Lippman/dp/0321714113):
 
-> We speak of types related by inheritance as polynomial
+> We speak of types related by inheritance as polymorphic types, 
+> because we can use the “many forms” of these types while ignoring the differences among them. 
+> The fact that the static and dynamic types of references and pointers can differ is the cornerstone of how C++ supports polymorphism.
+
+> When we call a function defined in a base class through a reference or pointer to the base class, 
+> we do not know the type of the object on which that member is executed. 
+> The object can be a base-class object or an object of a derived class. 
+> If the function is virtual, then the decision as to which function to run is 
+> delayed until run time. The version of the virtual function that is run is the 
+> one defined by the type of the object to which the reference is bound or to 
+> which the pointer points.On the other hand, calls to nonvirtual functions are 
+> bound at compile time. Similarly, calls to any function (virtual or not) 
+> on an object are also bound at compile time. 
+> The type of an object is fixed and unvarying—there is nothing we can do to 
+> make the dynamic type of an object differ from its static type. 
+> Therefore, calls made on an object are bound at compile time to the version defined by the type of the object.
+
+> Note: Virtuals are resolved at run time only if the call is made 
+> through a reference or pointer. Only in these cases is it possible for 
+> an object’s dynamic type to differ from its static type.
 
 
 ## Pure virtual function & abstract base class
