@@ -2,7 +2,7 @@ Title: Virtual methods and polymorphism in C++
 Date: 2017-07-12 23:11
 Category: programming languages
 Tags: cpp
-Summary: virtual methods and polymorphism in C++
+Summary: virtual, pure virtual, constructors, abstract base class
 
 Surprisingly, even I work with the product that is written majorly in C++, I don't have to deal
 with the stuff that differentiate C++ from C. However, I'm now working on a defect that
@@ -166,6 +166,82 @@ concept get explained in [C++ Primer](https://www.amazon.com/Primer-5th-Stanley-
 > through a reference or pointer. Only in these cases is it possible for 
 > an object’s dynamic type to differ from its static type.
 
+To see the final note of the above quote, let's take a look an example
+
+```c++
+#include <iostream>
+using namespace std;
+
+class Animal{
+public:
+  void getFamily() { cout << "We are animals" << endl; }
+  virtual void getClass() { cout << "I'm an Animal" << endl;}
+};
+
+class Dog: public Animal{
+public:
+  void getClass() { cout << "I'm a Dog" << endl;}
+};
+
+void whatClassAreYou(Animal *animal)
+{
+  animal->getClass(); 
+}
+
+void whatClassAreYou2(Animal animal)
+{
+  animal.getClass();
+}
+
+int main()
+{
+  Animal *animal = new Animal;
+  Dog *dog = new Dog;
+
+  animal->getClass();
+  dog->getClass();
+
+  whatClassAreYou(animal);
+  whatClassAreYou(dog);
+
+  Animal animal2;
+  Dog dog2;
+
+  whatClassAreYou2(animal2);
+  whatClassAreYou2(dog2);
+}
+```
+
+In this example, we define another method `whatClassAreYou2` calls on object instead of pointers. Now, we apply this method
+to our newly created objects `animal2` and `dog2` and we get
+
+```
+I'm an Animal
+I'm a Dog
+I'm an Animal
+I'm a Dog
+I'm an Animal
+I'm an Animal
+```
+
+As you can see, even we have virtual function in our base class, `whatClassAreYou2()` invokes only the base class's `getClass()`
+method and ignores the subclass overrides. 
+
+Aside note, you may notice that we use two ways to initialize our objects. The first way is through `Animal *animal = new Animal;`
+and the second way is through `Animal animal2;`. Initialization is quite complex in C++. These two ways are essentially the same:
+we use **default constructor** [^1] to initialize the objects. The only difference is that the first way gives us a pointer to 
+the object and the second way gives object directly. To obtain the pointer to the object, we can do `Animal *ptrAnimal = &animal2`.
+Another way to initialize object is through value initilialization [^2]. For example:
+
+```c++
+string *ps1 = new string;   // default initalized to the empty string
+string *ps = new string();  // value initialized to the empty string
+int *pi1 = new int;         // default initialized; *pi1 is undefined
+int *pi2 = new int();       // value initialized to 0; *pi2 is 0
+```
+
+[^1]: See Section 7.1.4 Constructors (p.262) of C++ Primier (5th edition) for details.
+[^2]: See Section 12.1.2 Managing Memory Directly (p.459) of C++ Primier (5th edition) for details.
 
 ## Pure virtual function & abstract base class
 
@@ -226,78 +302,27 @@ A class like `Car` that contains (or inherit without overriding) a pure virtual 
 abstract base class defines an interface for subsequent classes to override. We cannot (directly) create objects of a
 type that is an abstract base class.
 
+## Key terms summary
 
-```c++
-#include <iostream>
+Here, I summarize terms appeard in this post as a quick index for future reference:
 
-using namespace std;
+- **virtual**: Member function that defines type-specific behavior. Calls to virtual made through 
+a reference or pointer are resolved at run time, based on the type of the object to which the reference 
+or pointer is bound.
 
-// Virtual Methods and Polymorphism
-// Polymorphism allows you to treat subclasses as their superclass and yet
-// call the correct overwritten methods in the subclass automatically
+- **pure virtual**: Virtual function declared in the class header using `=0` just before the semicolon. A pure
+virtual function need not be (but maybe) defined. Classes with pure virtuals are abstract classes. If a 
+derived class does not define its own version of an inherited pure virtual, then the derived class is abstract as well.
 
-class Animal{
-public:
-  void getFamily() { cout << "We are animals" << endl; }
+- **polymorphism**: As used in object-oriented programming, refers to the ability to obtain type-specific behavior
+based on the dynamic type of a reference or pointer.
 
-  // When we define a method as virtual we know that Animal
-  // will be a base class that may have this method overwritten
-  virtual void getClass() { cout << "I'm an Animal" << endl;}
-};
+- **static type**: Type with which a variable is defined or that an expression yields. Static type is known at compile time.
 
-class Dog: public Animal{
-public:
-  void getClass() { cout << "I'm a Dog" << endl;}
-};
+- **dynamic type**: Type of an object at runtime. The dynamic type of an object to which a reference refers or to which
+a pointer points may differ from the static type of the reference or pointer. A pointer or reference to a base-class type
+can refer to an object of derived type. In such cases the static type is reference (or pointer) to base, but 
+the dynamic type is reference (or pointer) to derived.
 
-void whatClassAreYou(Animal *animal)
-{
-  animal->getClass(); // use "virtual", proper getClass() method will be called depending on
-                      // the exact type of Animal* animal get passed in (i.e. base class Animal
-                      // or subclass Dog)
-}
-
-class GermanShepard: public Dog
-{
-public:
-  void getClass() { cout << "I'm a German Shepard" << endl;}
-  void getDerived() { cout << "I'm an Animal and Dog" << endl; }
-};
-
-int main()
-{
-  Animal *animal = new Animal;
-  Dog *dog = new Dog;
-
-  // If a method is marked virtual or not doesn't matter if we call the
-  // method directly from the object
-  animal->getClass();
-  dog->getClass();
-
-  // If getClass is not marked as virtual outside functions, won't look for
-  // overwritten methods in subclasses however.
-  whatClassAreYou(animal);
-  whatClassAreYou(dog);
-
-  Dog spot;
-  GermanShepard max;
-
-  // A base calss can call derived class methods as long as they exist in the base class
-  Animal *ptrDog = &spot;
-  Animal *ptrGShepard = &max;
-
-  // Call the method not overwritten in the super class Animal
-  ptrDog -> getFamily();
-
-  // Since getClass was overwritten in Dog call the Dog version
-  ptrDog -> getClass();
-
-  // Call to the super class
-  ptrGShepard -> getFamily();
-
-  // Call to the overwritten GermanShepard version
-  ptrGShepard -> getClass();
-
-  return 0;
-}
-```
+- **abstract base class**: Class that has one or more pure virtual functions. We cannot create objects of an 
+abstract base-class type.
