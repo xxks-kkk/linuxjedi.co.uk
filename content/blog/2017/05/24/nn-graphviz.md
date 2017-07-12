@@ -31,7 +31,7 @@ likely see the below picture:
 
 ![]({filename}/images/multiclass_neural_network_example.png) 
 
-This is probably the most simplest Graphviz demonstration on Neural Network. The
+This is probably the simplest Graphviz demonstration on Neural Network. The
 code for this picture can be obtained [here](https://gist.github.com/thigm85/5760134).
 
 However, when I'm preparing my last post, I'm not quite satisified with the example above.
