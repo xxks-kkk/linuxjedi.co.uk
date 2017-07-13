@@ -92,8 +92,8 @@ $$
 Let's revisit our key observation \ref{eqn:1} and set $j = \mu$ and $k = (n-m)$, we have
 $x_{\mu + (n-m)\lambda} = x_{\mu}$. Then, by \ref{eqn:4}, we have
 $x_{\mu + i} = x_{\mu}$, which can be rewritten as $x_{i+\mu} = x_{\mu}$!!! This equation
-tells us that the node at which the cycle begins (i.e $x+{\mu}$) is exactly the
-same node as the node $\mu$ nodes away from the index at which tortoise and hare meet
+tells us that the node at which the cycle begins (i.e $x_{\mu}$) is exactly the
+same node as the node that is $\mu$ nodes away from the index at which tortoise and hare meet
 (i.e. $x_i$).
 
 !!!note
