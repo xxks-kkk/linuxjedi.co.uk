@@ -17,6 +17,9 @@ To him he is always doing both."
 
 .. stop-show-quotes
 
+"I know I have chosen the hard path, because I know that is the right thing to do."
+**- Unknown**
+
 "He who has a why to live can bear almost any how."
 **-- Friedrich Nietzsche**
 

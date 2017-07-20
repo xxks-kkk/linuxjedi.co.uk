@@ -1,7 +1,7 @@
 Title: Draw a Neural Network through Graphviz 
 Date: 2017-05-25 22:20
 Category: tools
-Tags: ml, graphviz
+Tags: ml, graphviz, nn
 Summary: Use NN as an example to show graphviz tricks
 
 ## Preface
