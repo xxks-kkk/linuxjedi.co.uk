@@ -39,8 +39,8 @@ with a learning algorithm, and gain guidance as to how best to improve its perfo
 We use **test set error** as our basic metrics to evaulate our learning algorithm (hypothesis).
 
 We first shuffle our whole data set to eliminate the potential impact of data record
-ordering. Then, we randomly choose $70%$ of data set as our training set and the rest
-$30%$ as our test set. Mathematically, we denote training set: 
+ordering. Then, we randomly choose $70\%$ of data set as our training set and the rest
+$30\%$ as our test set. Mathematically, we denote training set: 
 $(x^{(1)}, y^{(1)}), (x^{(2)}, y^{(2)}), \dots, (x^{(m)}, y^{(m)})$ and we denote
 test set as $(x_{\text{test}}^{(1)}, y_{\text{test}}^{(1)}), (x_{\text{test}}^{(1)}, y_{\text{test}}^{(1)}) \dots (x_{\text{test}}^{(m_\text{test})}, y_{\text{test}}^{(m_\text{test})})$ with
 $m_\text{test} = \text{no. of test examples}$.
@@ -80,7 +80,7 @@ This gives us the proportion of the test data that was misclassified.
 In addition to the test set error, we will define **cross validation set error**
 as well. Instead of dividing the whole data set as training set and test set, 
 we can divide it into three parts: training set, corss validation (cv) set, and
-test set, with proportion of data set as $60%$, $20%$, and $20%$. Mathematically,
+test set, with proportion of data set as $60\%$, $20\%$, and $20\%$. Mathematically,
 similar to the notation of test set, we have $(x_{\text{cv}}^{(1)}, y_{\text{cv}}^{(1)}), (x_{\text{cv}}^{(1)}, y_{\text{cv}}^{(1)}) \dots (x_{\text{cv}}^{(m_\text{cv})}, y_{\text{cv}}^{(m_\text{cv})})$ with
 $m_\text{cv} = \text{no. of cv examples}$. The purpose
 of dividing data set in this way will be clear in the next section. 
