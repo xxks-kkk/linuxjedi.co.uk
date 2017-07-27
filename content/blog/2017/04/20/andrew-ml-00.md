@@ -1,7 +1,7 @@
 Title: Introducing the "Andrew Ng's ML course study notes"
 Date: 2017-04-21 23:48
 Category: Machine Learning
-Tags: ml, coursera
+Tags: machine learning, coursera
 Summary: Let the battle begins :)
 
 I finally enrolled in Andrew Ng's machine learning course on 

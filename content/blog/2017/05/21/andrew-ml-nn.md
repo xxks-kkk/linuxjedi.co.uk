@@ -1,7 +1,7 @@
 Title: Andrew Ng's ML Week 04 - 05
 Date: 2017-05-23 22:20
 Category: Machine Learning
-Tags: ml, coursera, nn
+Tags: machine learning, coursera, neural network
 Summary: Neural network
 
 Week 4 and 5 mainly talks about one important learning technique called "Neural Networks".

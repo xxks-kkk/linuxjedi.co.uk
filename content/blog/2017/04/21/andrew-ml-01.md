@@ -1,7 +1,7 @@
 Title: Andrew Ng's ML Week 01 - 03
 Date: 2017-05-05 16:18
 Category: Machine Learning
-Tags: ml, coursera
+Tags: machine learning, coursera
 Summary: ML overview, Linear regression, Logistic regression, Regularization 
 
 [TOC]

@@ -1,7 +1,7 @@
 Title: Andrew Ng's ML Week 06, 11
 Date: 2017-07-21 12:51
 Category: Machine Learning
-Tags: ml, coursera, nn
+Tags: machine learning, coursera, neural network
 Summary: Advice on building a machine learning system from course
 
 I actually [finished the course](https://www.coursera.org/account/accomplishments/verify/58VFP5LF4UXV) 

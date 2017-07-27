@@ -11,11 +11,9 @@ which shipped with [DB2](http://www.ibm.com/analytics/us/en/technology/db2/), [d
 other IBM data warehouse solutions (i.e., If you can "interact" with multiple data source
 through one IBM product, federation is there). 
 
-I like to spend time on both system and machine learning: system programming is 
-deeply rooted in my heart that cannot easily get rid of; machine learning is
-like the magic trick that I always want to know how it works.
-I come back to the academia in the hope of finding the spark between these two
-fascinating fields. You can find more about me in my [LinkedIn page](http://cn.linkedin.com/in/zhu45) 
+I like to spend time on both system and machine learning: system programming 
+makes me a better programmer; machine learning and specifically NLP fulfill my
+research interests. You can find more about me in my [LinkedIn page](http://cn.linkedin.com/in/zhu45) 
 or my [resume]({attach}/assets/zeyuan-hu-cv.pdf). When I'm exhausted, I like to
 [write stuff](http://zhu45.org/blog2/) and [sing some songs]({filename}songs.md).
 

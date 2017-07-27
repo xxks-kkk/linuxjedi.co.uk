@@ -135,6 +135,9 @@ YEAR_ARCHIVE_URL = 'archives/{date:%Y}/period_archives.html'
 # tag
 TAG_URL = 'tag/{slug}.html'
 TAG_SAVE_AS = 'tag/{slug}.html'
+TAG_SUBSTITUTIONS = (('book reviews', 'book-reviews'), ('assembly language', 'assembly-language'), 
+                     ('call stack', 'call-stack'), ('machine learning', 'machine-learning'), 
+                     ('neural network', 'neural-network'))
 
 # Disqus
 DISQUS_SITENAME='zhu45-org'
