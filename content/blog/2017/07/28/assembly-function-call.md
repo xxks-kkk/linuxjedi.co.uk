@@ -254,8 +254,8 @@ called the base pointer.
 When a function is done executing, it does the following three things:
 
 1. It stores its return value in $\mathtt{\%eax}$
-2. It frees the stack space it allocated by adding the same amount to the stack pointer `addl $8 %esp`
-3. It pops off the registers it saved earlier `popl %ebx`
+2. It frees the stack space it allocated by adding the same amount to the stack pointer （i.e., `addl $8 %esp`)
+3. It pops off the registers it saved earlier (i.e., `popl %ebx`)
 4. It resets the stack to what it was when it was called (it gets rid of the current stack frame
 and puts the stack frame of the caller back into effect)
 5. It returns control back to wherever it was called from. This is done using the `ret` instruction,
