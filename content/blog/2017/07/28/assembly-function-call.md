@@ -264,8 +264,10 @@ to that value.
 
 The reason we have to restore the caller's base pointer register before calling `ret` is due to the
 structure of our current stack frame: in our current stack frame, the return address is not
-at the top of the stack. Therefore, before we return, we have to rest the stack pointer $\mathtt{\%esp}$
-and frame pointer $\mathtt{\%ebp}$ to what they were when the function began. 
+at the top of the stack. Therefore, in order to make the return address to be the top of the stack frame,
+we need to move the stack pointer $\mathtt{\%esp}$ to the current stack frame base pointer $\mathtt{\%ebp}$
+and restore the caller's frame pointer first. Then, the return address will be the top of the stack.
+Since we need to perform caller's frame pointer restoration anyway, everything just works out.
 
 Thus, to return from the function you have to do the following:
 
