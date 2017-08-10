@@ -17,8 +17,14 @@ To him he is always doing both."
 
 .. stop-show-quotes
 
+"The master has failed more times than the beginner has even tried."
+**-- Stephen McCranie**
+
+"Don't think. Feel" 
+**-- Bruce Lee**
+
 "I know I have chosen the hard path, because I know that is the right thing to do."
-**- Unknown**
+**-- Unknown**
 
 "He who has a why to live can bear almost any how."
 **-- Friedrich Nietzsche**

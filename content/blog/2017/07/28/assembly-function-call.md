@@ -288,8 +288,7 @@ ret             # Since stack pointer pointing to return address, we can now cal
 
 Now, we can take a look at two examples: the first one is to calculate the power given two numbers: one
 as the base and the other one as the power. The second example calculate the factorial of
-a given number, which demonstrates how the recursive function.
-is done.
+a given number, which demonstrates how the recursive function is done.
 
 ```asm
         # PURPOSE: Program to illustrate how functions work
