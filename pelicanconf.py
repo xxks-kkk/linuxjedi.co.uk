@@ -137,7 +137,9 @@ TAG_URL = 'tag/{slug}.html'
 TAG_SAVE_AS = 'tag/{slug}.html'
 TAG_SUBSTITUTIONS = (('book reviews', 'book-reviews'), ('assembly language', 'assembly-language'), 
                      ('call stack', 'call-stack'), ('machine learning', 'machine-learning'), 
-                     ('neural network', 'neural-network'))
+                     ('neural network', 'neural-network'),
+                     ('dynamic programming', 'dynamic-programming'),
+                     ('greedy algorithm', 'greedy-algorithm'))
 
 # Disqus
 DISQUS_SITENAME='zhu45-org'

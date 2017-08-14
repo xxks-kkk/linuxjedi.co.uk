@@ -1,7 +1,7 @@
-Title: Josephus Problem
+Title: Josephus problem
 Date: 2016-12-31 20:24
 Category: Data Struct & Algo
-Tags: recursion, dynamic-programming, math, maw
+Tags: recursion, dynamic programming, math, maw
 Summary: See above
 
 ## Preface
@@ -48,7 +48,7 @@ people in the initial circle, and $m$ denotes the count for each step. In other 
 are skipped and the $m$-th is eliminated. The people in the circle are numbered from $1$ to $n$. Our goal
 is to find $J(n,m)$, which denotes the survivor's number (i.e. $J(5,1) = 3$). For simplicity, let $F(n) = J(n,2)$.
 
-![]({filename}/images/josephus-1.png) 
+![joseph problem]({filename}/images/josephus-1.png) 
 
 One quick observation is that after the first go-round, we are left with the same problem but for a different
 number of people. For instance, when $n = 10$, after the first go-round, we eliminate $2$, $4$, $6$, $8$, $10$
