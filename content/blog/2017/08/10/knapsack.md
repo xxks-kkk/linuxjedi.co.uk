@@ -82,8 +82,8 @@ benefit $26$. However, as you can see, the solution for $S_4$ (i.e., $1,2,3,4$) 
 of the solution for $S_5$ (i.e., $1,3,4,5$). Thus, our definition of subproblem is not right.
 Let's refine our subproblem definition by adding another parameter $w$ that represents the
 exact weight for each subset of items. Then, our subproblem is to find the best subset of 
-$S_k$ that has total weight $w$. The benefits corresponding with the best subset is denoted
-as $B[k, w]$.
+$S_i$ that has total weight $w$. The benefits corresponding with the best subset is denoted
+as $B[i, w]$.
 
 !!!note
     The problem with the first subproblem definition is that we kind of play greedy algorithm in
@@ -115,7 +115,7 @@ with greater value: not contain $i$ (i.e., $B[i-1, w]$) or contain
 $i$ (i.e., $B[i-1, w-w_i] + b_i$).
 
 !!!note
-    As you can see from recursive formula, the solution $B[k,w]$ reuses
+    As you can see from recursive formula, the solution $B[i,w]$ reuses
     the solution to $B[i-1, w]$ and $B[i-1, w-w_i]$, which is the signature of
     dynamic programming.
 
