@@ -6,7 +6,7 @@ Summary: summarizes knapsack problem and its variations
 
 I'm studying this problem on my way from Beijing to Austin to kill some time.
 This problem works pretty well for this purpose. There are three kinds of 
-forms of the problem, which I'll summarize below. Also, this is a good example
+forms for the problem, which I'll illustrate below. This problem is a good example
 of dynamic programming paradigm.
 
 [TOC]
@@ -223,8 +223,8 @@ gain (i.e. $B[i,k] = B[i-1,k] = 5$).
 ## 0-x knapsack problem
 
 0-x knapsack problem is a generalization of 0-1 knapsack problem in the sense that
-for item $i$ we can load multiple of it into our knapsack. Let $x_i$ to denote
-the number of $i$th item are loaded into the knapsack. One requirement to $x_i$
+for item $i$ we can load multiple of it into our knapsack. Let's use $x_i$ to denote
+the number of $i$th item that is loaded into the knapsack. One requirement to $x_i$
 is that it has to be integer-valued.
 
 The problem formulation and subproblem definition is just like the 0-1 knapsack problem.
