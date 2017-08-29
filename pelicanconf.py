@@ -98,7 +98,7 @@ INDEX_SAVE_AS = INDEX_URL+'/index.html'
 THEME='pelican-cid'
 SITEFOOTER = u'Zeyuan Hu &copy; 2015-2017.'
 MENUITEMS = (
-    ('Teach', 'teach.html'),
+    ('Teaching', 'teaching.html'),
     ('Blog', INDEX_URL),
     ('Projects', 'projects.html'),
     ('Quotes', 'quotes.html')
