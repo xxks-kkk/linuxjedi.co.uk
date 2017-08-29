@@ -427,9 +427,3 @@ When we should use a very large training set? Two things need to consider before
 $x$, can a human expert confidently predict $y$?
 - Use a learning algorithm with many parameters (i.e. logistic regression or linear regression with many features; neural network with many hidden units),
 which can give us a low bias algorithm.
-
-## Links to resources
-
-Here are some of the resources I found helpful while preparing this article:
-
-- [机器学习笔记7 高偏差/低偏差，学习曲线，模型选择](http://nanshu.wang/post/2015-05-17/)
