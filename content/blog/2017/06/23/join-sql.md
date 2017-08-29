@@ -1,7 +1,7 @@
 Title: join in SQL
 Date: 2017-06-23 21:23
-Category: DB
-Tags: db, sql, relational-algebra, leetcode
+Category: Database
+Tags: database, sql, relational-algebra, leetcode
 Summary: A study on join statement in SQL
 
 In this post, I'll provide a summary on the usage of `join` statement in SQL

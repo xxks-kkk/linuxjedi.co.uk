@@ -17,6 +17,13 @@ To him he is always doing both."
 
 .. stop-show-quotes
 
+"Then you will know the truth, and the truth will set you free."
+**-- John 8:32, Bible**
+
+"The art of doing mathematics is finding that special case that 
+contains all the germs of generality."
+**-- David Hibert**
+
 "The master has failed more times than the beginner has even tried."
 **-- Stephen McCranie**
 
