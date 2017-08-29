@@ -151,6 +151,15 @@ The following table summarizes the running time for $M$ union-find operations on
 | quick union + path compression | $N + M\log N$    |
 | smart union + path compression | $N + M\log^*N$  |
 
+The running time for each operation for each algorithm is following:
+
+| algorithm                      | initialize | union     | find      |
+|--------------------------------|------------|-----------|-----------|
+| quick-find                     | N          | N         | 1         |
+| quick-union                    | N          | N         | N         |
+| smart union                    | N          | $\log N$  | $\log N$  |
+| quick union + path compression | N          | $\log N$  | $\log N$  |
+| smart union + path compression | N          | $\log^*N$ | $\log^*N$ |
 
 ## Links to resources
 
