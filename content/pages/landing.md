@@ -14,7 +14,7 @@ through one IBM product, federation is there).
 I like to spend time on both system and machine learning: system programming 
 makes me a better programmer; machine learning and specifically NLP fulfill my
 research interests. You can find more about me in my [LinkedIn page](http://cn.linkedin.com/in/zhu45) 
-or my [resume (short)]({attach}/assets/zeyuan-hu-cv.pdf)[(long)]({attach}/assets/zeyuan-hu-cv-long.pdf). When I'm exhausted, I like to
+or my [resume (industry)]({attach}/assets/zeyuan-hu-cv.pdf) [(academia)]({attach}/assets/zeyuan-hu-cv-long.pdf). When I'm exhausted, I like to
 [write stuff](http://zhu45.org/blog2/) and [sing some songs]({filename}songs.md).
 
 I am contactable via. my personal email address ferrishu3886 [AT] gmail [DOT] com and
