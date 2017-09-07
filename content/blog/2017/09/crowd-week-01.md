@@ -102,22 +102,24 @@ computational cost) to pursue a mediocre complicated model when a simple model c
 !!!note
     [Improving Twitter Search with Real-Time Human Computation](https://blog.twitter.com/engineering). Edwin Chen and Alpa Jain. [Twitter Engineering Blog](https://blog.twitter.com/engineering). January 8, 2013.
 
-This article is interesting because it offer a real world example on how we can integrate crowdsourcing into the real production system. 
-The problems associated with crowdsourcing are usually relate to the performance and latency. Performance often refers to the accuracy
+This article is interesting because it offers a real world example of how we can integrate crowdsourcing into the real production system. 
+The problems associated with crowdsourcing are usually related to the performance and latency. Performance often refers to the accuracy
 of tasks that crowd workers finish and latency usually measures the amount of time that takes from the tasks start to finish. In the papers
 I have read so far, researchers merely come up with good solutions to tackle these two issues and thus, the architecture or the product
-that they come up cannot be directly applied in the real world. That's why this article looks interesting because Twitter actually use
-crowdsourcing in their production system. The way that Twitter handles these two issues are centered around the people. Quite often, when
+that they come up cannot be directly applied in the real world. That's why this article looks interesting because Twitter actually uses
+crowdsourcing in their production system. The way that Twitter handles these two issues is centered around the people. Quite often, when
 there is a crowdsourcing task, people immediately think about Amazon Mechanical Turk or Crowdflower. However, what Twitter does is that
 they use these third-party platforms as backups and they mainly use "custom pool", which contains a group of crowd workers (or "judges") that
 are highly specialized to Twitter product scenarios. This solution may look expensive initially because "for many of them, this is a full-time job" 
 and thus, I hardly think Twitter just pay around 0.07 dollars for tasks these people finish. However, I think this solution saves a lot of
 economics cost. For example, as pointed out in this article, those judges are recruited to handle the short-term search query spike and annotate
-the new trend of search query. This means the latency is the key here: it is not acceptable for a crowdsourcing task spends several hours or days
-to finish, which are commonly-seen for standard crowdsourcing tasks through those third party platforms. In addition, we devote a lot of
-statistical methods or human intervention to improve the quality of crowdsourcing jobs, which may seem unnecessary for Twitter settings because
-those peole in the pool are highly-trained professionals. If we think from Twitter perspective, any mistake has the potential to cost multi-million 
-advertisement revenue and thus, it is no hard to imagine why Twitter chooses to use their own in-house "turkers".
+the new trend of the search query. This means the latency is the key here: it is not acceptable for a crowdsourcing task spends several hours or days
+to finish, which are commonly-seen for standard crowdsourcing tasks through those third party platforms. Furthermore, even the crowd workers fair
+quickly, the accuracy of the task result can hardly be guaranteed because crowd workers can possibly misunderstand the meaning of the query due
+to the sudden appearance of the trend. From the quality control perspective, we devote a lot of
+statistical methods or human intervention to improve the quality of crowdsourcing jobs in a standard setting, which may seem unnecessary for Twitter settings because
+those people in the pool are highly-trained professionals. If we think from Twitter perspective, any mistake has the potential to cost multi-million 
+advertisement revenue and thus, it is not hard to imagine why Twitter chooses to use their own in-house "turkers".
 
 !!!note
     There is also an article called [Moving Beyond CTR: Better Recommendations Through Human Evaluation](http://blog.echen.me/2014/10/07/moving-beyond-ctr-better-recommendations-through-human-evaluation/), which comes
