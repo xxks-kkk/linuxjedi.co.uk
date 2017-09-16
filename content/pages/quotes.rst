@@ -17,6 +17,17 @@ To him he is always doing both."
 
 .. stop-show-quotes
 
+"From [Grothendieck], I have also learned not to take glory in the difficulty of a proof:
+difficulty means we have not understood. The idea is to be able to paint a landscape in
+which the proof is obvious."
+**-- Pierre Deligne**
+
+"To ask the right question is harder than to answer it."
+**-- Georg Cantor**
+
+"The purpose of computation is insight, not numbers."
+**-- Richard Hamming**
+
 "Then you will know the truth, and the truth will set you free."
 **-- John 8:32, Bible**
 

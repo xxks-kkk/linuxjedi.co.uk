@@ -8,12 +8,11 @@ Summary: log book for CMU 15-445/15-645 Database Systems Fall 2017 course
 
 There is a hobby I always want to develop but never gets into practice: watch lecture videos while I eat. The
 reason because lecture videos are mostly not fun especially when the content of the video is entirely new to you.
-However, this semester I want to actually start developing this habbit partly because I miss system so much.
-Here, I'm not saying working on AI stuff is not fun for me. The truth is I miss my old friend so much, in particular, 
-the databse field. I miss the database knowledge I have picked up in the past three years and I don't want to lose the touch
+However, this semester I want to actually start developing this habbit partly because I'm missing system side of computer science.
+I miss the database knowledge I have picked up in the past three years and I don't want to lose the touch
 in this field. So, I think why not start to watch database lecture videoes for fun when I eat? That leads to this post.
 
-This post is a watching log of some cool points I like when I watch [CMU Database Group Database Systems lecture video](https://www.youtube.com/channel/UCHnBsf2rH-K7pn09rb3qvkA).
+This post is a log of cool points I like when I watch [CMU Database Group Database Systems lecture video](https://www.youtube.com/channel/UCHnBsf2rH-K7pn09rb3qvkA).
 
 ## Log
 
@@ -35,6 +34,6 @@ relational algebra and relational calculus in terms of their purpose:
     relational calculus is used when we try to come up with a different 
     query language to replace SQL.
 
-- The fundamental operators in relational algebra we actually need to implement
+- The fundamental operators in relational algebra need to be implemented
 in the database system in order to manipulate tuples: $\sigma \text{(select)}, \pi \text{(projection)}, \cup \text{(union)},
-\cap \text{(intersection)}, - \text{(difference)}, \times \text{(product)}, \bowtie \text{(join)}$.
+\cap \text{(intersection)}, - \text{(difference)}, \times \text{(product)}, \bowtie \text{(join)}$. 
