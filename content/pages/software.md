@@ -14,10 +14,11 @@ I work on several hobby projects when I get bored out of work.
 a python scraper for solution template formation.
 <a href="https://github.com/xxks-kkk/shuati"><i class="fa fa-github" aria-hidden="true"></i></a>
 
-- [Code for blog]: various code snippets appeard inside the blog posts of this site. 
-<a href="https://github.com/xxks-kkk/Code-for-blog"><i class="fa fa-github" aria-hidden="true"></i></a>
-
 ## Archived projects
+
+- [PCA on handwritten digits]: Implements PCA on handwritten digits data and run KNN to capture the major features of the images
+<a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/391L-dana/HW1"><i class="fa fa-github" aria-hidden="true"></i></a>
+<a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW1/Tex/report.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
 - [BeatTheRhythm]: a Unity3D music game. 
 <a href="https://github.com/xxks-kkk/BeatTheRhythm"><i class="fa fa-github" aria-hidden="true"></i></a>
