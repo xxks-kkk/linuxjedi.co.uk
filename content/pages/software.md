@@ -16,7 +16,7 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
-- [PCA on handwritten digits]: Implements PCA on handwritten digits data and run KNN to capture the major features of the images
+- [PCA on handwritten digits]: implements PCA on handwritten digits data and run KNN to capture the major features of the images
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/391L-dana/HW1"><i class="fa fa-github" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW1/Tex/report.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 

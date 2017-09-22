@@ -140,7 +140,8 @@ TAG_SUBSTITUTIONS = (('book reviews', 'book-reviews'), ('assembly language', 'as
                      ('call stack', 'call-stack'), ('machine learning', 'machine-learning'), 
                      ('neural network', 'neural-network'),
                      ('dynamic programming', 'dynamic-programming'),
-                     ('greedy algorithm', 'greedy-algorithm'))
+                     ('greedy algorithm', 'greedy-algorithm'),
+                     ('natural language processing', 'natural-language-processing'))
 
 # Disqus
 DISQUS_SITENAME='zhu45-org'
