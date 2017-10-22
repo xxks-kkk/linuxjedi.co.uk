@@ -6,14 +6,14 @@ I work on several hobby projects when I get bored out of work.
 
 ## Maintained projects
 
-- **[Shuati]**: a collection of solutions to OJ problems with the goal to stay fresh with computer science fundamentals. Also include
+- **[Shuati]** (2017 - ): a collection of solutions to OJ problems with the goal to stay fresh with computer science fundamentals. Also include
 a python scraper for solution template formation.
 <a href="https://github.com/xxks-kkk/shuati"><i class="fa fa-github" aria-hidden="true"></i></a>
 
-- **[Algo]**: a collection of data structures, algorithms with the aim to keep my computer science knowledge fresh. Implemented in C.
+- **[Algo]** (2016 - ): a collection of data structures, algorithms with the aim to keep my computer science knowledge fresh. Implemented in C.
 <a href="https://github.com/xxks-kkk/algo"><i class="fa fa-github" aria-hidden="true"></i></a>
 
-- **[Emacs Config]**: my personal emacs configuration that I used during the day work. Very lightweight.
+- **[Emacs Config]** (2016 - ): my personal emacs configuration that I used during the day work. Very lightweight.
 <a href="https://github.com/xxks-kkk/emacs-config"><i class="fa fa-github" aria-hidden="true"></i></a>
 
 ## Archived projects
