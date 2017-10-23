@@ -101,7 +101,8 @@ MENUITEMS = (
     ('Teaching', 'teaching.html'),
     ('Blog', INDEX_URL),
     ('Projects', 'projects.html'),
-    ('Quotes', 'quotes.html')
+    #('Quotes', 'quotes.html')
+    ('Links', 'links.html')
 )
 
 #################################
