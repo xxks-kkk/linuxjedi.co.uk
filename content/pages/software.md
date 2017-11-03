@@ -18,6 +18,11 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
+- **[Neural Networks for Sentiment Analysis]** (2017): implements a FeedForward Neural Network and a Convolutional Neural Network for Sentiment Analysis
+using Tensorflow
+<a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/395T-greg/HW3/hw3-release"><i class="fa fa-github" aria-hidden="true"></i></a>
+<a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/395T-greg/HW3/Tex/p3.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+
 - **[Shift-Reduce Parsing]** (2017): implements a shift-reduce parser to generate
 dependency trees using both a greedy model and a global model with beam search (logistic regression,
 Structured SVM, arc standard transition system, beam search)
@@ -41,3 +46,5 @@ Structured SVM, arc standard transition system, beam search)
 
 - **[OptiTimal]** (2012): an android application to allow user to track their time allocation and obtain a statistical report about their time management
 <a href="https://github.com/xxks-kkk/Optitimal"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+[Back To Top]({filename}/pages/software.md)
