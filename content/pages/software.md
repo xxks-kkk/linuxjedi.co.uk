@@ -4,6 +4,8 @@ I work on several hobby projects when I get bored out of work.
 
 ## Current projects
 
+Crowdsourcing, NLP for software engineering, Robotics
+
 ## Maintained projects
 
 - **[Shuati]** (2017 - ): a collection of solutions to OJ problems with the goal to stay fresh with computer science fundamentals. Also include
