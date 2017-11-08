@@ -20,6 +20,10 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
+- **[Gaussian process for human movement data]** (2017): Use the gaussian process regression to study the human movement data
+<a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW4/gp.py"><i class="fa fa-github" aria-hidden="true"></i></a>
+<a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW4/Tex/report.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+
 - **[Neural Networks for Sentiment Analysis]** (2017): implements a FeedForward Neural Network and a Convolutional Neural Network for Sentiment Analysis
 using Tensorflow
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/395T-greg/HW3/hw3-release"><i class="fa fa-github" aria-hidden="true"></i></a>
