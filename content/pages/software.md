@@ -20,6 +20,10 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
+- **[Modular reinforcement learning for 2D navigation]** (2017): Use the modular reinforcement learning to explore a 2D grid navigation task
+<a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW5/rl.py"><i class="fa fa-github" aria-hidden="true"></i></a>
+<a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW5/Tex/report.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+
 - **[Gaussian process for human movement data]** (2017): Use the gaussian process regression to study the human movement data
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW4/gp.py"><i class="fa fa-github" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW4/Tex/report.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>

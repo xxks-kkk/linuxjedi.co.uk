@@ -17,6 +17,10 @@ To him he is always doing both."
 
 .. stop-show-quotes
 
+"Any man who is really a man must learn to be alone in the midst of others, to think
+alone for others, and, if necessary, against others."
+**-- Romain Rolland**
+
 "From [Grothendieck], I have also learned not to take glory in the difficulty of a proof:
 difficulty means we have not understood. The idea is to be able to paint a landscape in
 which the proof is obvious."
