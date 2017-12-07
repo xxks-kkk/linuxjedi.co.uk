@@ -20,6 +20,10 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
+- **[Exploring Stereotypes and Biased Data with the Crowd]** (2017): How can we use the crowdsourcing to alleviate the bias in the dataset
+for machine learning?
+<a href="https://www.youtube.com/watch?v=kwmRzrWsYfU"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+
 - **[Modular reinforcement learning for 2D navigation]** (2017): Use the modular reinforcement learning to explore a 2D grid navigation task
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW5/rl.py"><i class="fa fa-github" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW5/Tex/report.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
