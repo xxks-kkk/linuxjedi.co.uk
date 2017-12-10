@@ -4,7 +4,7 @@ I work on several hobby projects when I get bored out of work.
 
 ## Current projects
 
-Crowdsourcing, NLP for software engineering, Robotics
+Crowdsourcing, NLP for software engineering
 
 ## Maintained projects
 
