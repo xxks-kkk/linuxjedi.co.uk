@@ -12,8 +12,8 @@ other IBM data warehouse solutions (i.e., If you can "interact" with multiple da
 through one IBM product, federation is there). 
 
 I'm a system guy with interests in operating system, database, and security. However, I also have interest in natural language processing.
-You can find more about me in my [LinkedIn page](http://cn.linkedin.com/in/zhu45) 
-or my [resume (industry)]({attach}/assets/zeyuan-hu-cv.pdf) [(academia)]({attach}/assets/zeyuan-hu-cv-long.pdf). When I'm exhausted, I like to
+You can find more about me on my [LinkedIn page](http://cn.linkedin.com/in/zhu45), 
+[resume]({attach}/assets/zeyuan-hu-cv.pdf) or [CV]({attach}/assets/zeyuan-hu-cv-long.pdf). When I'm free, I like to
 [write stuff](http://zhu45.org/blog2/) and [sing some songs]({filename}songs.md).
 
 I am contactable via. my personal email address ferrishu3886 [AT] gmail [DOT] com and
