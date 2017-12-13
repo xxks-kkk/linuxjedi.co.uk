@@ -11,7 +11,8 @@ which shipped with [DB2](http://www.ibm.com/analytics/us/en/technology/db2/), [d
 other IBM data warehouse solutions (i.e., If you can "interact" with multiple data source
 through one IBM product, federation is there). 
 
-I'm a system guy with interests in operating system, database, and security. However, I also have interest in natural language processing.
+I'm a system guy with interests in operating system, database, and security. However, I also have interest in natural language processing and
+I'm always looking for the opportunities that can mix those fields together.
 You can find more about me on my [LinkedIn page](http://cn.linkedin.com/in/zhu45), 
 [resume]({attach}/assets/zeyuan-hu-cv.pdf) or [CV]({attach}/assets/zeyuan-hu-cv-long.pdf). When I'm free, I like to
 [write stuff](http://zhu45.org/blog2/) and [sing some songs]({filename}songs.md).
