@@ -32,9 +32,6 @@ which the proof is obvious."
 "The purpose of computation is insight, not numbers."
 **-- Richard Hamming**
 
-"Then you will know the truth, and the truth will set you free."
-**-- John 8:32, Bible**
-
 "The art of doing mathematics is finding that special case that 
 contains all the germs of generality."
 **-- David Hibert**
