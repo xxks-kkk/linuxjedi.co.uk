@@ -6,7 +6,6 @@ title: Courses
 
 ## Course I take
 
-- [Distributed Systems](http://www.cs.utexas.edu/~vijay/cs380D-s18/index.htm) (Prof. Vijay Chidambaram) (UT-Austin, Spring 2018)
 - [Operating System](https://www.cs.utexas.edu/users/ans/classes/cs439/schedule.html) (Dr. Alison Norman) (UT-Austin, Spring 2018)
 - [Natural Language Processing](https://www.cs.utexas.edu/~mooney/cs388/) (Prof. Ray Mooney) (UT-Austin, Spring 2018)
 - [Machine Learning](http://www.cs.utexas.edu/~dana/MLClass/446outline.html) (Prof. Dana Ballard) (UT-Austin, Fall 2017)

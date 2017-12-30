@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Zeyuan Hu'
 SITENAME = "Fluffy Stuff"
 SITESUBTITLE = "A tmp place to rest"
-SITEURL = 'http://zhu45.org'
+SITEURL = 'https://zhu45.org'
 
 PATH = 'content'
 
@@ -96,7 +96,7 @@ BOOTSTRAP_THEME = 'lumen'
 INDEX_URL = 'blog2'
 INDEX_SAVE_AS = INDEX_URL+'/index.html'
 THEME='pelican-cid'
-SITEFOOTER = u'Zeyuan Hu &copy; 2015-2017.'
+SITEFOOTER = u'Zeyuan Hu &copy; 2015-2018.'
 MENUITEMS = (
     ('Courses', 'courses.html'),
     ('Blog', INDEX_URL),

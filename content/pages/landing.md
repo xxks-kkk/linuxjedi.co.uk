@@ -6,13 +6,10 @@ Welcome to my modest corner of the web! My name is Zack (Ze-Yuan) Hu (胡泽远 
 I'm a first year master student at [The University of Texas at Austin](https://www.utexas.edu/) and 
 before becoming a longhorn, I spent two years working as a 
 software engineer on [Federstion Server](http://www-03.ibm.com/software/products/en/ibminfofedeserv), 
-which shipped with [DB2](http://www.ibm.com/analytics/us/en/technology/db2/), [dashDB](http://www.ibm.com/analytics/us/en/technology/cloud-data-services/dashdb/), 
-[BigSQL](https://www-01.ibm.com/software/data/infosphere/hadoop/big-sql.html), and many 
-other IBM data warehouse solutions (i.e., If you can "interact" with multiple data source
-through one IBM product, federation is there). 
+which shipped with [Db2](http://www.ibm.com/analytics/us/en/technology/db2/), and many 
+other IBM data warehouse solutions. 
 
-I'm a system guy with interests in operating system, database, and security. However, I also have interest in natural language processing and
-I'm always looking for the opportunities that can mix those fields together.
+I'm interested in Natural Language Processing (NLP).
 You can find more about me on my [LinkedIn page](http://cn.linkedin.com/in/zhu45), 
 [resume]({attach}/assets/zeyuan-hu-cv.pdf) or [CV]({attach}/assets/zeyuan-hu-cv-long.pdf). When I'm free, I like to
 [write stuff](http://zhu45.org/blog2/) and [sing some songs]({filename}songs.md).
