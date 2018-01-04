@@ -161,6 +161,37 @@ The running time for each operation for each algorithm is following:
 | quick union + path compression | N          | $\log N$  | $\log N$  |
 | smart union + path compression | N          | $\log^*N$ | $\log^*N$ |
 
+## Remarks
+
+[Sedgewick slide](https://algs4.cs.princeton.edu/lectures/15UnionFind-2x2.pdf) offers view that may be helpful in modeling the problems using
+the union-find data structure. Essentially, union-find structure addresses the "dynamic connectivity problem":
+
+> Given a set of N objects, support two operation: 1. Connect two objects. 2. Is there a path connecting the two objects?
+
+For example, given two points in a maze, we may ask "Is there a path connecting $p$ and $q$?" Objects can be:
+
+- Pixels in a digital photo.
+- Computers in a network.
+- Friends in a social network.
+- Transistors in a computer chip.
+- Elements in a mathematical set.
+- Variable names in a Fortran program.
+- Metallic sites in a composite system.
+
+Segewick gives a list of union-find applications:
+
+- Percolation.
+- Games (Go, Hex).
+- Dynamic connectivity.
+- Least common ancestor.
+- Equivalence of finite state automata.
+- Hoshen-Kopelman algorithm in physics.
+- Hinley-Milner polymorphic type inference.
+- Kruskal's minimum spanning tree algorithm.
+- Compiling equivalence statements in Fortran.
+- Morphological attribute openings and closings.
+- Matlab's bwlabel() function in image processing.
+
 ## Links to resources
 
 Here are some of the resources I found helpful while preparing this article:

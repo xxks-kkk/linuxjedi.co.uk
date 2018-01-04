@@ -8,8 +8,9 @@ before becoming a longhorn, I spent two years working as a
 software engineer on [Federstion Server](http://www-03.ibm.com/software/products/en/ibminfofedeserv), 
 which shipped with [Db2](http://www.ibm.com/analytics/us/en/technology/db2/), and many 
 other IBM data warehouse solutions. You can find more about me on my [LinkedIn page](http://cn.linkedin.com/in/zhu45), 
-[resume]({attach}/assets/zeyuan-hu-cv.pdf) or [CV]({attach}/assets/zeyuan-hu-cv-long.pdf). When I'm free, I like to
-[write stuff](http://zhu45.org/blog2/) and [sing some songs]({filename}songs.md).
+[resume]({attach}/assets/zeyuan-hu-cv.pdf) or [CV]({attach}/assets/zeyuan-hu-cv-long.pdf). 
+I enjoy writing ([here](http://zhu45.org/blog2/) and [there](http://zeyuanhu.wordpress.com/)), cooking, [singing]({filename}songs.md),
+and getting involved with local church.
 
 I am contactable via. my personal email address ferrishu3886 [AT] gmail [DOT] com and
 am on twitter as [@zeyuanhu](https://twitter.com/zeyuanhu). 

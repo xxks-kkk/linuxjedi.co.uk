@@ -8,7 +8,8 @@ Crowdsourcing, NLP for software engineering
 
 ## Maintained projects
 
-- **[Shuati]** (2017 - ): a collection of solutions to OJ problems with the goal to stay fresh with computer science fundamentals. Also include
+- **[Shuati]** (2017 - ): a collection of solutions to OJ problems with the goal to stay fresh with computer science fundamentals
+and learn new programming languages. Also include
 a python scraper for solution template formation.
 <a href="https://github.com/xxks-kkk/shuati"><i class="fa fa-github" aria-hidden="true"></i></a>
 
