@@ -3,11 +3,10 @@ url:
 save_as: index.html
 
 Welcome to my modest corner of the web! My name is Zack (Ze-Yuan) Hu (胡泽远 in Chinese). 
-I'm a first year master student at [The University of Texas at Austin](https://www.utexas.edu/) and 
+I'm a first year master student at [the University of Texas at Austin](https://www.utexas.edu/) and 
 before becoming a longhorn, I spent two years working as a 
-software engineer on [Federstion Server](http://www-03.ibm.com/software/products/en/ibminfofedeserv), 
-which shipped with [Db2](http://www.ibm.com/analytics/us/en/technology/db2/), and many 
-other IBM data warehouse solutions. You can find more about me on my [LinkedIn page](http://cn.linkedin.com/in/zhu45), 
+software engineer on [Db2 for Linux, UNIX and Windows](http://www.ibm.com/analytics/us/en/technology/db2/). 
+You can find more about me on my [LinkedIn page](http://cn.linkedin.com/in/zhu45), 
 [resume]({attach}/assets/zeyuan-hu-cv.pdf) or [CV]({attach}/assets/zeyuan-hu-cv-long.pdf). 
 I enjoy writing ([here](http://zhu45.org/blog2/) and [there](http://zeyuanhu.wordpress.com/)), cooking, [singing]({filename}songs.md),
 and getting involved with local church.

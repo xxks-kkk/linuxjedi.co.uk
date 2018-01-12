@@ -45,7 +45,8 @@
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/cid.css">
         {% endblock stylesheets %}
         <!-- add font-awesome -->
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/fa/css/font-awesome.min.css">
+        <script defer src="{{ SITEURL }}/theme/fa-5/svg-with-js/js/fontawesome-all.js"></script>
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/academicons/css/academicons.css"/>
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
         {% endif %}
