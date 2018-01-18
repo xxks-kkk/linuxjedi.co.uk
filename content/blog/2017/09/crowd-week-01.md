@@ -1,4 +1,4 @@
-title: [Paper Reading] Crowdsourcing / Human Computation
+title: Crowdsourcing readings
 date: 2017-12-30 12:30 
 Category: Crowdsourcing & Human Computation
 Tags: crowdsourcing, papers
