@@ -4,7 +4,7 @@ I work on several hobby projects when I get bored out of work.
 
 ## Current projects
 
-
+TBA
 
 ## Maintained projects
 
@@ -18,6 +18,14 @@ a python scraper for solution template formation.
 
 - **[Emacs Config]** (2016 - ): my personal emacs configuration that I used during the day work. Very lightweight.
 <a href="https://github.com/xxks-kkk/emacs-config"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+
+## Open source projects contributed to
+
+- **[KenLM]**: Faster and Smaller Language Model Queries
+<a href="https://github.com/kpu/kenlm"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+
+- **[Sphinx-doc]**: Python Documentation Generator
+<a href="https://github.com/sphinx-doc/sphinx"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
 ## Archived projects
 
