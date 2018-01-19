@@ -98,6 +98,22 @@ traversal of the tree.
 
     <img src="/images/pred-succ.PNG" alt="predecessor-successor" style="width: 700px;"/>
 
+**Inorder traversal**
+
+Given a tree shown below, the inorder traversal (left, root, right) gives: 4, 2, 5, 1, 3
+
+.. raw:: html
+
+    <img src="/images/tree12.gif" alt="example tree"/>
+
+**Preorder traversal**
+
+Given the same tree above, the preorder traversal (root, left, right) gives: 1, 2, 4, 5, 3
+
+**Postorder traversal**
+
+Given the same tree above, the postorder traversal (left, right, root) gives: 4, 5, 2, 3, 1
+
 ****************
 Some properties
 ****************
