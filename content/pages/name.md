@@ -30,8 +30,8 @@ a word. The definition of word can be ambiguous in Chinese because a word in Chi
 single Chinese character or two characters. Thus, whether we use hyphen or not when writing Chinese names in
 Pinyin really depends on whether those two characters can form a word. For example, "Ze" means water in Chinese
 and "Yuan" means travelling further. Those two characters combined together doesn't form a word with a valid
-semantics and should be treated as two words. Thus, "Ze-Yuan" is more appropriate than "Zeyuan". However, in our passport,
-"Zeyuan" is usued (of course, all capitalized), thus "Zeyuan" should be used more for legal documents. So, to sum up,
+semantics and should be treated as two words. Thus, "Ze-Yuan" is more appropriate than "Zeyuan". However, in my passport,
+"Zeyuan" is used (of course, all capitalized), thus "Zeyuan" should be used more for legal documents. So, to sum up,
 use either "Ze-Yuan" or "Zeyuan" is fine but "Ze-Yuan" is slightly better.
 
 That's it! Thanks for reading!
