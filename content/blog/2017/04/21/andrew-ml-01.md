@@ -353,7 +353,7 @@ h_\theta(x) = g(\theta^Tx) \text{ where $g(z) = \frac{1}{1+e^{-z}}$}
 $$
 
 This hypothesis can be intrepreted as the probability that $y = 1$ given $x$ and $\theta$
-(i.e. $h_\theta(x) = P(y = 0 | x;\theta)$)
+(i.e. $h_\theta(x) = P(y = 1 | x;\theta)$)
 
 In the linear regression, we have cost function \ref{eq:2}. However, 
 $\text{cost}(h_\theta(x),y)$ cannot work for logistic regression because

@@ -17,6 +17,13 @@ To him he is always doing both."
 
 .. stop-show-quotes
 
+"It is important for you to realize what grades in this class reflect and what they don't reflect. 
+All we can grade you on is how well you demonstrate that you know the material this semester. 
+We can't grade you on how much of a success you'll be after graduation, 
+how smart/creative/persistent/self-motivated you are, or even how well you'll be able to apply the material in the future. 
+And after all, it is what you do in the future, not what you do this semester, that's really important."
+**-- Prof. Lorenzo Alvisi** (found in his `"Distributed Computing Principles" class grading policy <http://www.cs.cornell.edu/courses/cs5414/2017fa/>`_)
+
 "Any man who is really a man must learn to be alone in the midst of others, to think
 alone for others, and, if necessary, against others."
 **-- Romain Rolland**
