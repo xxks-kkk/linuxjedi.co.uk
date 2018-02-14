@@ -1,9 +1,5 @@
 title: NEU466M - Quantitative Methods in Neuroscience
 
-## News
-
-- (LAB 01/23) Logistic, MATLAB Basics, Q&A
-
 ## Basic info
 
 |  Key  | Value                                                                                      |
@@ -12,8 +8,6 @@ title: NEU466M - Quantitative Methods in Neuroscience
 | TA         | [Ze-Yuan "Zack" Hu](http://zhu45.org)                                                     |
 | Syllabus   | [Course page](http://ctcn.utexas.edu/quantitative-methods-neuroscience/) |
 | MATLAB Sessions | T/Th: 3:30 - 5pm @ WEL 2.128 |
-| Piazza | [Piazza signup link](piazza.com/utexas/spring2018/neu466m) |
-| Feedback | [Google survey link](https://goo.gl/forms/B0vgErtbh5r4oOq02) |
 
 ## Resources
 

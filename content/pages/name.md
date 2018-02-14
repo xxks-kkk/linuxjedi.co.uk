@@ -15,7 +15,7 @@ Economics department.
 - Facebook helps me to figure out the prounciation as "ZE-yoo-AHN HOO". Sounds pretty close.
 - Simply call me "Zack" and forget about Chinese prounciation nonsense.
 
-If you have a trick that is different from above. Feel free to shoot me an email.
+If you have a trick that is different from above, feel free to shoot me an email.
 
 
 ## FAQ

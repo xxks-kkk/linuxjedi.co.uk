@@ -4,7 +4,7 @@ I work on several hobby projects when I get bored out of work.
 
 ## Current projects
 
-TBA
+Operating System, Distributed System, NLP
 
 ## Maintained projects
 
