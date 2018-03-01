@@ -29,6 +29,9 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
+- **[Distributed Key-Value Store]** (2018): built a distributed Key-Value Strore using eventually consistency model with two session guarantees: *Read Your Writes* and *Monotonic Reads*
+<a href="https://github.com/xxks-kkk/KV-store"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+
 - **[Bidirectional Bigram Model]** (2018): build a bidirectional bigram model
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2018/388-ray/p1"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2018/388-ray/p1/Tex/p2.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
