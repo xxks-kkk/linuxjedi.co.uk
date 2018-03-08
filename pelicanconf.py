@@ -143,7 +143,9 @@ TAG_SUBSTITUTIONS = (('book reviews', 'book-reviews'), ('assembly language', 'as
                      ('dynamic programming', 'dynamic-programming'),
                      ('greedy algorithm', 'greedy-algorithm'),
                      ('natural language processing', 'natural-language-processing'),
-                     ('distributed systems','distributed-systems'))
+                     ('distributed systems','distributed-systems'),
+                     ('system design principle', 'system-design-principle'),
+                     ('system concepts', 'system-concepts'))
 
 # Disqus
 DISQUS_SITENAME='zhu45-org'

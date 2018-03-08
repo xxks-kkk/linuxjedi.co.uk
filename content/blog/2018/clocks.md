@@ -60,7 +60,7 @@ about state of whole system)
 
 - Implementing Vector Clocks:
 
-    - Each process $P_i$ updates its component $C_i$ in its vector clock (This update happens for each internal event)
+    - Each process $P_i$ updates its component $C_i$ in its vector clock (This update happens for each internal event (e.g. on receiving a message))
     - Each message has a vector clock time stamp
     - On getting the message, for each field $x$ in the vector: $C[x] = \max(C[x], message\_time\_stamp[x])$
 

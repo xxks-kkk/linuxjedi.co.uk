@@ -11,24 +11,29 @@ mentioned in my posts.
 
 ## System Concepts
 
-- [Logical Clocks, Vector Clocks]({filename}/blog/2018/380-03.md)
-
-## System Performance Measurements
-
-
-
+- [Logical Clocks, Vector Clocks]({filename}/blog/2018/clocks.md)
+- __State Machine__: A process whose state depends entirely on the starting state and sequence of operations
+- __Replication__: All servers exhibit the same behavior
+- __Sharding__: Different data on different servers; Partitioned via some function on keys 
+- __Clock Skew__: the same sourced clock signal arrives at different components at different times
 
 ## Protocol
 
-
+- [Pub/Sub Mechanism from PNUTS]({filename}/blog/2018/pnuts.md)
 
 
 ## System Designs
 
-- [State Machine Replication]({filename}/blog/2018/380-04.md)
+- [State Machine Replication]({filename}/blog/2018/state-machine.md)
 
 
 ## System Principles
 
+- Scability: sharding + replication
 
+    - Usually, shard then replicate 
+    - Each piece of data lives on one replicated shard
+
+- Stronger consistency models are easier to reason about (and program for), but more expensive to obtain 
+- Weaker consistency models provide more performance, but hard to understand and program for
 

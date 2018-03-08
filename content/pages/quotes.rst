@@ -17,6 +17,9 @@ To him he is always doing both."
 
 .. stop-show-quotes
 
+"只有你自己能帮得了自己，没有人能够帮得了你“ 
+**-- 江疏影**
+
 "It is important for you to realize what grades in this class reflect and what they don't reflect. 
 All we can grade you on is how well you demonstrate that you know the material this semester. 
 We can't grade you on how much of a success you'll be after graduation, 
