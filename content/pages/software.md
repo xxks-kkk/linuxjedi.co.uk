@@ -1,6 +1,6 @@
 title: Projects
 
-I work on several hobby projects when I get bored out of work.
+A log of work that I have spent quite some time on.
 
 ## Current projects
 
@@ -29,7 +29,11 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
-- **[Distributed Key-Value Store]** (2018): built a distributed Key-Value Strore using eventually consistency model with two session guarantees: *Read Your Writes* and *Monotonic Reads*
+- **[Part-of-Speech Tagging with LSTMs]** (2018): build a BiLSTMs model with orthographic features 
+<a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2018/388-ray/p2"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+<a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2018/388-ray/p2/Tex/emnlp2016.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
+
+- **[Distributed Key-Value Store]** (2018): build a distributed Key-Value Strore using eventually consistency model with two session guarantees: *Read Your Writes* and *Monotonic Reads*
 <a href="https://github.com/xxks-kkk/KV-store"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
 - **[Bidirectional Bigram Model]** (2018): build a bidirectional bigram model
