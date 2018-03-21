@@ -175,6 +175,10 @@ Thus, we have to designate one copy of each tablet as the __tablet master__, and
 - Each tablet has a topic that user subscribe to
 - Whenever tablet is updated or split, notifications can be sent out
 
+## Further Readings
+
+- [Yahoo!'S PNUTS Database: Too Hot, Too Cold Or Just Right?](http://highscalability.com/blog/2009/8/8/yahoos-pnuts-database-too-hot-too-cold-or-just-right.html)
+
 ## Reference
 
 - https://www.cs.utexas.edu/~vijay/cs380D-s18/feb8-pnuts-voting.pdf
