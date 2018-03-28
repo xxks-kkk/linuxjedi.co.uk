@@ -1,6 +1,6 @@
 title: Projects
 
-A log of work that I have spent quite some time on.
+A log of work that I have spent some time on.
 
 ## Current projects
 

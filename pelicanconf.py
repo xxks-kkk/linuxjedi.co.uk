@@ -145,7 +145,8 @@ TAG_SUBSTITUTIONS = (('book reviews', 'book-reviews'), ('assembly language', 'as
                      ('natural language processing', 'natural-language-processing'),
                      ('distributed systems','distributed-systems'),
                      ('system design principle', 'system-design-principle'),
-                     ('system concepts', 'system-concepts'))
+                     ('system concepts', 'system-concepts'),
+                     ('evaluation metrics', 'evaluation-metrics'))
 
 # Disqus
 DISQUS_SITENAME='zhu45-org'
