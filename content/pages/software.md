@@ -29,6 +29,10 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
+- **[Active Learning for Neural Dependency Parsing]** (2018): explore the idea of [active Learning](http://aclweb.org/anthology/W00-1306) on Stanford Neural Dependency Parsing 
+<a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2018/388-ray/p3"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+<a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2018/388-ray/p3/Tex/emnlp2016.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
+
 - **[Part-of-Speech Tagging with LSTMs]** (2018): build a BiLSTMs model with orthographic features 
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2018/388-ray/p2"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2018/388-ray/p2/Tex/emnlp2016.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>

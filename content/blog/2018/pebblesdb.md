@@ -221,6 +221,10 @@ Due to the limitation of FLSM, several existing techniques are applied to improv
 
 - [PebblesDB读后感](https://zhuanlan.zhihu.com/p/32225460)
 
+## Further Reading
+
+- [PebblesDB Slides](https://www.cs.utexas.edu/~vijay/papers/pebblesdb-sosp17-slides.pdf)
+- [RocksDB Tuning Guide](https://github.com/facebook/rocksdb/wiki/RocksDB-Tuning-Guide)
 
 [^1]: [CMU slides](https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/skiplists.pdf), [this post](http://igoro.com/archive/skip-lists-are-fascinating/), and
 [UCI reading](https://www.ics.uci.edu/~pattis/ICS-23/lectures/notes/Skip%20Lists.pdf) give an intuitive introduction to skip list.

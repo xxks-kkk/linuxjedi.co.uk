@@ -67,7 +67,10 @@ DISPLAY_TAGS_INLINE = True
 #################################
 
 #THEME='pelican-bootstrap3'
-JINJA_EXTENSIONS = ['jinja2.ext.i18n']
+#JINJA_ENVIRONMENT = ['jinja2.ext.i18n']
+JINJA_ENVIRONMENT = {
+    'extensions': ['jinja2.ext.i18n'],
+}
 
 ##################################
 # NOTE: 
@@ -77,7 +80,25 @@ JINJA_EXTENSIONS = ['jinja2.ext.i18n']
 # the list of MD extensions manually (http://pythonhosted.org/Markdown/extensions/
 # )
 ##################################
-MD_EXTENSIONS = ['toc', 'codehilite(css_class=highlight)', 'extra', 'meta', 'admonition']
+# MARKDOWN = {
+#     'extensions': ['toc', 'codehilite(css_class=highlight)', 'extra', 'meta', 'admonition']
+# }
+
+MARKDOWN = {
+    'extensions' : ['markdown.extensions.codehilite', 
+                    'markdown.extensions.extra', 
+                    'markdown.extensions.meta', 
+                    'markdown.extensions.toc',
+                    'markdown.extensions.admonition'],
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        # if you have nothing to configure there is no need to add a empty config
+        #'markdown.extensions.meta': {}, 
+    }
+    # By default Pelican already sets the output_format to html5 so it is only needed if you want something else
+    #'output_format': 'html5',
+}
+
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['tag_cloud', 'render_math', 'i18n_subsites', 'html_rst_directive', 'bootstrapify']
 LOCAL_CONTENT_CACHE = False
