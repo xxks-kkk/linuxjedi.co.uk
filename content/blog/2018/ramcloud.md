@@ -109,8 +109,15 @@ divide crashed master's data into partitions and assign the recoverying work to 
 
 ## Remarks & Thoughts
 
-The authors use the log-structured storage instead of synchronous disk write to preserve durability. 
-And the availability is achieved via data parallelism. The design harness the scale well and has exceptional performance.
+Each segment is randomly shuffled to multiple backups and recovery is constructed in parallel, which reminds me of the MapReduce. Segments are
+distributed uniformly across backups, which mirrors chunking the data evenly in Map phase. The recovery from multiple recovery masters and
+each recovery master only done part of the whole need-to-be-recovered data, which reminds me of Reduce phase. Even Prof. John Ousterhout in the [video](https://www.youtube.com/watch?v=lcUvU3b5co8) thinks that MapReduce almost solve their problem. 
+
+<img src="/images/mapreduce.png" alt="map reduce"/>
+
+This finding is quite atonishing to me because [MapReduce paper](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
+comes out in 2004 and RAMCloud comes out in 2011. If we take a slightly different angle to look at prior work, we may find something new. That's provoking for
+me in terms of research.
 
 ## Reference
 
