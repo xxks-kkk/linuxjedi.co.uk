@@ -119,7 +119,7 @@ INDEX_SAVE_AS = INDEX_URL+'/index.html'
 THEME='pelican-cid'
 SITEFOOTER = u'Zeyuan Hu &copy; 2015-2018.'
 MENUITEMS = (
-    ('Courses', 'courses.html'),
+    #('Courses', 'courses.html'),
     ('Blog', INDEX_URL),
     ('Projects', 'projects.html'),
     #('Quotes', 'quotes.html')
@@ -167,7 +167,9 @@ TAG_SUBSTITUTIONS = (('book reviews', 'book-reviews'), ('assembly language', 'as
                      ('distributed systems','distributed-systems'),
                      ('system design principle', 'system-design-principle'),
                      ('system concepts', 'system-concepts'),
-                     ('evaluation metrics', 'evaluation-metrics'))
+                     ('evaluation metrics', 'evaluation-metrics'),
+                     ('consistent hashing', 'consistent-hashing'),
+                     ('merkle tree', 'merkle-tree'))
 
 # Disqus
 DISQUS_SITENAME='zhu45-org'

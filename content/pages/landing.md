@@ -12,7 +12,7 @@ a side interest in language, which usually leads to NLP. You can find more about
 [resume]({attach}/assets/zeyuan-hu-cv.pdf) or [CV]({attach}/assets/zeyuan-hu-cv-long.pdf). 
 I enjoy writing ([here](http://zhu45.org/blog2/) and [there](http://zeyuanhu.wordpress.com/)), cooking (e.g., traditional 
 [Beijing dish](https://en.wikipedia.org/wiki/Beijing_cuisine)), 
-[singing]({filename}songs.md), and getting involved with local church.
+[singing]({filename}songs.md), and [drawing](https://ferrishu3886.deviantart.com/), and volunteering in local church.
 
 I am contactable via. my personal email address ferrishu3886 [AT] gmail [DOT] com and
 am on twitter as [@zeyuanhu](https://twitter.com/zeyuanhu). 

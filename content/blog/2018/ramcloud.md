@@ -1,7 +1,7 @@
 Title: "Fast Crash Recovery in RAMCloud"
 Date: 2018-04-09 22:00
 Category: system
-Tags: papers, storage,  
+Tags: papers, storage, distributed systems
 Summary: "Fast Crash Recovery in RAMCloud" paper reading
 
 [TOC]
@@ -41,6 +41,16 @@ becomes how to recover from crash within 1s~2s for 64GB or more DRAM data?
 
 - Large scale: 10,000 nodes, 100TB to 1PB
 
+## Assumptions
+
+- Use low-latency Infiniband NICs and switches 
+    - Ethernet switches and NICs typically add at least 200-500 μs to round-trip latency in a large datacenter
+
+- DRAM uses an auxiliary power source
+    - to ensure that buffers can be written to stable storage after a power failure
+
+- Every byte of data is in DRAM
+
 ## Architecture
 
 <img src="/images/RAMCloud-architecture.png" alt="RAMCloud main architecture"/>
@@ -77,7 +87,8 @@ becomes how to recover from crash within 1s~2s for 64GB or more DRAM data?
     - Hash table is used for quickly lookup object in log
 
 !!!note
-    This part idea borrows from [log-structured file system](http://pages.cs.wisc.edu/~remzi/OSTEP/file-lfs.pdf).
+    This part idea borrows from [log-structured file system](http://pages.cs.wisc.edu/~remzi/OSTEP/file-lfs.pdf). Log structure
+    in memory is thought to be interesting by Vijay.
 
 ### Fast Recovery
 
@@ -106,6 +117,21 @@ divide crashed master's data into partitions and assign the recoverying work to 
 <img src="/images/recovery-ops.png" alt="recovery ops"/>
 
 <img src="/images/recovery-ops-details.png" alt="recovery ops details"/>
+
+## Other interesting details
+
+- Each RAMCloud master decides independently where to place each replica, using a combination of randomization and refinement.
+    
+    When a master needs to select a backup for a segment, it chooses several candidates at random from a list of all backups in the cluster. Then it selects the best candidate, using its knowledge of where it has already allocated segment replicas and information about the speed of each backup’s disk. The best backup is the one that can read its share of the master’s segment replicas most quickly from disk during recovery. A backup is rejected if it is in the same rack as the master or any other replica for the current segment. Once a backup has been selected, the master contacts that backup to reserve space for the segment. At this point the backup can reject the request if it is overloaded, in which case the master selects another candidate.
+
+!!!note
+    Advantages of randomization + refinement:
+    
+    - eliminate behavior: all masters choosing the same backups in a lock-step fashion
+    - provides a solution nearly as optimal as a centralized manager
+    - make segment distribution nearly uniform
+        - compensate for each machine difference: more powerful machine, high disk speed, more likely to be selected
+        - handles the entry of new backups gracefully: new machine, less workload, more likely to be selected
 
 ## Remarks & Thoughts
 

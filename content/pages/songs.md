@@ -13,6 +13,5 @@ title: My favorite karaoke songs
 - 爱情买卖 - 慕容晓晓
 - 东方之珠 - 罗大佑
 - 爱 - 小虎队
-- Pretty boys - M2M
 - 童年 - 罗大佑
 - 情非得已 - 庾澄庆
