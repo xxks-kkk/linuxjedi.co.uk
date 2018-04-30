@@ -208,7 +208,8 @@ Summary: "Dynamo: Amazon’s Highly Available Key-value Store" paper reading
 - To prevent logical partitions, some Dynamo nodes play the role of seeds:
     - Case: node A joins the ring; node B joins the ring; but A and B would consider each other be the member of the ring at once
     - Seeds are nodes that are discovered via an external mechanism and are known to all nodes.
-    - Typically seeds are fully functional nodes in the Dynamo ring
+    - Typically seeds are fully functional nodes in the Dynamo ring.
+    - Because all nodes eventually reconcile their membership with a seed, logical partitions are highly unlikely.
 
 - node A may consider node B failed if node B does not respond to node A’s messages (even if B is responsive to node C's messages)
 

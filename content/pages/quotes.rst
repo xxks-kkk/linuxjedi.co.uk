@@ -17,6 +17,12 @@ To him he is always doing both."
 
 .. stop-show-quotes
 
+"Don't cling to a mistake just because you spent a lot of time making it."
+**-- Unknown**
+
+"in theory, there is no difference between theory and practice, but in practice, there is."
+**-- Unknown**
+
 "只有你自己能帮得了自己，没有人能够帮得了你“ 
 **-- 江疏影**
 
