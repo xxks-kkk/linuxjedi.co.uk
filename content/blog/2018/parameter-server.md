@@ -78,6 +78,8 @@ or entire row of matrix)
     Paxos can also be used when we have small set of parameter servers. Their membership can be stored using Paxos.
     Usually, paxos cannot scale over 5 servers.
 
+- Machine learning algorithm tolerates stale data is the major point we exploit when design "Big data + ML" system
+
 ## Reference
 
 - [Scaling Distributed Machine Learning with the Parameter Server](https://www.cs.cmu.edu/~muli/file/parameter_server_osdi14.pdf)
