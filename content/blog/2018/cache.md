@@ -130,6 +130,10 @@ Summary: Cache, Lease, Consistency, Invalidation
         - Relaxation of linearizability 
         - Instead of conforming to a real-time partial order, we use a client-observed partial order
 
+    !!!note
+        “The result of any execution is the same as if the operations of all the processes were executed in some sequential order and the operations of each individual process appear in this sequence in the order specified by its program” (Lamport, 1979)
+        There is a order on all the processes and operations in each process are ordered in the way sent out by its program.
+
     - __Strict Serializability__:
 
         - Combines linearizability and serializability
@@ -157,6 +161,10 @@ Summary: Cache, Lease, Consistency, Invalidation
 
             - Some other consistency model + atomicity of transactions
 
+!!!note
+    Another angle to look at consistency model is: a contract between the data store and its clients that
+    specifies the results that clients can expect to obtain when accessing the data store.
+
 - Why different models?
 
     - Tradeoff between:
@@ -170,6 +178,7 @@ Summary: Cache, Lease, Consistency, Invalidation
 
 ## Reference
 
-- https://courses.cs.washington.edu/courses/cse452/17sp/slides/Caching.pdf
-- https://courses.cs.washington.edu/courses/cse452/17sp/slides/ImplementingCaches1.
+- https://courses.cs.washington.edu/courses/cse452/17sp/slides/Caching.pdf (Examples on different consistency models)
+- https://courses.cs.washington.edu/courses/cse452/17sp/slides/ImplementingCaches1
 - https://www.cs.utexas.edu/~vijay/cs380D-s18/feb6-fb.pdf
+- [CS439 Alison's slide "Other File Systems"](https://www.cs.utexas.edu/users/ans/classes/cs439/schedule.html)

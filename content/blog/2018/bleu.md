@@ -154,6 +154,8 @@ doesn't work: MT systems can overgenerate “reasonable” words, resulting in i
 - We may use a big test corpus with a single reference translation, provided that the translations are not all from the same translator.
 - BLEU has shown good performance for corpus-level comparisons over which a high number of n-gram matches exist. However, at a sentence-level the
 n-gram matches for higher n rarely occur. As a result, BLEU performs poorly when comparing individual sentences.
+- [Mooney's slides on MT](https://www.cs.utexas.edu/~mooney/cs388/slides/mt.ppt) has nice illustration of modified bigram precision
+calculation
 
 ## Reference
 
