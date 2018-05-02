@@ -2,6 +2,8 @@ title: Projects
 
 A log of work that I have spent some time on.
 
+[TOC]
+
 ## Current projects
 
 Operating System, Distributed System, NLP

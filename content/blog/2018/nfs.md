@@ -32,7 +32,7 @@ Design a distributed file system with transparent access to files from clients
 
 - Clients talk to server using RPC:
     - Use RPC to forward every file system request; remote server executes each request as a local request; server
-    responds backk with result (Example: Figure 49.5 in Remzi's chapter)
+    responds back with result (Example: Figure 49.5 in Remzi's chapter)
     - Advantage: server provides a consistent view of the file system to clients
     - Disadvantage: performance (use cache)
 
