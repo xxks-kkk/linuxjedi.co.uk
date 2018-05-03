@@ -49,19 +49,22 @@ Design a distributed file system with transparent access to files from clients
 
 - Cache:
     - Client side:
-        - cache file data (and metadata) that is read from server in local memory
+        - cache file data and metadata by block that is read from server in local memory
         - Cache serves as a temporary buffer for writes (allow asyncronous write)
         - Advantage: reduce network usage, improve performance
+        - Disadvantage: write lost in memory after crash (safety vs. performance tradeoff)
     - Server side:
         - server can buffer the write in memory and write to disk asychronously 
         - Problem: write in memory can lost
-        - Sol: battery-backed memory
+        - Sol: 
+            - battery-backed memory
+            - commit each WRITE to stable storage before ack WRITE success to clients
 
 - Cache consistency problem:
     - Update visibility: when do updates from one client become visible at other clients?
         - sol: flush-on-close (write-back cache):
             - when a file is written to and subsequently closed by a client application, the client flushes all updates (i.e., dirty pages in the cache) to the server.
-    - Stale cache: read the old copy
+    - Stale cache: once the server has a new version, how long before clients see the new version instead of an older cached copy?
         - sol: issue GETATTR to get file stats (last modified date), if the time-of-modification is more recent than the time that the file was fetched into the client cache, the client invalidates the cache and subsequent reads will go to the server.
         - Use attribute cache to reduce GETATTR requests (update attribute cache periodically)
         - Still has problem: can still read stale value (polling interval, cache update/invalidation delayed by network)
@@ -76,7 +79,7 @@ Design a distributed file system with transparent access to files from clients
 - NFS issues:
     - multiple clients update the same file may get inconsistent view of the file (depends on cache update/invalidation, attribute
     cache polling frequency)
-    - Clients crash may lose data in buffer
+    - Clients crash may lose data in buffer (cache)
 - NFS Key features:
     - Location-transparent naming
     - Client-side and server-side caching for performance
