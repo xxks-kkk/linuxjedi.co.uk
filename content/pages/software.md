@@ -10,6 +10,9 @@ Operating System, Distributed System, NLP
 
 ## Maintained projects
 
+- **[HyperPebblesDB]** (2018 - ): a key-value store that is part of LevelDB family
+<a href="https://github.com/xxks-kkk/HyperPebblesDB"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+
 - **[Shuati]** (2017 - ): a collection of solutions to OJ problems with the goal to stay fresh with computer science fundamentals
 and learn new programming languages. Also include
 a python scraper for solution template formation.

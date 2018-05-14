@@ -86,15 +86,15 @@ Design a distributed file system that can scale: a server can support as many cl
     - NFS only read the blocks that need to be modified
     - AFS is not good for append information to log periodically (little log writes that add small amounts of data to an existing large file)
 
-|                                    | NFS                             | AFS                                     |
-|------------------------------------|---------------------------------|-----------------------------------------|
-| Cache unit                         | block of a file                 | whole file                              |
-| Cache location                     | memory                          | local disk                              |
-| Cache strategy                     | cache block only                | cache directories and files             |
-| Cache invalidation                 | callback                        | polling (issue GETATTR)                 |
-| Concurrent update of the same file | Last Writer Wins                | Blocks flushed to servers during update |
-| Crash Recovery                     | server crash is unnoticeable    | complex crash recovery                  |
-| Namespace                          | single namespace to all clients | namespace is arbitrary across clients   |
+|                                    | NFS                                     | AFS                             |
+|------------------------------------|-----------------------------------------|---------------------------------|
+| Cache unit                         | block of a file                         | whole file                      |
+| Cache location                     | memory                                  | local disk                      |
+| Cache strategy                     | cache block only                        | cache directories and files     |
+| Cache invalidation                 | polling (issue GETATTR)                 | callback                        |
+| Concurrent update of the same file | Blocks flushed to servers during update | Last Writer Wins                |
+| Crash Recovery                     | server crash is unnoticeable            | complex crash recovery          |
+| Namespace                          | namespace is arbitrary across clients   | single namespace to all clients |
 
 ## Remarks
 
@@ -108,6 +108,12 @@ Design a distributed file system that can scale: a server can support as many cl
     - Need extra mechnaism to handle conflicts (e.g., concurrent updates):
         - Google doc use git-like [operational transformation](https://www.quora.com/How-is-collaborative-document-editing-implemented-in-Google-Docs-How-are-infinite-undo-redo-implemented-separately-for-each-user-What-tasks-are-offloaded-to-the-client-and-which-are-done-at-the-server-itself) to resolve conflict
 
+- Dropbox is inspired by AFS
+
+- The scalability in AFS is measured in terms of number of clients that a server can support. However, if we think about
+scability in terms of the number of servers, NFS wins out due the stateless protocol and simple crash recovery
+
 ## Reference
 
 - [The Andrew File System (AFS)](http://pages.cs.wisc.edu/~remzi/OSTEP/dist-afs.pdf)
+- [M. Satyanarayanan wikipedia page](https://en.wikipedia.org/wiki/M._Satyanarayanan)

@@ -7,6 +7,21 @@ Status: draft
 
 [TOC]
 
+## Problem
+
+
+
+
+## Design assumptions
+
+## Design
+
+## Remarks
+
+## Reference
+
+- [M. Satyanarayanan wikipedia page](https://en.wikipedia.org/wiki/M._Satyanarayanan)
+
 Building on the AFS work, Satya helped design Coda File System[18] as a principle architect. Coda introduced the concepts of disconnected operation and bandwidth-adaptive weakly-connected operation in distributed file systems.
 
 
