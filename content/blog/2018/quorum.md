@@ -43,7 +43,7 @@ and return to the client
 
 ### Quorum-based Reads and Writes
 
-Quorum-based system (e.g., [Dynamo]({filename}/blog/2018/dynamo.md)) is one special case of Weighted Voting: N = 1; K = N (i.e., the number of replica in the system):
+Quorum-based system (e.g., [Dynamo]({filename}/blog/2018/dynamo.md)) is one special case of Weighted Voting: M = 1; K = N (i.e., the number of replica in the system):
 
 - All reads go to R replicas
 - All writes go to W replicas
