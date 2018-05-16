@@ -64,7 +64,7 @@ we have to read Representative 1 because we need 1 vote to satisfy R = 1. At the
 Representative 1 for the same reason. In this example, Representative 1 can be the the server in the clients-server architecture
 (e.g., NFS) and all the read/write have to go to the server. However, we can also set R = 0, which we can read from the
 local cached copy directly (Representative 2 & 3 have 0 votes, which satisfy R requirement). But, in this case, weighted-voting
-algorithm doesn't guarantee that you can get the latest copy of the file.
+algorithm doesn't guarantee that we can get the latest copy of the file.
 
 - Giving each replica (server) one vote: decentralized quorum system with high availability, low performance
 - Giving one replica (server) all the votes: centralized system with high performance, low availability

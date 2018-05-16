@@ -1,12 +1,12 @@
 title: Projects
 
-A log of work that I have spent some time on.
+A log of work that I have spent some time on
 
 [TOC]
 
 ## Current projects
 
-Operating System, Distributed System, NLP
+Storage
 
 ## Maintained projects
 
@@ -18,21 +18,21 @@ and learn new programming languages. Also include
 a python scraper for solution template formation.
 <a href="https://github.com/xxks-kkk/shuati"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
-- **[Algo]** (2016 - ): a collection of data structures, algorithms with the aim to keep my computer science knowledge fresh. Implemented in C.
-<a href="https://github.com/xxks-kkk/algo"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-
 - **[Emacs Config]** (2016 - ): my personal emacs configuration that I used during the day work. Very lightweight.
 <a href="https://github.com/xxks-kkk/emacs-config"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
-## Open source projects contributed to
+<!-- ## Open source projects contributed to
 
 - **[KenLM]**: Faster and Smaller Language Model Queries
 <a href="https://github.com/kpu/kenlm"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
 - **[Sphinx-doc]**: Python Documentation Generator
-<a href="https://github.com/sphinx-doc/sphinx"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+<a href="https://github.com/sphinx-doc/sphinx"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a> -->
 
 ## Archived projects
+
+- **[Algo]** (2016 - 2018): a collection of data structures, algorithms with the aim to keep my computer science knowledge fresh. Implemented in C.
+<a href="https://github.com/xxks-kkk/algo"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
 - **[Active Learning for Neural Dependency Parsing]** (2018): explore the idea of [active Learning](http://aclweb.org/anthology/W00-1306) on Stanford Neural Dependency Parsing 
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2018/388-ray/p3"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
