@@ -125,8 +125,8 @@ $$
 \begin{eqnarray}
 \sum_{i=j}^m k_i + \sum_{i=h}^t k_i & > & \sum_{i=1}^N k_i \\
 \sum_{i=1}^N k_i - \sum_{i=h}^t k_i - \sum_{i=j}^m k_i & < & 0 \\
-\sum_{i=1}^{\{1 \dots h-1\} \cup \{t+1 \dots n\}} k_i - \sum_{i=j}^m k_i & < & 0   \label{1} \\
-\sum_{i=1}^{\{1 \dots h-1\} \cup \{t+1 \dots n\} \cup \{m+1 \dots n\}} k_i & < & 0 \label{2} \\
+\sum_{i \in \{1 \dots h-1\} \cup \{t+1 \dots n\}} k_i - \sum_{i=j}^m k_i & < & 0   \label{1} \\
+\sum_{i \in \{1 \dots h-1\} \cup \{t+1 \dots n\} \cup \{m+1 \dots n\}} k_i & < & 0 \label{2} \\
 \end{eqnarray}
 $$
 
@@ -141,4 +141,3 @@ votes to each server.
 - [Weighted Voting for Replicated Data paper](https://dl.acm.org/citation.cfm?id=806583)
 - [Weighted Voting for Replicated Data slides](https://pdfs.semanticscholar.org/presentation/337c/ddcf5753b3b06fd43044319ce51172ff89e4.pdf)
 - [Vijay's Slides](https://www.cs.utexas.edu/~vijay/cs380D-s18/feb8-pnuts-voting.pdf)
-- [Html writeup on paper](http://www.cs.cornell.edu/Info/Courses/Spring-97/CS614/voting.html)
