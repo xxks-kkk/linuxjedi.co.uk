@@ -79,7 +79,7 @@ To unavoid unnecessary complexity, we assume we are working with a collection of
     - Space complexity: $O(1)$
 
 !!!note
-    We implement the trie data structure [here](https://github.com/xxks-kkk/shuati/master/208/leetcode/208-ImplementTrie).
+    We implement the trie data structure [here](https://github.com/xxks-kkk/shuati/blob/master/leetcode/208-ImplementTrie/implementTrie.cc).
 
 ## Applications
 
