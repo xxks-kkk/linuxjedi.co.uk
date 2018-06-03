@@ -1,7 +1,7 @@
 Title: "PebblesDB: Building Key-Value Stores using Fragmented Log-Structured Merge Trees"
 Date: 2018-03-30 0:45
 Category: system
-Tags: papers, storage, LSM, 
+Tags: papers, storage, log-structured merge tree, 
 Summary: "PebblesDB: Building Key-Value Stores using Fragmented Log-Structured Merge Trees" paper reading
 
 [TOC]

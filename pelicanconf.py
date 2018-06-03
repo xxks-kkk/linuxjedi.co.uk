@@ -172,7 +172,8 @@ TAG_SUBSTITUTIONS = (('book reviews', 'book-reviews'), ('assembly language', 'as
                      ('evaluation metrics', 'evaluation-metrics'),
                      ('consistent hashing', 'consistent-hashing'),
                      ('merkle tree', 'merkle-tree'),
-                     ('prefix tree', 'prefix-tree'))
+                     ('prefix tree', 'prefix-tree'),
+                     ('log-structured merge tree', 'log-structured-merge-tree'))
 
 # Disqus
 DISQUS_SITENAME='zhu45-org'
