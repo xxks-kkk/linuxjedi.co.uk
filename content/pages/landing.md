@@ -3,7 +3,7 @@ url:
 save_as: index.html
 
 <!-- See: https://github.com/peterwittek/peterwittek.com/blob/master/content/pages/home.md on image-text arrangement -->
-<img style="float:left; border-right:10px solid white; max-width: 40%" src="images/me2.jpg" alt="photo"/>Welcome to my modest corner of the web! My name is Zeyuan Hu (胡泽远 in Chinese) [^1]. 
+<img style="float:left; border-right:10px solid white; max-width: 40%" src="images/me2.jpg" alt="photo"/>Welcome to my modest corner of the web! My name is Ze-Yuan Hu (胡泽远 in Chinese) [^1]. 
 I'm a first year master student at [the University of Texas at Austin](https://www.utexas.edu/) and 
 before becoming a longhorn, I spent two years working as a 
 software engineer on [Db2 for Linux, UNIX and Windows](http://www.ibm.com/analytics/us/en/technology/db2/). 
@@ -26,4 +26,4 @@ am on twitter as [@zeyuanhu](https://twitter.com/zeyuanhu).
 
 _"Don't be afraid to fail, be afraid not to try." -- Unknown_
 
-[^1]: Here is a simple [tutorial]({filename}name.md) on handling my name!
+[^1]:  I write a simple [tutorial]({filename}name.md) on my name prounciation and difference between Zeyuan and Ze-Yuan.

@@ -18,7 +18,7 @@ VS. Hash Table:
 - Hash table has $O(1)$ time complexity for looking up a key but it is not efficient for the operations:
 
     - Finding all keys with a common prefix. We have to traverse all keys in hash table, which can be $O(n)$ ($n$ is 
-    the number of keys inserted). However, trie can take $O(k)$ ($k$ is the length of the prefix).
+    the number of keys inserted). However, trie takes $O(k)$ ($k$ is the length of the prefix).
     - Enumerating a dataset of strings in lexicographical order. There is a sorting on all strings (i.e. keys)
     and thus $O(n\log n)$. However, trie takes $O(n)$ time only.
 
@@ -33,17 +33,23 @@ VS. balanced trees:
 
 ## Data Structure
 
-To unavoid unnecessary complexity, we assume we are working with a collection of strings which consist of only lower case alphabetics.
+To avoid unnecessary complexity, we assume we are working with a collection of strings which consist of only lower case alphabetics.
 
 ![trie]({filename}/images/trie.png)
 
 - A trie node contains two fields:
 
-    - An array of $R$ links, with each link representing one letter. A link connects two trie nodes together.
+    - An array of $R$ links (`links`), with each link representing one letter. A link connects two trie nodes together.
     In our example, we have $R = 26$.
-    - A boolean variable `isEnd`, which indicates whether we reach the end of the string. This is needed because
+    - A boolean variable `isEnd`, which indicates whether we reach the end of a string. This is needed because
     if we are searching for a prefix, we should have `isEnd = false`. On the other hand, if we reach the end of a string,
     we have `isEnd = true`.
+
+!!!note
+    Please note that `isEnd = true` doesn't indicate that we are at leaf node of the trie. The boolean only indicates
+    whether we have reached the end of some string. In Figure 1, the end nodes of "wa" and "wax" are connected with each other.
+    If we require that there is no common prefix for the string (e.g. strings in the dataset don't share the common prefix),
+    we then don't need `isEnd` boolean variable.
 
 - Insert a key into trie:
 
@@ -78,8 +84,9 @@ To unavoid unnecessary complexity, we assume we are working with a collection of
 
     - Space complexity: $O(1)$
 
-!!!note
-    We implement the trie data structure [here](https://github.com/xxks-kkk/shuati/blob/master/leetcode/208-ImplementTrie/implementTrie.cc).
+## Implementation
+
+We implement the trie data structure in C++ [here](https://github.com/xxks-kkk/shuati/blob/master/leetcode/208-ImplementTrie/implementTrie.cc).
 
 ## Applications
 
