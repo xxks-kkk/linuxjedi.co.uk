@@ -6,6 +6,15 @@ Summary: "PebblesDB: Building Key-Value Stores using Fragmented Log-Structured M
 
 [TOC]
 
+--- 05/22/18 UPDATE ---
+
+!!!note
+    I write this post when I start to read system papers and even before I read through PebblesDB's code. 
+    My system paper reading skill is lacking and I cannot fully grasp the essence of the paper back then. Please
+    jump to the [Remarks](#remarks) section for a concise summary of LSM and FLSM (PebblesDB's
+    data structure). The other sections are filled with unnecessary details and they are helpful only when you
+    want to [build something](https://github.com/xxks-kkk/HyperPebblesDB) based on the paper's implementation.
+
 ## Introduction
 
 - One fundamental problem is the high write amplification of key-value stores for write-intensive workloads. 
@@ -212,6 +221,37 @@ Due to the limitation of FLSM, several existing techniques are applied to improv
 
     - Seek-Based Compaction
     - Parallel Seek
+
+## Remarks
+
+Log-structured Merge Tree (LSM) is a data structure that is used to provide good write performance by leverage log organizations.
+In details, write to LSM-based storage system is first written to in-memory log called *MemTable*
+by appending the corresponding key-value pair at the end of log. Doing the write through appending is
+the key differentiator from the B-tree-based storage system as we are doing the sequential write instead of
+the random update, which can reduce write amplification and improve the write performance. 
+
+To improve the read performance and make the system scalable
+to the large datasets, LSM-based storage system organizes their logs into levels. The first layer
+(numbered as 0), which
+*MemTable* is stored in memory. All the logs (*sstables*) in the rest levels are written to the persistent storage devices. 
+Acceptable read performance is maintained by lowering down the number of logs. 
+This is done by *compactions*, which merges the logs in the upper level into the lower level (i.e.,
+merging sstables from level 1 to level 2). However, there is problem with the merging process as we
+need to read both logs from the upper level and lower level into memory and perform the merge. This mechanism
+naturally introduces the write amplifcation effect, which decreases the write performance.
+
+![flsm compaction process illustration]({filename}/images/guard-compaction.png) 
+
+To combat write amplification, Fragmented Log-Structured Merge Trees (FLSM) and its implementation *PebblesDB* are proposed. 
+The key idea is shown in picture above. FLSM uses *guard*, which
+can be thought of as the key for a collection of logs. the keys in the collection of logs have to be 
+in the range between the current guard's key and the previous guard's key. During the compaction, the 
+the log in the upper level is split across the guard keys in the lower level. In the example shown
+above, 10 and 80 from level 1 is split to 10 in guard 60 and 80 to guard 100 in level 2.
+As one can see, this split and append avoids reading the data from lower level (e.g., level 2), which reduces
+the write amplification and improve the write performance. Read performance stays still thanks to the guard 
+as we can first search guard key and then logs within the guard to locate the corresponding value for the 
+given key. 
 
 ## Reference
 

@@ -62,7 +62,7 @@ The sum of the depths of all nodes in a tree is known as the *internal path leng
 **height**
 
 The *height* of :math:`n_i` is the length of the longest path from :math:`n_i` to
-a leaf. 
+a leaf. (i.e., the height of a node is the number of edges from the node to the deepest leaf)
 
 **ancestor**, **descendant**
 

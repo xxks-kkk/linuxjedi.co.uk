@@ -100,13 +100,15 @@ MARKDOWN = {
 }
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['tag_cloud', 'render_math', 'i18n_subsites', 'html_rst_directive', 'bootstrapify']
+PLUGINS = ['tag_cloud', 'render_math', 'i18n_subsites', 'html_rst_directive', 'bootstrapify', 'pelican-cite']
 LOCAL_CONTENT_CACHE = False
 HIDE_SIDEBAR = True
 DISPLAY_CATEGORIES_ON_MENU = False # disable display categories in the navbar
 DISPLAY_PAGES_ON_MENU = False
 PYGMENTS_STYLE = 'emacs'
 BOOTSTRAP_THEME = 'lumen'
+
+PUBLICATIONS_SRC = 'content/pubs.bib'
 
 #################################
 #
@@ -169,7 +171,8 @@ TAG_SUBSTITUTIONS = (('book reviews', 'book-reviews'), ('assembly language', 'as
                      ('system concepts', 'system-concepts'),
                      ('evaluation metrics', 'evaluation-metrics'),
                      ('consistent hashing', 'consistent-hashing'),
-                     ('merkle tree', 'merkle-tree'))
+                     ('merkle tree', 'merkle-tree'),
+                     ('prefix tree', 'prefix-tree'))
 
 # Disqus
 DISQUS_SITENAME='zhu45-org'
