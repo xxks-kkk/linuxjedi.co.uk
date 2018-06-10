@@ -7,6 +7,9 @@ Quotes
 ..
    :template: quotes
 
+"If you can't measure it, it doesn't exist."
+**-- Unknown** (found in Brené Brown's TED talk `"The power of vulnerability" <https://www.ted.com/talks/brene_brown_on_vulnerability#t-108259>`__)
+
 "The Master in the art of living makes little distinction between his work 
 and his play, his labor and his leisure, his mind and his body, his 
 education and his recreation, his love and his religion. 

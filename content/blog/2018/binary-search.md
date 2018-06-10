@@ -1,7 +1,7 @@
 Title: How to write binary search correctly
 Date: 2018-01-12 16:24
 Category: Data Struct & Algo
-Tags: algorithm
+Tags: algorithm, leetcode
 Summary: How to write a binary search correctly on the first try
 
 [TOC]
@@ -236,6 +236,8 @@ Once we exit the loop, we need to check our postcondition once again. Our postco
 if it is in the array and `-1` otherwise. However, during the initialization of `high`, we consider `n` represents the case when no such number exists and at the same
 time, satisfies our invariant. Thus, before returning the result, we need to check whether `high` within the index range of the given array to satisfy the
 postcondition constraint.
+
+## Conclusion
 
 In this post, we take a look at the technique that helps us implement the binary search correctly: maintain the invariant. Also, we emphasize the importance
 of the postcondition to help us get the returen result correctly. We haven't empahsized the importance of bound function in the post but we should consider

@@ -14,7 +14,9 @@ Also, I have a side interest in human language, which usually leads to NLP. Occa
 how to crack the deep-learning-based systems. You can find more about me on my [LinkedIn page](http://cn.linkedin.com/in/zhu45), 
 [resume]({attach}/assets/zeyuan-hu-cv.pdf), [CV]({attach}/assets/zeyuan-hu-cv-long.pdf), and [StackOverflow page](https://stackoverflow.com/users/1460102/zack). 
 
-When I'm free, I enjoy writing ([here](http://zhu45.org/blog2/) and [there](http://zeyuanhu.wordpress.com/)), cooking (e.g., traditional 
+When I'm free, I enjoy carrying out some min research projects on some niche topics (e.g. how to write binary search)
+in programming and write them down [here](http://zhu45.org/blog2/). I also write random non-technical things [there]. 
+Besides writings, I like cooking (e.g., traditional 
 [Beijing dish](https://en.wikipedia.org/wiki/Beijing_cuisine)), 
 [singing]({filename}songs.md), and [drawing](https://ferrishu3886.deviantart.com/).
 I also find myself digging the question on how political system and religion (e.g. Christianity and Buddhism) impact social organization and people's way of thinking.

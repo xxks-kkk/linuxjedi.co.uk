@@ -1,7 +1,7 @@
 Title: Trie
 Date: 2018-06-02 22:30
 Category: Data Struct & Algo
-Tags: trie, log-structured merge tree, storage, prefix tree
+Tags: trie, log-structured merge tree, storage, prefix tree, trees
 Summary: A study of trie data structure
 
 Trie is a classic data structure ([@@idreos2018data]) that is widely used in key-value store ([@@zhang2018surf]; [@@wu2015lsm]). In this post, we describe the basics about the data structure.
