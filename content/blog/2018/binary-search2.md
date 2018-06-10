@@ -23,9 +23,9 @@ The generalization of binary search is done by formalizing how we reduce the sea
 if and only if for all $x$ in the search space $S$ (i.e., the ordered set), $p(x)$ implies $p(y)$ for all $y > x$ ($p$ stands
 for some predicate over $S$). TopCoder article calls this formalization as *main theorem*. We use this theorem to discard
 the second half of search space. For example, in the most basic binary search problem in the ascending order array, our predicate $p$ 
-is defined as: is the value at `i` smaller than `X`? If answer is yes, we discard the first half of the array (i.e., any values 
-with index smaller than $i$) because the array is sorted in ascending order, any value before `A[i]` is also smaller than
-`X`. By the same reasoning, if the answer is no, we discard the second half. Couple of observations we can make here:
+is defined as: is the value at `i` smaller than `X`? If answer is yes, we discard all the values 
+with index smaller than $i$ because given the ascending order and `A[i]` is smaller than `X`, any value comes before `A[i]` is also 
+smaller than `X`. By the same reasoning, if the answer is no, we discard the second half. We make some observations here:
 
 - As you may have noticed, predicate is exactly what we check in the if-statement (e.g. `X > A[i]`).
 - If `X < A[i]`, then for any $y > i$, we have `X < A[y]`, which exactly matches the main theorem and that's how we can discard
