@@ -15,7 +15,7 @@ how to crack the deep-learning-based systems. You can find more about me on my [
 [resume]({attach}/assets/zeyuan-hu-cv.pdf), [CV]({attach}/assets/zeyuan-hu-cv-long.pdf), and [StackOverflow page](https://stackoverflow.com/users/1460102/zack). 
 
 When I'm free, I enjoy carrying out some min research projects on some niche topics (e.g. how to write binary search)
-in programming and write them down [here](http://zhu45.org/blog2/). I also write random non-technical things [there]. 
+in programming and write them down [here](http://zhu45.org/blog2/). I also write random non-technical things [there](https://zeyuanhu.wordpress.com/). 
 Besides writings, I like cooking (e.g., traditional 
 [Beijing dish](https://en.wikipedia.org/wiki/Beijing_cuisine)), 
 [singing]({filename}songs.md), and [drawing](https://ferrishu3886.deviantart.com/).

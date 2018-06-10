@@ -1,7 +1,7 @@
-Title: Generalized binary search idea
+Title: Generalized binary search
 Date: 2018-06-10 1:24
 Category: Data Struct & Algo
-Tags: algorithm, leetcode
+Tags: algorithm, leetcode, cpp
 Summary: Binary search idea can be generalized to other problems
 
 [TOC]
@@ -115,6 +115,15 @@ public:
 };
 ```
 
+!!!note
+    Notice that in the code we actually use $|A_{j+k} - T| \ge |A_j - T|$ instead of $|A_{j+k} - T| > |A_j - T|$. The reason
+    is because whenever there is a tie, the smaller elements are always preferred. Consider `[1,2,3,4,5]` with $k = 4$ and $
+    T = 3$. Then, both `[1,2,3,4]` and `[2,3,4,5]` are the closest $k$ elements to the $T$ and sum of the elements to $T$ distance
+    are the same, which is a tie. In this case, we prefer `[1,2,3,4]`. If we strictly follow the predicate, we end up with
+    `[2,3,4,5]`. Switching $|A_{j+k} - T| > |A_j - T|$ to $|A_{j+k} - T| \ge |A_j - T|$ still maintains the invariant in the loop
+    because when $|A_{j+k} - T| = |A_j - T|$, shifting the subrange to the right doesn't give any improvement and by set `right`
+    to mid, we still ensure that the optimal $j$ falls inside $[\text{left}, \text{right}]$.
+
 $|A_{j+k} - T| > |A_j - T|$ means we cannot move the subrange to the right to obtain the optimal subrange. We also show that
 under the condition, we can discard the second half of the array. `mid` represents $j$ in our condition and by not moving
 subrange to right, we are saying that the optimal $j$ has to be the left of `mid`. This implies that we can safely move
@@ -125,13 +134,13 @@ move subrange (indicating by $j$ or `mid`) to the left; we have to move to right
 $\text{left}$ to `mid+1` to narrow down the search space while maintainng the invariant unchanged.
 
 !!!note
-    Notice that in the code we actually use $|A_{j+k} - T| \ge |A_j - T|$ instead of $|A_{j+k} - T| > |A_j - T|$. The reason
-    is because whenever there is a tie, the smaller elements are always preferred. Consider `[1,2,3,4,5]` with $k = 4$ and $
-    T = 3$. Then, both `[1,2,3,4]` and `[2,3,4,5]` are the closest $k$ elements to the $T$ and sum of the elements to $T$ distance
-    are the same, which is a tie. In this case, we prefer `[1,2,3,4]`. If we strictly follow the predicate, we end up with
-    `[2,3,4,5]`. Switching $|A_{j+k} - T| > |A_j - T|$ to $|A_{j+k} - T| \ge |A_j - T|$ still maintains the invariant in the loop
-    because when $|A_{j+k} - T| = |A_j - T|$, shifting the subrange to the right doesn't give any improvement and by set `right`
-    to mid, we still ensure that the optimal $j$ falls inside $[\text{left}, \text{right}]$.
+    The above code is theoretically correct but it has fundamentally implementation issue: `mid` can be 0,
+    which will lead to index out of bound error in `else if (fabs(x - arr[mid-1]) > fabs(x - arr[mid+k-1]))`.
+    C++ doesn't enforce index out of bound error (i.e., *undefined behavior*) and the above code can run
+    successfully for certain complier on certain platform (leetcode obvious can). However, issue will happen
+    if you directly translate the above logic to another language. A safe way to do is to replace the `else if`
+    statement with `else if ((mid >0 && fabs(x - arr[mid-1]) > fabs(x - arr[mid+k-1])) || fabs(x - arr[mid]) > fabs(arr[mid+k] - x))`,
+    which you can see is redundant and can be optimized. This is exactly what we are going to do next.
 
 One thing to note that `while(left < right)` means we haven't found the optimal $j$ yet, which implies that we have to
 either move the subrange to left or move the subrange to right. This provides us the further opportunity to optimize the above
@@ -166,8 +175,8 @@ In other words, there is no such case that both conditions are false and we are 
 one of the conditions and use `else` instead. Another way of thinking is that we do nothing if both conditions are failed
 and thus this third do-nothing case can be combined with the second `else if (fabs(x - arr[mid-1]) > fabs(x - arr[mid+k-1]))` condition to form a `else` statement.
 
-In fact, we can even get rid of the `fabs` and finally optimize our code into
-
+There is another optimization code proposal I find online, which I don't think it is correct:
+    
 ```cpp
 class Solution {
 public:
@@ -191,32 +200,11 @@ public:
 };
 ```
 
-To see why this one is correct, we have to resort back to our predicate proof. In the second optimization, we get 
-rid of $|A_{j-1} - T| > |A_{j+k-1} - T|$ and focus ourselves on $|A_{j+k} - T| > |A_j - T|$ only. Then, we
-get rid of the absolute sign and rewrite the inequalities based on the sorted order of the given array, which
-are the same inequalities from our previous predicate proof:
-
-| Sorted Order | Inequalities                                                                               |
-|--------------|--------------------------------------------------------------------------------------------|
-| ascending    | $$\begin{eqnarray*}A_{j+k} - T & > & A_j - T \\A_{j+k} - T & > & T - A_j\end{eqnarray*}$$  |
-| descending   | $$\begin{eqnarray*}T - A_{j+k} & > & T - A_j \\ T - A_{j+k} & > & A_j - T\end{eqnarray*}$$ |
-
-Let's first consider the ascending case. One can observe that the left-hand side of the inequalities are the same:
-$A_{j+k} - T$ and only right-hand side of the inequalities are different. If $T > A_j$, that means
-$T - A_j < 0$ and thus $A_{j+k} - T > T - A_j$ implies $A_{j+k} - T > A_j - T$ 
-(a number that is greater than a positive number must be greater than a negative number) and we only need to check
-$A_{j+k} - T > T - A_j$ in the code. If $T < A_j$, that means we should move the subrange to the left (to get
-$j$ closer to the index of $T$), which is exactly the same thing we are going to do when $T > A_j$: `right = mid`.
-
-For the descending case, we have to realize that descending is just the reverse of the ascending. Mathematically,
-this means that $A_{j+k}$ and $A_{j}$ are swapped. For example, consider `[1,2,3,4,5]` with $A_j = 1$ and $A_{j+k} = 5$.
-However, for the descending `[5,4,3,2,1]`, $A_j = 5$ and $A_{j+k} = 1$. Thus, the `if` condition is
-really checking $A_{j} - T > A_{j+k} - T$, which is equivalent as $T - A_{j} < T - A_{j+k}$, which is one of the inequalities
-listed in the table above. Like the ascending case, if $T > A_j$,
-then $T - A_{j+k} > T - A_j$ entails $T - A_{j+k} > A_j - T$; if $T < A_j$, we necessarily want to shift the subrange to left.
-
-Thus, $|A_{j+k} - T| > |A_j - T|$ can be further simplified to $A_{j+k} - T > T - A_j$ and that leads to our final optimized
-solution.
+But this code return the wrong answer for the following case: `arr = [5,4,3,2,1], x = 2, k = 4`. The above
+solution gives `[5,4,3,2]`, which is wrong because `[4,3,2,1]` is the closest elements to `2`. To see this,
+we can invoke the predicate: `5` is 3 units away from `2` but `1` is only 1 unit away from `2` ($|A_j - T| > |A_{j+k} - T|$), 
+which implies we can shift the subrange to the right. More straightforward way is to simply calculate the sum of distance of
+each element: `[5,4,3,2]` has sum `3+2+1 = 6` while `[4,3,2,1]` has sum `2+1+1 = 4`.
 
 ## Conclusion
 

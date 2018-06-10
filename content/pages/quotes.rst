@@ -7,6 +7,9 @@ Quotes
 ..
    :template: quotes
 
+"Worry is a misuse of the imagination."
+**-- Dan Zadra**
+
 "If you can't measure it, it doesn't exist."
 **-- Unknown** (found in Brené Brown's TED talk `"The power of vulnerability" <https://www.ted.com/talks/brene_brown_on_vulnerability#t-108259>`__)
 
