@@ -78,19 +78,19 @@ in details:
         range between 0 and $j-1$. We have $T - A_{j-1-d} > T - A_{j-1} > A_{j+k-1} - T > A_{j+k-1-d} - T$. Thus, for any
         index $i <= j$, we have $|A_{i-1} - T| > |A_{i+k-1} - T|$. This suggests that we can discard first half of the array.
         - $A_{j-1} < A_{j+k-1} < T$. We have $T - A_{j-1} > T - A_{j+k-1}$, which implies 
-        $T - A_{j-1-d} > T - A_{j-1} > T - A_{j+k-1-d} > T - A_{j+k-1}$, which again the predication holds.
+        $T - A_{j-1-d} > T - A_{j-1} > T - A_{j+k-1-d} > T - A_{j+k-1}$, which again the predicate holds.
 
     - If $A$ is sorted in descending order, then we have three possible cases:
 
         - $T > A_j > A_{j+k}$. Impossible.
         - $A_j > T > A_{j+k}$. In this case, we have $A_{j-1} - T > T - A_{j+k-1}$, which implies that 
-        $A_{j-1-d} - T > A_{j-1} - T > T - A_{j+k-1} > T - A_{j+k-1-d}$. Predication holds: for all index $i <= j$,
+        $A_{j-1-d} - T > A_{j-1} - T > T - A_{j+k-1} > T - A_{j+k-1-d}$. predicate holds: for all index $i <= j$,
         we have $|A_{i-1} - T| > |A_{i+k-1} - T|$, which means we can discard first half of the array and move subrange to the right.
         - $A_j > A_{j+k} > T$. In this case, we have $A_{j-1} - T > A_{j+k-1} - T$, which imples that
-        $A_{j-1-d} - T > A_{j-1} - T > A_{j+k-1-d} - T > A_{j+k-1} - T$. Predication holds.
+        $A_{j-1-d} - T > A_{j-1} - T > A_{j+k-1-d} - T > A_{j+k-1} - T$. predicate holds.
 
-Once we verify the predication satisifies the *main theorem*, the only thing we left is to build the connection between the
-invariant and predication, and make sure the invariant holds during the loop execution. Let's first list out the code:
+Once we verify the predicate satisifies the *main theorem*, the only thing we left is to build the connection between the
+invariant and predicate, and make sure the invariant holds during the loop execution. Let's first list out the code:
 
 ```cpp
 class Solution {

@@ -31,6 +31,9 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
+- **[Joint Image Captioning and Question Answering]** (2018): a system that performs image captioning and VQA at the same time and outperforms SOTA on VQA v2 dataset.
+<a href="https://arxiv.org/pdf/1805.08389.pdf"><i class="ai ai-arxiv ai-lg" aria-hidden="true"}"></i></a>
+
 - **[Algo]** (2016 - 2018): a collection of data structures, algorithms with the aim to keep my computer science knowledge fresh. Implemented in C.
 <a href="https://github.com/xxks-kkk/algo"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
