@@ -1,8 +1,8 @@
 Title: Graph basics + Topological Sort
-Date: 2018-06-30 22:30
+Date: 2018-07-08 22:30
 Tags: graph, sorting, maw
 Summary: Basic graph concepts
-Status: draft
+Status: Draft
 
 [TOC]
 
@@ -39,7 +39,7 @@ $1 \le i < N$. The **length** of such path is the number of edges on the path, w
 - A **cycle** in a graph:
     - For directed graph, a cycle is a path of length at least 1 such that vertices $w_1 = w_N$.
     - For undirected graph, we require edges to be distinct
-        - reasoning: the path $u,v,u$ in an undirected graph should be considered a cycle because $(u,v)$ and $(v,u)$
+        - reasoning: the path $u,v,u$ in an undirected graph should not be considered a cycle because $(u,v)$ and $(v,u)$
         are the same edge.
 - A **directed acyclic graph (DAG)** is a directed graph in which there are no cycles (i.e., paths which contain one or
 more edges and which begin and end at the same vertex)
@@ -57,16 +57,96 @@ is connected, then the graph is said to be **weakly connected**.
 in $G$. Every vertex belongs to exactly one connected component.
 - A **complete graph** is a graph in which there is an edge between every pair of vertices.
 
+!!!note
+    A tree is a special sort of graph - it is an undirected graph that is connected but has no cycles.
+    Given a graph $G = (V, E)$, if the graph $G' = (V, E')$ where $E' \in E$, is a tree, then $G'$ is
+    referred to as a spanning tree of $G$.
+
 ### Representation
 
+- Adjacency matrix: use a $|V| \times |V|$ matrix indexed by vertices, with a `1` indicating the presence of an edge (i.e.
+For each edge $(u, v)$, we set `A[u][v]` to `true`; otherwise the entry in the array is `false`). If the edge has a weight 
+associated with it, then we can set `A[u][v]` equal to the weight and use either a very large or 
+a very small weight as a sentinel to indicate nonexistent edges.
+    - Disadvantage: we require graph to be dense: $|E| = \Theta(|V|^2)$, which is very unlikely.
+
+- Adjacency list: For each vertex, we keep a list of all adjacent vertices. For undirected graph, each edge $(u,v)$ appears in
+two lists
+    - Advantage: only requires $O(|E|+|V|)$ space.
+
+- Edge Lists: we represent the graph as an array of $|E|$ edges. For example, for an undirected edge connects $0$ and $1$, we can 
+represent it as `[0,1]`.
+
+!!!note
+    Checkout [Khan Academy::Computer Science::Algorithms::Representing graphs](https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs) for a nice example.
 
 ## Topological Sort
 
-### Definition
+### Definition and Properties
+
+- We have following two equivalent definitions:
+    - Def 1: A topological sort is an ordering of vertices in a DAG such that
+    if there is a path from $v_i$ to $v_j$, then $v_j$ appears
+    after $v_i$ in the ordering.
+    - Def 2: A topological ordering of a DAG $G$ is a labeling $f$ of 
+    $G$'s nodes such that:
+        - The $f(v)$'s are the set ${1,2, \dots, n}$
+        - $(u,v) \in G \implies f(u) < f(v)$
+
+![topological sorting example](topological-sort-example.png)
+
+- Application: sequence tasks while respecting all precedence constraints.
+(e.g. course prerequisite structure can be represented as a graph. A topological ordering of these courses is any course sequence that does not violate the prerequisite requirement.)
+
+- If G has a cycle, there is no topological sort: since for two vertices $v$ and $w$ on the cycle, $v$ precedes $w$ and $w$ precedes $v$. On ther other hand,
+if there is no directed cycle in the graph, we can compute topological sort in linear time ($O(|V|+|E|)$).
+
+- Topological sorting is not necessary unique as shown in the picture above.
+
+### DFS Approach
+
+The basic idea of computing the topological ordering is following:
+
+- Let $v$ be a sink vertex of $G$
+- set $f(v) = n$
+- recurse on $G - {v}$
+
+There are some proofs we need to show for the correctness of the procedure:
+
+- Every directed acyclic graph has a sink vertex
+
+    Suppose the DAG doesn't have a sink vertex, that means every single vertex has at least one outgoing arc. We can start with arbitrary
+    vertex and follow its outgoing arc to the next vertex. Since there is no sink vertex in our graph, we can repeatedly follow the outgoing
+    arc of the vertex. Suppose there are $N$ nodes in the graph and by following edges for $N$ times, we reach the $N+1$th vertex. Since among
+    the $N+1$ nodes, there are only $N$ distinct nodes. By the pigeonhole principle, we must have visted some vertex twice. By following the
+    nodes and visited some node twice, we show that the graph contains a directed cycle, which is a contradiction.
+
+- During each recursion step, we can find a sink vertex
+
+    For a DAG, if we delete one or some of the vertices, we still have DAG (i.e., we cannot create a directed cycle). Thus,
+    in each recursion step, we always have DAG. Then, by the previous observation, during each recursion step, we can find a sink vertex.
+
+- The above steps do produce topological ordering
+
+    By topological ordering, we know that all the edges have to go forward. Intutively, we always want to assign the sink vertex
+    of the graph to the final position because otherwise there is going to be an outgoing arc of the node and the node that the
+    outgoing arc points to will be assigned a lower position, which violates the topological ordering (i.e. edge goes backward). 
+    In our procedure, when a node $v$ is assigned to position $i$, that means we only have $i$ nodes remaining and $v$ is the sink vertex. 
+    This implies that all of outgoing arcs and the corresponding nodes are deleted and assigned higher positions. So for every vertex, 
+    by the time it actually gets assigned a position, it's a sink and it only has incoming arcs from the as yet unsigned vertices. 
+    It's outgoing arcs all go forward to vertices that were already assigned higher positions, and got deleted previously from the graph. 
+
+To implement the procedure above, we use the DFS:
+
+
+
 
 ### BFS Approach
 
-### DFS Approach
+
+
+
+
 
 ## Reference
 
@@ -76,9 +156,7 @@ in $G$. Every vertex belongs to exactly one connected component.
 Tsung-Hsien Lee, and Amit Prakash, p.342 - 346 (we use *ATA* for short in the future)
 - [Topological Sort on Coursera](https://www.coursera.org/learn/algorithms-graphs-data-structures/lecture/yeKm7/topological-sort)
 
-- MAW (cpp) p.
 
-- graph basics
 - topological sort (coursera + maw)
-- BFS (MAW)
-- DFS (Coursera one)
+- BFS (MAW) <-- start with indegree=0 vertex
+- DFS (Coursera one) <--- start with outdegree=0 vertex
