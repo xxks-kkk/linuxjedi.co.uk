@@ -1,8 +1,7 @@
 Title: Graph basics + Topological Sort
-Date: 2018-07-08 22:30
+Date: 2018-07-14 22:30
 Tags: graph, sorting, maw
 Summary: Basic graph concepts
-Status: Draft
 
 [TOC]
 
@@ -62,6 +61,9 @@ in $G$. Every vertex belongs to exactly one connected component.
     Given a graph $G = (V, E)$, if the graph $G' = (V, E')$ where $E' \in E$, is a tree, then $G'$ is
     referred to as a spanning tree of $G$.
 
+- **Indegree** of a vertex $v$ is the number of edges $(u,v)$
+- **Outdegree** of a vertex $v$ is the number of edges $(v,u)$
+
 ### Representation
 
 - Adjacency matrix: use a $|V| \times |V|$ matrix indexed by vertices, with a `1` indicating the presence of an edge (i.e.
@@ -93,7 +95,7 @@ represent it as `[0,1]`.
         - The $f(v)$'s are the set ${1,2, \dots, n}$
         - $(u,v) \in G \implies f(u) < f(v)$
 
-![topological sorting example](topological-sort-example.png)
+![topological sorting example](/images/topological-sort-example.png)
 
 - Application: sequence tasks while respecting all precedence constraints.
 (e.g. course prerequisite structure can be represented as a graph. A topological ordering of these courses is any course sequence that does not violate the prerequisite requirement.)
@@ -138,15 +140,48 @@ There are some proofs we need to show for the correctness of the procedure:
 
 To implement the procedure above, we use the DFS:
 
+![DFS for topological sort](/images/topological-dfs.png)
 
+There are several points we need to note here:
 
+- We set $f(s) = \text{current_label}$ right before we about to pop the call stack. At that point, for every edge $(s,v)$, there is no such
+$v$ that we haven't explored. That means there are no outgoing edges, which indicate that $s$ is a sink and thus we can assign it a labeling.
+
+- Running time: $O(|E|+|V|)$ (we only visit each vertex in the graph once and we look at each edge once as well)
+
+- Correctness: we want to show that this DFS algorithm can correctly produce topological ordering. Topological ordering requires that for
+an edge $(s,v)$, $f(s) < f(v)$. There are two possible cases for DFS: 1) $s$ get visited first 2) $v$ get visited first. For the first case,
+since there is an edge from $s$ to $v$, DFS will recursively call on $v$. In other words, DFS call on $v$ will finish before the DFS call on $s$.
+Thus, $v$ will get a label larger than $s$ and the topological ordering is satisfied. For the second case, since there is no cycle in DAG, $s$ will
+not get discovered. Thus, $s$ will be visited later than $v$. By the same reasoning as the first case, we still have the topological ordering.
 
 ### BFS Approach
 
+Not surprisingly, we can find topological ordering of a graph using BFS as well. Instead of finding the sink vertex each time (i.e. the vertex
+with outdegree = 0), we find the source vertex (i.e. the vertex with indegree = 0) each time in BFS. The basic steps to compute the topological ordering follows:
 
+- Let $s$ be a source vertex of $G$
+- set $f(s) = 1$
+- recurse on $G - {s}$
 
+We omit the proofs of the properties in BFS as the proofs will mirror with the ones for DFS. We can use the BFS to implement the procedure above:
 
+![DFS for topological sort](/images/topological-bfs.png)
 
+There are several points we need to note here:
+
+- In the basic version, we pick a source vertex of $G$ each time and assign the label. Inevitably, we will compute all the indegree of all nodes in
+the graph to find the source vertices. However, not all nodes' indegrees will be updated. To save this duplicate calculation, we use a queue (box).
+
+- Running time: $O(|E|+|V|)$ (We visit each edge once and for each node, we visit twice: compute the inital indegree; assign the labeling)
+
+- Correctness: this BFS will prodcue the topological ordering because for an edge $(s,v)$, we will always visit $s$ before visiting $v$. Without
+removing $s$ first, $v$ will always have an incoming edge, which will not make $v$ a source vertex. Since we assign the labeling in the increasing order,
+$f(s) < f(v)$. Thus, we produce a topological ordering.
+
+As one can see the difference between DFS and BFS is that: for DFS, we start with the sink vertex and assign the label of the vertices in the decreasing
+order (i.e. start from $n$ and until $1$). However, for BFS, we start with the source vertex and assign the label of the vertices in the increasing fashion
+(i.e. start from $1$ and until $n$).
 
 ## Reference
 
@@ -155,8 +190,3 @@ To implement the procedure above, we use the DFS:
 - "Elements of Programming Interviews: The Insiders' Guide" by Adnan Aziz,
 Tsung-Hsien Lee, and Amit Prakash, p.342 - 346 (we use *ATA* for short in the future)
 - [Topological Sort on Coursera](https://www.coursera.org/learn/algorithms-graphs-data-structures/lecture/yeKm7/topological-sort)
-
-
-- topological sort (coursera + maw)
-- BFS (MAW) <-- start with indegree=0 vertex
-- DFS (Coursera one) <--- start with outdegree=0 vertex
