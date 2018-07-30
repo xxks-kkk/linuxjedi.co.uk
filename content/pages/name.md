@@ -1,21 +1,21 @@
 title: Crash course in handling my name
 
 First of all, I'm very grateful that you're willing to click the link and glance at this page.
-Chinese name can be hard to write and pronounce. This guide deals with the prounciation. 
+Chinese name can be hard to write and pronounce. This guide deals with the prounciation part. 
 
 ## Prounciation tricks
 
-Over the years, I have developed a set of tricks to help non-chinese-native speakers prounce the
-names. Feel free to pick the one works best for you!
+Over the years, I have developed a set of tricks to help non-chinese-native speakers prounce my name. 
+Feel free to pick the one works best for you!
 
 - You can break "Zeyuan" as "Ze-Yuan", which represents two Chinese characters: "Ze" and "Yuan".
 "Ze" can be prounced as "ch" or "Z" and "Yuan" shares the same prouncation with Chinese currency
 unit: "Yuan" (the spelling is not the same though). I find this trick works particularly well in
-Economics department.
+the econ department.
 - Facebook helps me to figure out the prounciation as "ZE-yoo-AHN HOO". Sounds pretty close.
-- Simply call me "Zack" and forget about Chinese prounciation nonsense.
+- Simply call me "Zack" and forget about the Chinese prounciation nonsense.
 
-If you have a trick that is different from above, feel free to shoot me an email.
+If you use a trick that is different from above, feel free to shoot me an email.
 
 
 ## FAQ

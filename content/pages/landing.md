@@ -11,7 +11,9 @@ software engineer on [Db2 for Linux, UNIX and Windows](http://www.ibm.com/analyt
 I'm interested in storage and security. In particular, I'm interested in building reliable storage system
 that can best use of underlying hardware and the distributed storage system with emphasis on performance and security.
 Also, I have a side interest in human language, which usually leads to NLP. Occasionally, I read papers on
-how to crack the deep-learning-based systems. You can find more about me on my [LinkedIn page](http://cn.linkedin.com/in/zhu45), 
+how to crack the deep-learning-based systems. 
+I have interest in human language, which usually leads to NLP.
+You can find more about me on my [LinkedIn page](http://cn.linkedin.com/in/zhu45), 
 [resume]({attach}/assets/zeyuan-hu-cv.pdf), [CV]({attach}/assets/zeyuan-hu-cv-long.pdf), and [StackOverflow page](https://stackoverflow.com/users/1460102/zack). 
 
 When I'm free, I enjoy carrying out some min research projects on some niche topics (e.g. how to write binary search)

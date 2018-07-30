@@ -4,9 +4,9 @@ A log of work that I have spent some time on
 
 [TOC]
 
-## Current projects
+<!-- ## Current projects
 
-Storage
+Storage -->
 
 ## Maintained projects
 
