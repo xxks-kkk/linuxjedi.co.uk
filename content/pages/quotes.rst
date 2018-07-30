@@ -7,6 +7,27 @@ Quotes
 ..
    :template: quotes
 
+"Now I've actually always found something that to be very true which is most
+people don't get those experiences because they'd never asked. I've never
+found anybody that didn't want to help me if I asked them for help. I always
+call him up I called up this will date me but I called up Bill Hewlett when I
+was 12 years old and he lived in Palo Alto. His number was still in a phonebook
+and he answered the phone himself you know. "yes?" "hi I'm Steve Jobs I'm 12 years
+old I'm a student in high school and I want to build a frequency counter and I
+was wondering if you had any spare parts I could have?" and he laughed and he gave
+me the spare parts to build his frequency counter and he gave me a job
+that summer in Hewlett Packard working on the assembly line putting nuts and
+bolts together on frequency counters. He got me a job in the place that built him
+and I was in heaven and I've never found anyone who said no or hung up the phone
+when I call. I just asked and when people ask me I try to be as responsive to pay
+that that debt of gratitude back. Most people never pick up the phone and call.
+Most people never ask and that's what separates sometimes the people that do
+things from the people that just dream about them. You got it. You got to act and
+you've got to be willing to fail. You've got to be willing to crash and burn, you
+know, with people on the phone, with starting a company, with whatever. If
+you're afraid of failing, you won't get very far."
+**-- Steve Jobs** (found `on YouTube <https://youtu.be/zkTf0LmDqKI>`__ through `this post <http://harouneducationventures.com/blog/2016/8/29/steve-jobs-on-dont-be-afraid-to-ask-for-help>`__)
+
 "腾讯副总裁吴军博士说“成功的道路并不像想象得那么拥挤，因为在人生的马拉松长路上，绝大部分人跑不到一半就主动退下来了。
 到后来，剩下的少数人不是嫌竞争对手太多，而是发愁怎样找一个同伴陪自己一同跑下去。
 因此，教育是一辈子的事情，笑到最后的人是一辈子接受教育的人。回过头来看，一些过去比我们读书更优秀，
