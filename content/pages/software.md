@@ -10,7 +10,7 @@ Storage -->
 
 ## Publication
 
-- Jialin Wu, **__Zeyuan Hu__**, Raymond J. Mooney. "Joint Image Captioning and Question Answering?" In *VQA Challenge and Visual Dialog Workshop at the 31st IEEE Conference on Computer Vision and Pattern Recognition* (CVPR2018) 
+- Jialin Wu, **__Zeyuan Hu__**, Raymond J. Mooney. "Joint Image Captioning and Question Answering" In *VQA Challenge and Visual Dialog Workshop at the 31st IEEE Conference on Computer Vision and Pattern Recognition* (CVPR2018) 
 <a href="https://arxiv.org/pdf/1805.08389.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
 ## Maintained projects
