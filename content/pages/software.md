@@ -8,6 +8,11 @@ A log of work that I have spent some time on
 
 Storage -->
 
+## Publication
+
+- Jialin Wu, **__Zeyuan Hu__**, Raymond J. Mooney. "Joint Image Captioning and Question Answering?" In *VQA Challenge and Visual Dialog Workshop at the 31st IEEE Conference on Computer Vision and Pattern Recognition* (CVPR2018) 
+<a href="https://arxiv.org/pdf/1805.08389.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
+
 ## Maintained projects
 
 - **[HyperPebblesDB]** (2018 - ): a key-value store that is part of LevelDB family
@@ -31,7 +36,7 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
-- **[Joint Image Captioning and Question Answering]** (2018): a system that performs image captioning and VQA at the same time and outperforms SOTA on VQA v2 dataset.
+<!-- - **[Joint Image Captioning and Question Answering]** (2018): a system that performs image captioning and VQA at the same time and outperforms SOTA on VQA v2 dataset.
 <a href="https://arxiv.org/pdf/1805.08389.pdf"><i class="ai ai-arxiv ai-lg" aria-hidden="true"}"></i></a>
 <a href="javascript:myFunction('myDIV');"><img src="images/bibtex.jpg" alt="bibtex" width="21.34" height="16"></a>
 
@@ -44,7 +49,7 @@ a python scraper for solution template formation.
   year={2018}}
   </pre>
   </blockquote>
-</div>
+</div> -->
 
 - **[Algo]** (2016 - 2018): a collection of data structures, algorithms with the aim to keep my computer science knowledge fresh. Implemented in C.
 <a href="https://github.com/xxks-kkk/algo"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
