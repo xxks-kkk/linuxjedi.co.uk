@@ -58,7 +58,7 @@ in $G$. Every vertex belongs to exactly one connected component.
 
 !!!note
     A tree is a special sort of graph - it is an undirected graph that is connected but has no cycles.
-    Given a graph $G = (V, E)$, if the graph $G' = (V, E')$ where $E' \in E$, is a tree, then $G'$ is
+    Given a graph $G = (V, E)$, if the graph $G' = (V, E')$ where $E' \subset E$, is a tree, then $G'$ is
     referred to as a spanning tree of $G$.
 
 - **Indegree** of a vertex $v$ is the number of edges $(u,v)$

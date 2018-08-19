@@ -10,7 +10,7 @@ Feel free to pick the one works best for you!
 
 - You can break "Zeyuan" as "Ze-Yuan", which represents two Chinese characters: "Ze" and "Yuan".
 "Ze" can be prounced as "ch" or "Z" and "Yuan" shares the same prouncation with Chinese currency
-unit: "Yuan" (the spelling is not the same though). I find this trick works particularly well in
+unit: "Yuan" (the chinese spelling is not the same though). I find this trick works particularly well in
 the econ department.
 - Facebook helps me to figure out the prounciation as "ZE-yoo-AHN HOO". Sounds pretty close.
 - Simply call me "Zack" and forget about the Chinese prounciation nonsense.
@@ -32,7 +32,7 @@ a [morpheme](https://en.wikipedia.org/wiki/Morpheme). Thus, whether we use hyphe
 Pinyin really depends on whether those two characters can form a word. For example, "Ze" means water in Chinese
 and "Yuan" means travelling further. Those two characters combined together doesn't form a word with a valid
 semantics and should be treated as two words. Thus, "Ze-Yuan" is more appropriate than "Zeyuan". However, in my passport,
-"Zeyuan" is used (of course, all capitalized), thus "Zeyuan" should be used more for legal documents. So, to sum up,
-use either "Ze-Yuan" or "Zeyuan" is fine but "Ze-Yuan" is slightly better.
+"Zeyuan" is used, thus "Zeyuan" should be used more for legal documents. So, to sum up,
+use either "Ze-Yuan" or "Zeyuan" is fine: "Zeyuan" is for legal but "Ze-Yuan" is better from linguistic perspective.
 
 That's it! Thanks for reading!
