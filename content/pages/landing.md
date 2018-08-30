@@ -8,7 +8,7 @@ I'm a second year master student at [the University of Texas at Austin](https://
 software engineer on [Db2 for Linux, UNIX and Windows](http://www.ibm.com/analytics/us/en/technology/db2/) at [IBM](https://www.ibm.com/us-en/). 
 
 I'm interested in storage. In particular, I'm interested in building reliable storage system
-that can best use of underlying hardware and the distributed storage system with emphasis on performance and security.
+that can make best use of the underlying hardware and the distributed storage system with emphasis on performance and security.
 Also, I have a side interest in human language, which usually leads to NLP. 
 You can find more about me on my [LinkedIn page](http://cn.linkedin.com/in/zhu45), 
 [resume]({attach}/assets/zeyuan-hu-cv.pdf), [CV]({attach}/assets/zeyuan-hu-cv-long.pdf), [StackOverflow](https://stackoverflow.com/users/1460102/zack), and
