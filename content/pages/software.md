@@ -27,9 +27,6 @@ Storage -->
 
 ## Maintained projects
 
-- **[HyperPebblesDB]** (2018 - ): a key-value store that is part of LevelDB family
-<a href="https://github.com/xxks-kkk/HyperPebblesDB"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-
 - **[Shuati]** (2017 - ): a collection of solutions to OJ problems with the goal to stay fresh with computer science fundamentals
 and learn new programming languages. Also include
 a python scraper for solution template formation.
@@ -47,6 +44,10 @@ a python scraper for solution template formation.
 <a href="https://github.com/sphinx-doc/sphinx"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a> -->
 
 ## Archived projects
+
+- **[HyperPebblesDB]** (2018): a key-value store that is part of LevelDB family
+<a href="https://github.com/xxks-kkk/HyperPebblesDB"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+<a href="assets/hpb.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
 <!-- - **[Joint Image Captioning and Question Answering]** (2018): a system that performs image captioning and VQA at the same time and outperforms SOTA on VQA v2 dataset.
 <a href="https://arxiv.org/pdf/1805.08389.pdf"><i class="ai ai-arxiv ai-lg" aria-hidden="true"}"></i></a>
