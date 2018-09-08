@@ -25,6 +25,27 @@ Storage -->
   </blockquote>
 </div>
 
+## Manuscript
+
+- **Zeyuan Hu** and Julia Strout. Exploring Stereotypes and Biased Data with
+the Crowd. arXiv preprint arXiv:1801.03261 (2018)
+<a href="https://www.youtube.com/watch?v=kwmRzrWsYfU"><i class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+<a href="https://arxiv.org/pdf/1801.03261.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"}"></i></a>
+<!-- <a href="https://arxiv.org/pdf/1801.03261.pdf"><i class="ai ai-arxiv ai-lg" aria-hidden="true"}"></i></a> -->
+<a href="javascript:myFunction('myDIV2');"><img src="images/bibtex.jpg" alt="bibtex" width="21.34" height="16"></a>
+
+<div id="myDIV2" style="display:none;">
+  <blockquote>
+  <pre>@article{hu2018exploring,
+  title={Exploring Stereotypes and Biased Data with the Crowd},
+  author={Hu, Zeyuan and Strout, Julia},
+  journal={arXiv preprint arXiv:1801.03261},
+  year={2018}}
+  </pre>
+  </blockquote>
+</div>
+
+
 ## Maintained projects
 
 - **[Shuati]** (2017 - ): a collection of solutions to OJ problems with the goal to stay fresh with computer science fundamentals
@@ -94,10 +115,10 @@ for the handwritten digits classification task using Keras
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/391L-dana/HW6"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW6/Tex/report.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
-- **[Exploring Stereotypes and Biased Data with the Crowd]** (2017): How can we use the crowdsourcing to alleviate the bias in the dataset
+<!-- - **[Exploring Stereotypes and Biased Data with the Crowd]** (2017): How can we use the crowdsourcing to alleviate the bias in the dataset
 for machine learning?
 <a href="https://www.youtube.com/watch?v=kwmRzrWsYfU"><i class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
-<a href="http://arxiv.org/abs/1801.03261"><i class="ai ai-arxiv ai-lg" aria-hidden="true"}"></i></a>
+<a href="http://arxiv.org/abs/1801.03261"><i class="ai ai-arxiv ai-lg" aria-hidden="true"}"></i></a> -->
 
 <!-- [![[PDF]](images/arxiv.png)](http://arxiv.org/abs/1801.03261) -->
 

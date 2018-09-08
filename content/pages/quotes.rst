@@ -7,11 +7,39 @@ Quotes
 ..
    :template: quotes
 
+"On the subject of not having a good/challenging job:
+Hogwash. Either get a better job, or here's an idea: Make your current job into something 
+it's **not**, at least right now. 
+One of the best programmers I knew walked into a 
+job as a maintenance programmer on a legacy system that consisted of dozens of programs 
+and hundreds of thousands of lines of code. Most of which had been hacked on over the years so much that 
+you would have to say there wasn't any coherent design to it anymore.
+This was pretty much a go-nowhere, dead-end job. 
+Management wanted you to keep your head down, and just fix the damn bugs. 
+The good developers were working on the greenfield project. 
+People either came here to sit out their remaining days until they retired, 
+or gain a few years of experience before going on to new application development. 
+Whereas most programmers would complain about the lack of career development, 
+or the opportunity to learn new things, or not having exciting projects to work on, 
+or more generally just bitching about **no one enabling them**, this guy simply sat down, 
+and went about doing the work that needed to be done.
+And over the course of 2 years, he had transformed that system from a buggy hell of spaghetti 
+code to something that was a thing of beauty and functioned like a swiss watch. 
+So complete was the transformation, that the VP of the division started 
+paying more & more attention to the existing project, and started questioning the value of the greenfield project. 
+Although he didn't have a title, the operations people went to him as the de-facto leader of the group. 
+When I left, the VP was talking about creating a new role for him as a systems architect...
+I'm not sure what happened to him after that, but he taught me a couple of very important lessons:
+1. Your job is what you make it, and there's interesting problems to be solved **everywhere**. 
+If you hate writing CRUD screens, solve the problem by automatically generating them.
+2. Don't sit around waiting for opportunities to come to you. Chances are they never will."
+**-- red-dirt** (found on `StackExchange: I don't program in my spare time. Does that make me a bad developer? <https://softwareengineering.stackexchange.com/questions/48698/i-dont-program-in-my-spare-time-does-that-make-me-a-bad-developer>`_)
+
 "Success doesn't happen overnight. Keep your eye on the prize and don't look back."
-**-Erin Andrews**
+**-- Erin Andrews**
 
 “海阔天空 在勇敢以后 要拿执着 将命运的锁打破 冷漠的人 谢谢你们曾经看轻我 让我不低头 更精彩的活。”
-**-海阔天空 （信乐团）**
+**-- 海阔天空 （信乐团）**
 
 "其实你们看了这个视频水友们 教给你们一个道理 在这个圈子里面 你们可以看到 我是无数次的跌落至谷底。
 我跟你们说下我的状况 我的状况就是我爸不在了 我家里根本就没有任何的后援 你们懂吗？ 我给你们教一个人生的道理
