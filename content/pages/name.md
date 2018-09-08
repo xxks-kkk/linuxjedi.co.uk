@@ -15,8 +15,8 @@ unit: "Yuan" (the chinese spelling is not the same though). I find this trick wo
 the econ department.
 - Facebook helps me to figure out the prounciation as "ZE-yoo-AHN HOO". Sounds pretty close.
 - In the Wade-Giles system of romanization, my name is rendered as Tse-Yüan Hu.
-- Simply call me "Zack" and forget about the Chinese prounciation nonsense. If you're curious, I pick "Zack"
-simply because it allows me to write my initials without any hesitation.
+<!-- - Simply call me "Zack" and forget about the Chinese prounciation nonsense. If you're curious, I pick "Zack"
+simply because it allows me to write my initials without any hesitation. -->
 
 If you use a trick that is different from the above, feel free to shoot me an email.
 

@@ -46,7 +46,7 @@ a python scraper for solution template formation.
 ## Archived projects
 
 - **[HyperPebblesDB]** (2018): a key-value store that is part of LevelDB family
-<a href="https://github.com/xxks-kkk/HyperPebblesDB"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+<a href="https://github.com/xxks-kkk/HyperPebblesDB/tree/2.0-staging"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="assets/hpb.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
 <!-- - **[Joint Image Captioning and Question Answering]** (2018): a system that performs image captioning and VQA at the same time and outperforms SOTA on VQA v2 dataset.

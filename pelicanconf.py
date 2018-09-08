@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Zeyuan Hu'
-SITENAME = "Ze-Yuan Hu's page"
+SITENAME = "Zeyuan Hu's page"
 #SITESUBTITLE = "Make things clear with the fewest words"
 SITEURL = 'https://zhu45.org'
 
