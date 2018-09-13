@@ -7,6 +7,13 @@ Quotes
 ..
    :template: quotes
 
+"IN THE END… We only regret the chances we didn’t take, the relationships we were afraid to have,
+and the decisions we waited too long to make."
+**-- Lewis Carroll**
+
+"You miss 100% of the shots you don't take"
+**-- Wayne Gretzky**
+
 "On the subject of not having a good/challenging job:
 Hogwash. Either get a better job, or here's an idea: Make your current job into something 
 it's **not**, at least right now. 
