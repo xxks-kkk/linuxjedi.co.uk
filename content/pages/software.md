@@ -56,6 +56,9 @@ a python scraper for solution template formation.
 - **[Emacs Config]** (2016 - ): my personal emacs configuration that I used during the day work. Very lightweight.
 <a href="https://github.com/xxks-kkk/emacs-config"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
+- **[PebblesDB]** (2018 - ): a LevelDB-style KV-store, which I help to maintain.
+<a href="https://github.com/utsaslab/pebblesdb"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+
 <!-- ## Open source projects contributed to
 
 - **[KenLM]**: Faster and Smaller Language Model Queries

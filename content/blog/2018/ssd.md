@@ -1,6 +1,6 @@
 Title: Flash-based SSD Basics
 Date: 2018-07-01 22:00
-Tags: ssd, storage
+Tags: ssd, storage, ostep
 Summary: list out the basic concepts in SSD
 
 [TOC]
