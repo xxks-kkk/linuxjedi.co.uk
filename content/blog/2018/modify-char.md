@@ -71,8 +71,8 @@ Note that the last two commands are executed after `*c = "Hello World!";`. The s
 
 ![state of variables on the stack]({filename}/images/stack.png)
 
-Note that one can think about *variable as the alias for some virtual memory address*. In other words, variable `s` and address `0x7fff5fbff340`
-are the same and we use variable as a shortcut to reference some address. For a given variable name, we can get its address by using `&`
+Note that one can think about *a variable in C as an alias for some virtual memory address*. In other words, variable `s` and address `0x7fff5fbff340`
+are the same thing and we use variable as a shortcut to reference some address. For a given variable name, we can get its address by using `&`
 (i.e., When `&` used, the address of that variable is returned, instead of the variable itsef).
 In our case, `&s` is `0x7fff5fbff340`. Since `s` itself is a pointer, which by definition, contains a memory address instead of 
 a value. In our case, the memory address in `s` is `0x7fff5fbff360`, which contains `""`.
