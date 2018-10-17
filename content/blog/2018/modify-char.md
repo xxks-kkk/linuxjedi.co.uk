@@ -75,12 +75,15 @@ Note that one can think about *a variable in C as an alias for some virtual memo
 are the same thing and we use variable as a shortcut to reference some address. For a given variable name, we can get its address by using `&`
 (i.e., When `&` used, the address of that variable is returned, instead of the variable itsef).
 In our case, `&s` is `0x7fff5fbff340`. Since `s` itself is a pointer, which by definition, contains a memory address instead of 
-a value. In our case, the memory address in `s` is `0x7fff5fbff360`, which contains `""`.
+a value. In our case, the memory address in `s` is `0x7fff5fbff360`, which contains `""` (note that `""`
+value is undefined. It could be any value).
 
 We pass `&s` into the function because inside the function, if we modify the content on the address `0x7fff5fbff340` (i.e. represented by `&s`),
 we can still reference `0x7fff5fbff340` once the function exits. It's because we can still access `s`, and `s` and `0x7fff5fbff340` are the same thing.
 Whatever change made to the content on `0x7fff5fbff340` will be accessible by `s` as well. 
-Since `s` has type `char*`, then naturally `&s` corresponds with type `char**`.
+Since `s` has type `char*`, then naturally `&s` corresponds with type `char**`. Another way of understanding
+`char**` is that we want to change the value of the passed in argument and C, by default, pass the argument
+by copying the value. Thus, we need to pass in a pointer to that value, not just the value itself.
 
 Inside the function, we modify the content on the address `0x7fff5fbff340` by deferencing `c` (i.e. `*c`), which holds a copy of `0x7fff5fbff340`. 
 After `*c = "Hello World!";`, the content on the address `0x7fff5fbff340` changed to `0x100000f8e`, which contains `"Hello World!"`. Once we are done

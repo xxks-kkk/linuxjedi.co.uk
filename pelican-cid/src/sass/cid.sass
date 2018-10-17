@@ -16,10 +16,17 @@ $monospace-font: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace
 *
     color: $text-color
 
-.post-info, blockquote, .topic, .highlight
-    background: #dadfe1
+.post-info, blockquote, .topic
+    background: #f7f7f7
+    border: 1px solid #ccc
+    border-radius: 4px
     //border-top: 1px solid #ccc
     //border-bottom: 1px solid #ccc
+
+.highlight
+    background: #dadfe1
+    border: 1px solid #ccc
+    border-radius: 4px
 
 code, kbd, pre, samp
     font-family: $monospace-font
@@ -327,6 +334,7 @@ body
         padding: 4px
         border: 2px black solid
         font-size: 90%
+        border-radius: 4px
 
     .admonition-title
         background: #1abc9c
@@ -337,6 +345,7 @@ body
         margin: -6px
         margin-bottom: 12px
         text-align: center
+        border-radius: 4px
 
 .topic
     padding: 10px 20px
@@ -344,6 +353,7 @@ body
         
 .toc
     border: 1px solid #c6c9cb
+    border-radius: 4px
 
 .highlight pre
     padding: 20px

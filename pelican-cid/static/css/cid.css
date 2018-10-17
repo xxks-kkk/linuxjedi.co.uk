@@ -162,8 +162,15 @@
 * {
   color: #030303; }
 
-.post-info, blockquote, .topic, .highlight {
-  background: #dadfe1; }
+.post-info, blockquote, .topic {
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+
+.highlight {
+  background: #dadfe1;
+  border: 1px solid #ccc;
+  border-radius: 4px; }
 
 code, kbd, pre, samp {
   font-family: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
@@ -430,7 +437,8 @@ body {
     margin-top: 20px;
     padding: 4px;
     border: 2px black solid;
-    font-size: 90%; }
+    font-size: 90%;
+    border-radius: 4px; }
   .container .admonition-title {
     background: #1abc9c;
     font-weight: bold;
@@ -439,14 +447,16 @@ body {
     padding: 6px 12px;
     margin: -6px;
     margin-bottom: 12px;
-    text-align: center; }
+    text-align: center;
+    border-radius: 4px; }
 
 .topic {
   padding: 10px 20px;
   margin: 20px; }
 
 .toc {
-  border: 1px solid #c6c9cb; }
+  border: 1px solid #c6c9cb;
+  border-radius: 4px; }
 
 .highlight pre {
   padding: 20px; }

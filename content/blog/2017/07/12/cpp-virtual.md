@@ -4,6 +4,8 @@ Category: programming languages
 Tags: cpp
 Summary: virtual, pure virtual, constructors, abstract base class
 
+[TOC]
+
 Surprisingly, even I work with the product that is written majorly in C++, I don't have to deal
 with the stuff that differentiate C++ from C. However, I'm now working on a defect that
 forces me to simplify C++ objects in order to get the root cause of the problem. That's the place
@@ -155,16 +157,16 @@ concept get explained in [C++ Primer](https://www.amazon.com/Primer-5th-Stanley-
 > If the function is virtual, then the decision as to which function to run is 
 > delayed until run time. The version of the virtual function that is run is the 
 > one defined by the type of the object to which the reference is bound or to 
-> which the pointer points.On the other hand, calls to nonvirtual functions are 
-> bound at compile time. Similarly, calls to any function (virtual or not) 
-> on an object are also bound at compile time. 
+> which the pointer points. On the other hand, calls to nonvirtual functions are 
+> bound at compile time. Similarly, *calls to any function (virtual or not) 
+> on an object are also bound at compile time*. 
 > The type of an object is fixed and unvarying—there is nothing we can do to 
 > make the dynamic type of an object differ from its static type. 
 > Therefore, calls made on an object are bound at compile time to the version defined by the type of the object.
 
-> Note: Virtuals are resolved at run time only if the call is made 
-> through a reference or pointer. Only in these cases is it possible for 
-> an object’s dynamic type to differ from its static type.
+!!!Note 
+    Virtuals are resolved at run time only if the call is made through a *reference* or *pointer*. Only in these cases is it possible for 
+    an object’s dynamic type to differ from its static type.
 
 To see the final note of the above quote, let's take a look an example
 

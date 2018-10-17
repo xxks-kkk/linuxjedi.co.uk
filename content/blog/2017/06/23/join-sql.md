@@ -13,17 +13,14 @@ happened when I took DB course in college, and the second time was when I joined
 the federation team at IBM and learned about DB2. Unfortunately, I didn't keep
 my study notes well in the first two tries and I don't write SQL a lot during my
 day to day work. Things, again, get rusty very quickly. This time I want to do a
-better job by, at least, saving my notes in a good place. 
+better job by, at least, saving my notes in a good place [^2]. 
 
-!!!note
-    Tables appeard in this post 
-    are from the 
-    [supplementary resources](http://db-book.com/) of the 
-    [Database System Concepts](https://www.amazon.com/Database-System-Concepts-Computer-Science/dp/0073523321) book.
+[^2]: Tables appeard in this post are from the [supplementary resources](http://db-book.com/) of the 
+[Database System Concepts](https://www.amazon.com/Database-System-Concepts-Computer-Science/dp/0073523321) book.
 
 [TOC]
 
-## TL;DR
+## Summary
 
 - `natural join` produces a relation from two relations by considering only those pairs of tuples
 with the same value on those attributes that appear in the schemas of both relations.
@@ -38,10 +35,14 @@ the common attributes of either or both of the relations that we want to join on
 ## Motivation
 
 Before we directly jump into the SQL, I want to briefly talks about the motivation
-for the `join` statement. Specifically, why do we need it?
+for the `join` statement. Specifically, why do we need it? In short, `join` is used
+as a shorthand for a widely-used type of query where we want to equate two columns
+in two tables in the `where` clause (e.g., `T1.a = T2.a`).
 
 To retrieve data from multiple relations (i.e. more than one table), we can either
 use a cartesian product or join of columns of the same data type.
+
+### Cartesian product
 
 The cartesian product happens to the relations listed in the `from` clause of a SQL.
 The end result of cartesian product is a relation that has all attributes from
@@ -135,15 +136,10 @@ ID|name|dept_name|salary|ID|course_id|sec_id|semester|year
 12121|Wu|Finance|90000|15151|MU-199|1|Spring|2010
 ```
 
-The result relation has 180 rows, which exactly equal to $12 \times 15$. Notice that
-the order of appearance of relations appeard in the `from` clause matters. If you 
-take a look at our SQL result, we get there are $15$ rows with "name" called 
-"Srinivasan" and then we expect another $15$ rows with "name" called "Wu" and so on.
-This matches the description of relational algebra perfectly.
+The result relation has 180 rows, which exactly equal to $12 \times 15$. 
 
 Quite often, we use `where` clause to restrict the combinations created by the 
-cartesian product to those that are meaningful for the desired answer. One common 
-scenario is like the following SQL
+cartesian product to those that are meaningful for the desired answer. For example:
 
 ```sql
 select name, course id
@@ -154,9 +150,7 @@ where instructor.ID = teaches.ID;
 In this query, we combine information from the *instructor* and *teaches* table
 and the matching condition requires `instructor.ID` to be equal to `teaches.ID`. 
 In fact, these are the only attributes in the two relations that have the same name. 
-In general, we may often find us writing SQLs that requires all attributes with
-matching names to be equated in the `where` clause. This case is so common that
-we use `join` to save us some effort.
+*In general, we may often find us writing SQLs that requires all attributes with matching names to be equated in the `where` clause. This case is so common that we use `join` to save us some effort.*
 
 ## join
 
@@ -180,7 +174,7 @@ is a graphic summary for the text above
 ```
 
 In addition, there are join conditions that we can use in combination with
-the join form mentioned above. In other words, any form of join (inner, left outer,
+the join form mentioned above. Any form of join (inner, left outer,
 right outer, or full outer) can be combined with any join condition (natural, using, or on).
 The table below provides a summary of join types and join conditions
 
@@ -190,6 +184,12 @@ The table below provides a summary of join types and join conditions
 | **left outer join**  | on <predicate>  |
 | **right outer join** | using ($A_1, A_2, \dots, A_n$)        |
 | **full outer join**  |                 |
+
+Then the SQL syntax is 
+
+```
+[table1] <natural> [Join types] [table2] <on | using>
+```
 
 #### inner join
 
@@ -202,37 +202,13 @@ with every tuple of the second, natural join considers only those pairs of tuple
 with the same value on those attributes that appear in the schemas of both relations.
 
 ```sql
-select name, course_id from instructor natural join teaches;
+select * from instructor natural join teaches;
 ```
 
-Consider the query above, computing *instructor* `natural join` *teaches* considers
-only those pairs of tuples where both the tuple from *instructor* and the tuple
-from *teaches* have the same value on the common attribute, "ID".
+Consider the query above, computing `instructor natural join teaches` considers
+only those pairs of tuples where both the tuple from `instructor` and the tuple
+from `teaches` have the same value on the common attribute, `ID`.
 
-```
-sqlite> select name, course_id from instructor natural join teaches;
-name|course_id
-Srinivasan|CS-101
-Srinivasan|CS-315
-Srinivasan|CS-347
-Wu|FIN-201
-Mozart|MU-199
-Einstein|PHY-101
-El Said|HIS-351
-Katz|CS-101
-Katz|CS-319
-Crick|BIO-101
-Crick|BIO-301
-Brandt|CS-190
-Brandt|CS-190
-Brandt|CS-319
-Kim|EE-181
-```
-
-!!!note
-    1. The query result set is exactly the same as the
-    result set given by ``select name, course id from instructor, teaches where instructor.ID = teaches.ID;``
-  
 ```
 sqlite> select * from instructor natural join teaches;
 ID|name|dept_name|salary|course_id|sec_id|semester|year
@@ -253,14 +229,17 @@ ID|name|dept_name|salary|course_id|sec_id|semester|year
 98345|Kim|Elec. Eng.|80000|EE-181|1|Spring|2009
 ```
 
-From above query result we can note that
+Since `join` is really a shorthand of writing a type of SQL with cartesian product, we can get the same 
+result using ``select * from instructor, teaches where instructor.ID = teaches.ID;``. From above query result we can see that:
 
-1. we do not repeat those attributes that appear in the schemas of both relations;
-rather they appear only once.
+1. We do not repeat those attributes that appear in the schemas of both relations;
+rather they appear only once (e.g. only one `ID` column, not two).
 
-2. the order in which the attributes are listed: first the attributes common to the schemas
+2. The order in which the attributes are listed: first the attributes common to the schemas
 of both relations, second those attributes unqiue to the schema of the first relation, and
 finally, those attribute unique to the schema of the second relation.
+
+3. All the columns from `instructor` table (4 columns) and `teaches` (5 columns) table show up in the final result (8 columns in total except `ID` column showing up once).
 
 In addition, natural join will consider ALL the attributes that appear in the 
 schemas of both relations. Consider the following query
@@ -290,13 +269,13 @@ MU-199|Music Video Production|Music|3
 PHY-101|Physical Principles|Physics|4
 ```
 
-*instructor* has attributes (`ID|name|dept_name|salary`); 
-*teaches* has attributes (`ID|course_id|sec_id|semester|year`);
-*course* has attributes (`course_id|title|dept_name|credits`). The first `natural join`
-will first do cartesian product of *instructor* and *teaches* and 
-keep the tuples that have the same value on "ID". Then, the resulting relation
-will do the second `natural join` with *course* and 
-will keep the tuples that have the same value on "course_id" and "dept_name".
+`instructor` has attributes (`ID|name|dept_name|salary`); 
+`teaches` has attributes (`ID|course_id|sec_id|semester|year`);
+`course` has attributes (`course_id|title|dept_name|credits`). The first `natural join`
+will first do cartesian product of `instructor` and `teaches` and 
+keep the tuples that have the same value on `ID`. Then, the resulting relation
+will do the second `natural join` with `course` and 
+will keep the tuples that have the same value on `course_id` and `dept_name`.
 
 ```
 sqlite> select * from instructor natural join teaches natural join course;
@@ -370,7 +349,7 @@ like working exactly the same as **where** clause? The answer is
 
 ##### Motivation
 
-Let's consider *student* and *takes* tables look like the below
+Let's consider `student` and `takes` tables look like the below
 
 ```
 sqlite> select * from student;
@@ -424,11 +403,11 @@ from student natural join takes;
 ```
 
 This query actually is not right for our purpose because it will not show
-the student who takes no course. This is because his "ID" will only appear
-in *student* table not in *takes* table. If we do `natural join`, the value
-of "ID" will not equal (one is a number and the other is null), which will
+the student who takes no course. This is because his `ID` will only appear
+in `student` table not in `takes` table. If we do `natural join`, the value
+of `ID` will not equal (one is a number and the other is null), which will
 not show up in our final result set. Example in our case will be student Snow
-with "ID" 70557, who has not taken any course. 
+with `ID` 70557, who has not taken any course. 
 
 ```
 sqlite> select * from student natural join takes;
@@ -457,7 +436,7 @@ ID|name|dept_name|tot_cred|course_id|sec_id|semester|year|grade
 98988|Tanaka|Biology|120|BIO-301|1|Summer|2010|
 ```
 
-More generallyy, some tuples in either or both of the relations being joined 
+More generally, some tuples in either or both of the relations being joined 
 may be "lost" in this way. The **outer join** operation works in a manner similar
 to the join operations we studied above, but preserve those tuples that would be
 lost in a join, by creating tuples in the result containing null values.
@@ -553,8 +532,8 @@ ID|name|dept_name|tot_cred|ID|course_id|sec_id|semester|year|grade
 ```
 
 Here, `left outer join` esentially returns a cartesian product of two relations.
-Since there is no tuple in *take* with ID = 70577, every time a tuple appears in the outer
-join with name = "Snow", the values for student.ID and takes.ID must be different, and
+Since there is no tuple in `take` with `ID = 70577`, every time a tuple appears in the outer
+join with name = `"Snow"`, the values for `student.ID` and `takes.ID` must be different, and
 such tuples would be eliminated by the `where` clause predicate. Thus, student
 Snow never appears in the result of the latter query.
 
@@ -592,12 +571,14 @@ In fact, this perspective is acutally how people explain `join` to others. There
 are two excellent pages offer graphical explaination to this concept. Their links
 are attached in the "Links to resources" section.
 
-## A leetcode example
+## Examples
+
+### Leetcode 175
 
 Now, let's take a look at [leetcode 175. Combine Two tables](https://leetcode.com/problems/combine-two-tables/#/description)
 for practice. 
 
-The problem ask us to 
+The problem asks us to 
 
 > Write a SQL query for a report that provides the following information
 > (FirstName, LastName, City, State) 
@@ -628,6 +609,30 @@ select FirstName, LastName, City, State from Address natural right outer join Pe
 ```
 
 We should have no trouble to understand these queries now. 
+
+### Example Two
+
+Suppose we have two tables `t1` and `t2` that are created like:
+
+```
+create table t1 (a int, b char(1));
+create table t2 (b char(1), c char(10));
+```
+
+Also, `t1.b` contains 7 `'x'` and `t2.b` contains 3 `'x'`. If we do `select * from t1 inner join t2 on t1.b = t2.b`:
+
+> what are the columns of the resulting queries?
+
+The result contains 4 columns: `a`, `b`, `b`, `c`. Note that one difference between `join ... on` and 
+`natural join` or `join ... using` is that `join ... on` will keep the columns with same attributes from
+two tables (e.g. `b` in this case) while the other two will only keep one column only.
+
+> How many rows does the result set contain?
+
+Remember `join` is a special case of cartesian product: only keep the rows that have the same value on the
+shared attributes between two tables. In this example, since there are 7 `'x'` in `t1` and 3 `'x'` in `t2`,
+we will have 21 rows in the end.
+
 
 ## Links to resources
 

@@ -1,5 +1,5 @@
 ##########################
-MAW: Chapter 5 Reflection
+Hash Table
 ##########################
 
 :date: 2017-03-17 15:56
@@ -7,8 +7,7 @@ MAW: Chapter 5 Reflection
 :tags: meta, maw, hashing
 :summary: Summary of hash table for MAW Chapter 5
 
-This is the summary part of hash table and at the same time, it serves as the Chapter 5
-reflection.
+This post summarizes the basic idea about hash table. It is created based on MAW Chapter 5.
 
 ***********
 Reflection
@@ -37,6 +36,7 @@ A hash table is an array of some fixed size. Then we use hash function to map ea
 ``Tablesize-1`` and place it in the appropriate cell.
 
 .. image:: /images/hashtable.PNG
+   :alt: hash table idea illustration
 
 Ideally, two distinct keys get different cells. However, this is not possible because
 there are a finite number of cells and a virtually infinite supply of keys. Thus the key
@@ -93,6 +93,12 @@ two main strategies discussed in the chapter: separate chaining and open address
 Separate chaining
 ==================
 
+.. note::
+
+    Sometimes separate chaining is also referred as *"open hashing"*, which means that none of the objects
+    are stored inside the hash table's internal array. For example, objects are stored in lists of buckets
+    for hash table implementng the separate chaining. 
+
 Separate chaining is to keep a list (chain or bucket) of all elements that hash to the same value. In other words,
 each hash table cell holds pointer to linked list of records with same hash value.
 When collision happens, we insert the hash value of the key to the corresponding linked list of 
@@ -113,8 +119,19 @@ than 1 but close to 1 if good hashing function. Thus, the general rule for
 separate chaining hashing is to make the table size about as large as the number of 
 elements expected (let :math:`\lambda \approx 1`).
 
+.. note::
+
+    Actually, separate chaining doesn't restrict us to use the list to chain the objects together.
+    We can use a tree to organize the elements that have the same hash value.
+
 Open addressing
 ==================
+
+.. note::
+
+    Open addressing is sometimes referred as *"closed hashing"*, which means that every object
+    is stored directly at some index in the hash table's internal array; the objects never
+    live outside of the internal array.
 
 One disadvantage for the separate chaining strategy is that we need to build linked list
 for each cell, whcih introduces the overhead that can waste space. Another strategy to 
@@ -169,18 +186,10 @@ then the disk I/O becomes the main cost. In this case, we use different hash sch
 Like B-tree, this structure is widely applied in the database field.
 
 **********
-Left Out
-**********
-
-Some material I left out when I work through this chapter majorly due to the time
-constraint:
-
-- 5.7, 5.12, 5.13, 5.15
-
-**********
 Reference
 **********
 
 - MAW Chapter 5
-- https://courses.cs.washington.edu/courses/cse332/10sp/lectures/lecture10.pdf
-- https://courses.cs.washington.edu/courses/cse373/06sp/handouts/lecture16.pdf
+- Washington lecture slides: `CSE 332 Lecture 10 <https://courses.cs.washington.edu/courses/cse332/10sp/lectures/lecture10.pdf>`_, 
+  `CSE 373 Lecture 16 <https://courses.cs.washington.edu/courses/cse373/06sp/handouts/lecture16.pdf>`_
+- `SO: Meaning of Open hashing and Closed hashing <https://stackoverflow.com/questions/9124331/meaning-of-open-hashing-and-closed-hashing>`_

@@ -4,10 +4,6 @@ A log of work that I have spent some time on
 
 [TOC]
 
-<!-- ## Current projects
-
-Storage -->
-
 ## Publication
 
 - Jialin Wu, **__Zeyuan Hu__**, Raymond J. Mooney. "Joint Image Captioning and Question Answering" In *VQA Challenge and Visual Dialog Workshop at the 31st IEEE Conference on Computer Vision and Pattern Recognition* (CVPR2018) 
