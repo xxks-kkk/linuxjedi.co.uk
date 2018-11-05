@@ -4,6 +4,11 @@ A log of work that I have spent some time on
 
 [TOC]
 
+## Current Project
+
+- **[RustFS]** (2018 - ): a user-space file system
+<a href="https://github.com/utsaslab/rustfs"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+
 ## Publication
 
 - Jialin Wu, **__Zeyuan Hu__**, Raymond J. Mooney. "Joint Image Captioning and Question Answering" In *VQA Challenge and Visual Dialog Workshop at the 31st IEEE Conference on Computer Vision and Pattern Recognition* (CVPR2018) 
