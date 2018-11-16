@@ -37,3 +37,11 @@ relational algebra and relational calculus in terms of their purpose:
 - The fundamental operators in relational algebra need to be implemented
 in the database system in order to manipulate tuples: $\sigma \text{(select)}, \pi \text{(projection)}, \cup \text{(union)},
 \cap \text{(intersection)}, - \text{(difference)}, \times \text{(product)}, \bowtie \text{(join)}$. 
+
+--- 11/14/2018 UPDATE ---
+
+- Lock vs. Latch in database context: 
+
+    - Lock is a high-level primitive on a logical component of a database: a lock on a database, a lock on a table, a lock on a record
+    - Latch is the lock from OS perspective (a low-level primitive that works on the data structure): a latch on the page table,
+      a latch on a index page

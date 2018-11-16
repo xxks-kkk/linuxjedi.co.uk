@@ -32,7 +32,7 @@ copy of the file.
 - Each replica (i.e., server, "Representative" in paper) gets M votes
 - Extra read-only copies get 0 votes (i.e., Weak Representatives)
 - Each file is assigned K votes
-- To read a file for a set of replicas, we require R + W > K
+- To read a file from a set of replicas, we require R + W > K
     - R: the number of replicas we need to read before replying to the clients
     - W: the number of replicas we need to write before replying to the clients
     - We have at least one overlapping replica between R and W
