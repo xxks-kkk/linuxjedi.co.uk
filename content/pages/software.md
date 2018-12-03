@@ -70,6 +70,10 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
+- **[Strata with Lease]** (2018): Extended Strata with Lease mechanism to support concurrent file access
+<a href="https://github.com/xxks-kkk/strata"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+<a href="assets/Strata_Lease.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
+
 - **[HyperPebblesDB]** (2018): a key-value store that is part of LevelDB family
 <a href="https://github.com/xxks-kkk/HyperPebblesDB/tree/2.0-staging"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="assets/hpb.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
