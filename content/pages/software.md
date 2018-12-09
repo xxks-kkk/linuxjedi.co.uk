@@ -70,9 +70,10 @@ a python scraper for solution template formation.
 
 ## Archived projects
 
-- **[Strata with Lease]** (2018): Extended Strata with Lease mechanism to support concurrent file access
+- **[Strata with Lease]** (2018): enhanced [Strata file system](https://www.cs.utexas.edu/~simon/sosp17-final207.pdf) with Lease mechanism to support concurrent file access across processes
 <a href="https://github.com/xxks-kkk/strata"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-<a href="assets/Strata_Lease.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
+<a href="assets/Strata_Lease.pdf"><i class="fas fa-file-pdf fa-lg"></i></a>
+<a href="assets/Strata_report.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
 - **[HyperPebblesDB]** (2018): a key-value store that is part of LevelDB family
 <a href="https://github.com/xxks-kkk/HyperPebblesDB/tree/2.0-staging"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
@@ -96,29 +97,29 @@ a python scraper for solution template formation.
 - **[Algo]** (2016 - 2018): a collection of data structures, algorithms with the aim to keep my computer science knowledge fresh. Implemented in C.
 <a href="https://github.com/xxks-kkk/algo"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
-- **[Active Learning for Neural Dependency Parsing]** (2018): explore the idea of [active Learning](http://aclweb.org/anthology/W00-1306) on Stanford Neural Dependency Parsing 
+- **[Active Learning for Neural Dependency Parsing]** (2018): explored the idea of [active Learning](http://aclweb.org/anthology/W00-1306) on Stanford Neural Dependency Parsing 
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2018/388-ray/p3"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2018/388-ray/p3/Tex/emnlp2016.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
 <!-- [![[GitHub]](images/github.png)](https://github.com/xxks-kkk/Code-for-blog/tree/master/2018/388-ray/p3) -->
 <!-- [![[PDF]](images/pdf.png)](https://github.com/xxks-kkk/Code-for-blog/blob/master/2018/388-ray/p3/Tex/emnlp2016.pdf) -->
 
-- **[Part-of-Speech Tagging with LSTMs]** (2018): build a BiLSTMs model with orthographic features 
+- **[Part-of-Speech Tagging with LSTMs]** (2018): built a BiLSTMs model with orthographic features 
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2018/388-ray/p2"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2018/388-ray/p2/Tex/emnlp2016.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
-- **[Distributed Key-Value Store]** (2018): build a distributed Key-Value Strore using eventually consistency model with two session guarantees: *Read Your Writes* and *Monotonic Reads*
+- **[Distributed Key-Value Store]** (2018): built a distributed Key-Value Strore using eventually consistency model with two session guarantees: *Read Your Writes* and *Monotonic Reads*
 <a href="https://github.com/xxks-kkk/KV-store"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
-- **[Bidirectional Bigram Model]** (2018): build a bidirectional bigram model
+- **[Bidirectional Bigram Model]** (2018): built a bidirectional bigram model
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2018/388-ray/p1"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2018/388-ray/p1/Tex/p2.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
-- **[Identifier Inference through Neural Network]** (2017):  build N-gram and Neural Network language models
+- **[Identifier Inference through Neural Network]** (2017):  built N-gram and Neural Network language models
 to study the *identifier naming convention* problem
 <a href="assets/fp.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
-- **[Investigation of neural network architecture on MNIST digits dataset]** (2017): implements a FeedForward Neural Network and a Convolutional Neural Network
+- **[Investigation of neural network architecture on MNIST digits dataset]** (2017): implemented a FeedForward Neural Network and a Convolutional Neural Network
 for the handwritten digits classification task using Keras
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/391L-dana/HW6"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW6/Tex/report.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
@@ -130,41 +131,41 @@ for machine learning?
 
 <!-- [![[PDF]](images/arxiv.png)](http://arxiv.org/abs/1801.03261) -->
 
-- **[Modular reinforcement learning for 2D navigation]** (2017): Use the modular reinforcement learning to explore a 2D grid navigation task
+- **[Modular reinforcement learning for 2D navigation]** (2017): Used modular reinforcement learning to explore a 2D grid navigation task
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW5/rl.py"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW5/Tex/report.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
-- **[Gaussian process for human movement data]** (2017): Use the gaussian process regression to study the human movement data
+- **[Gaussian process for human movement data]** (2017): Used gaussian process regression to study human movement data
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW4/gp.py"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW4/Tex/report.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
-- **[Neural Networks for Sentiment Analysis]** (2017): implements a FeedForward Neural Network and a Convolutional Neural Network for Sentiment Analysis
+- **[Neural Networks for Sentiment Analysis]** (2017): implemented a FeedForward Neural Network and a Convolutional Neural Network for Sentiment Analysis
 using Tensorflow
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/395T-greg/HW3/hw3-release"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/395T-greg/HW3/Tex/p3.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
-- **[Shift-Reduce Parsing]** (2017): implements a shift-reduce parser to generate
+- **[Shift-Reduce Parsing]** (2017): implemented a shift-reduce parser to generate
 dependency trees using both a greedy model and a global model with beam search (logistic regression,
 Structured SVM, arc standard transition system, beam search)
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/395T-greg/HW2/hw2-release"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/395T-greg/HW2/Tex/p2.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
-- **[Sequential CRF for NER]** (2017): implements HMM model for POS tagging and CRF model for NER (forward-backward algorithm, viterbi algorithm, beam search)
+- **[Sequential CRF for NER]** (2017): implemented HMM model for POS tagging and CRF model for NER (forward-backward algorithm, viterbi algorithm, beam search)
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/395T-greg/HW1/hw1"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/395T-greg/HW1/Tex/p1.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
-- **[ICA on mixed signals]** (2017): implements ICA to perform blind source separation
+- **[ICA on mixed signals]** (2017): implemented ICA to perform blind source separation
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/391L-dana/HW2"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW2/Tex/report.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
-- **[PCA on handwritten digits]** (2017): implements PCA on handwritten digits data and run KNN to capture the major features of the images
+- **[PCA on handwritten digits]** (2017): implemented PCA on handwritten digits data and run KNN to capture the major features of the images
 <a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2017/391L-dana/HW1"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 <a href="https://github.com/xxks-kkk/Code-for-blog/blob/master/2017/391L-dana/HW1/Tex/report.pdf"><i class="far fa-file-pdf fa-lg" aria-hidden="true"></i></a>
 
 - **[BeatTheRhythm]** (2014): a Unity3D music game
 <a href="https://github.com/xxks-kkk/BeatTheRhythm"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
-- **[OptiTimal]** (2012): an android application to allow user to track their time allocation and obtain a statistical report about their time management
+- **[OptiTimal]** (2012): an android application that allows user to track their time allocation and obtain a statistical report about their time management
 <a href="https://github.com/xxks-kkk/Optitimal"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
 [Back To Top]({filename}/pages/software.md)
