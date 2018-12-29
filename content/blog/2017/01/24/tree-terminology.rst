@@ -21,6 +21,7 @@ can be empty; otherwise, a tree consists of a distinguish node *r*, called the
 each of whose roots are connected by a directed *edge* from *r*.
 
 .. image:: /images/subtree.PNG
+   :alt: subtree definition illustration
 
 **child**, **parent**
 
@@ -87,6 +88,7 @@ In other words, in a tree each step from top to bottom is called as a *level* an
 count starts with '0' and incremented by one at each level (step).
 
 .. image:: /images/tree-level.PNG
+   :alt: tree level illustration
 
 **predecessor / successor**
 

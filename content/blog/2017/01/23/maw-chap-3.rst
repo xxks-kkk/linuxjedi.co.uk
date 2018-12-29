@@ -25,6 +25,7 @@ all essentially the "List" but with some restrictions in terms of list operation
 Here is a picture that helps us to understand this concept better:
 
 .. image:: /images/maw-chap3.PNG
+   :alt: data structure summarization
 
 In terms of actual implementation, we can get a sense of what's the basic structure that a data structure
 should have. Take a linked list implementation of a queue as an example. The key characteristics

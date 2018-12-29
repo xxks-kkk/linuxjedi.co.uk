@@ -35,7 +35,7 @@ VS. balanced trees:
 
 To avoid unnecessary complexity, we assume we are working with a collection of strings which consist of only lower case alphabetics.
 
-![trie]({filename}/images/trie.png)
+![trie]({static}/images/trie.png)
 
 - A trie node contains two fields:
 

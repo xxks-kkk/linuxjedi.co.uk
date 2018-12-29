@@ -106,6 +106,7 @@ the cell that hash value should be stored. When we want to find an item, we comp
 hash value, then do find on linked list.
 
 .. image:: /images/separate-chaining.PNG
+   :alt: separate chaining illustration
 
 Here the worst case time happens for find operation, which can take linear time.
 However, this can happen in the extreme rare case (bad luck or bad hash function).

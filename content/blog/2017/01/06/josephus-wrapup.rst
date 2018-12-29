@@ -63,6 +63,7 @@ need to carefully think through. This is what stated in the book:
 Here is my circularly double linked list in picture:
 
 .. image:: /images/circularly-double-linked-list-dummy.PNG
+   :alt: circularly double linked list with dummy node picture
 
 In words, our dummy node's ``Next`` points to the the first data node and ``Prev`` points to the last data node.
 With this setup, the head of the list can be accessed by ``dummy.Next`` and tail by ``dummy.Prev``. In addition,

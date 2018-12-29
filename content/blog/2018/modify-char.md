@@ -69,7 +69,7 @@ We acquire key data from GDB as following:
 
 Note that the last two commands are executed after `*c = "Hello World!";`. The state of the variables on the stack shown below:
 
-![state of variables on the stack]({filename}/images/stack.png)
+![state of variables on the stack]({static}/images/stack.png)
 
 Note that one can think about *a variable in C as an alias for some virtual memory address*. In other words, variable `s` and address `0x7fff5fbff340`
 are the same thing and we use variable as a shortcut to reference some address. For a given variable name, we can get its address by using `&`
