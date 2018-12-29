@@ -7,6 +7,9 @@ Quotes
 ..
    :template: quotes
 
+“由是則生而有不用也，由是則可以辟患而有不為也，是故所欲有甚於生者，所惡有甚於死者。非獨賢者有是心也，人皆有之，賢者能勿喪耳。”
+**-- 魚我所欲也 （孟子）** (`全文 <http://students.heungto.edu.hk/~chinese/upload_files/textread/f5/text/105.htm>`_)
+      
 "IN THE END… We only regret the chances we didn’t take, the relationships we were afraid to have,
 and the decisions we waited too long to make."
 **-- Lewis Carroll**
@@ -382,14 +385,15 @@ and things will go better later."
 begin here."
 **-- Captain John Parker**
 
-.. html::
+..
+   .. html::
 
-    <blockquote>
-    <p>
-    This page was initially forked from <a href="http://pages.cs.wisc.edu/~remzi/quotes.html" style="border-bottom: 1px dotted">
-    Prof. Remzi's quotes collection</a> back in year 2012 when I was having fun with his 
-    <a href="http://pages.cs.wisc.edu/~remzi/Classes/354/Fall2012" style="border-bottom: 1px dotted">amazing system class</a>.
-    </p>
-    </blockquote>
+       <blockquote>
+       <p>
+       This page was initially forked from <a href="http://pages.cs.wisc.edu/~remzi/quotes.html" style="border-bottom: 1px dotted">
+       Prof. Remzi's quotes collection</a> back in year 2012 when I was having fun with his 
+       <a href="http://pages.cs.wisc.edu/~remzi/Classes/354/Fall2012" style="border-bottom: 1px dotted">amazing system class</a>.
+       </p>
+       </blockquote>
 
 `Back To Top <{filename}/pages/quotes.rst>`_
