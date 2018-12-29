@@ -100,7 +100,7 @@ MARKDOWN = {
 }
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['tag_cloud', 'render_math', 'i18n_subsites', 'html_rst_directive', 'bootstrapify', 'pelican-cite']
+PLUGINS = ['tag_cloud', 'render_math', 'html_rst_directive', 'bootstrapify', 'pelican-cite', 'i18n_subsites']
 LOCAL_CONTENT_CACHE = False
 HIDE_SIDEBAR = True
 DISPLAY_CATEGORIES_ON_MENU = False # disable display categories in the navbar
