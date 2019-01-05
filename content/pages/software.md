@@ -4,10 +4,15 @@ A log of work that I have spent some time on
 
 [TOC]
 
-## Current Project
+## Current projects
 
 - **[RustFS]** (2018 - ): a user-space file system
 <a href="https://github.com/utsaslab/rustfs"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+
+- **[MIT 6.828]** (2019 - ): self-study of [MIT 6.828](https://pdos.csail.mit.edu/6.828/2018/schedule.html)
+<a href="https://github.com/xxks-kkk/Code-for-blog/tree/mit/2019/mit6.828"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+
+- Stealth database project (2019 - ): will be open-sourced once the project is in shape
 
 ## Publication
 
@@ -46,7 +51,6 @@ the Crowd. arXiv preprint arXiv:1801.03261 (2018)
   </blockquote>
 </div>
 
-
 ## Maintained projects
 
 - **[Shuati]** (2017 - ): a collection of solutions to OJ problems with the goal to stay fresh with computer science fundamentals
@@ -57,9 +61,6 @@ a python scraper for solution template formation.
 - **[Emacs Config]** (2016 - ): my personal emacs configuration that I used during the day work. Very lightweight.
 <a href="https://github.com/xxks-kkk/emacs-config"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
-- **[PebblesDB]** (2018 - ): a LevelDB-style KV-store, which I help to maintain.
-<a href="https://github.com/utsaslab/pebblesdb"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
-
 <!-- ## Open source projects contributed to
 
 - **[KenLM]**: Faster and Smaller Language Model Queries
@@ -67,6 +68,9 @@ a python scraper for solution template formation.
 
 - **[Sphinx-doc]**: Python Documentation Generator
 <a href="https://github.com/sphinx-doc/sphinx"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a> -->
+
+<!-- - **[PebblesDB]** (2018 - ): a LevelDB-style KV-store, which I help to maintain. -->
+<!-- <a href="https://github.com/utsaslab/pebblesdb"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a> -->
 
 ## Archived projects
 

@@ -119,7 +119,7 @@ PUBLICATIONS_SRC = 'content/pubs.bib'
 INDEX_URL = 'blog2'
 INDEX_SAVE_AS = INDEX_URL+'/index.html'
 THEME='pelican-cid'
-SITEFOOTER = u'Zeyuan Hu &copy; 2015-2018.'
+SITEFOOTER = u'Zeyuan Hu &copy; 2015-2019.'
 MENUITEMS = (
     #('Courses', 'courses.html'),
     ('Blog', INDEX_URL),
