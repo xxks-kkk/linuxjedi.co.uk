@@ -3,8 +3,8 @@ title: Courses
 ## Course I help to teach
 
 - [EE382V - Data Engineering](https://piazza.com/class/jl6z6fojbj46ot) (UT-Austin, Fall 2018)
-- [NEU466M - Quantitative Methods in Neuroscience]({filename}/pages/teach/neu466m.md) (UT-Austin, Spring 2018)
-- [M408K - Differential Calculus]({filename}/pages/teach/m408k.md) (UT-Austin, Fall 2017)
+- NEU466M - Quantitative Methods in Neuroscience (UT-Austin, Spring 2018)
+- M408K - Differential Calculus (UT-Austin, Fall 2017)
 
 ## Course I take
 
