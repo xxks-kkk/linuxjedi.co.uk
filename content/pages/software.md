@@ -10,7 +10,7 @@ A log of work that I have spent some time on
 <a href="https://github.com/utsaslab/rustfs"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
 - **[MIT 6.828]** (2019 - ): self-study of [MIT 6.828](https://pdos.csail.mit.edu/6.828/2018/schedule.html)
-<a href="https://github.com/xxks-kkk/Code-for-blog/tree/mit/2019/mit6.828"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+<a href="https://github.com/xxks-kkk/Code-for-blog/tree/master/2019/mit6.828"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 
 - Stealth database project (2019 - ): will be open-sourced once the project is in shape
 
